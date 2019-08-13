@@ -1,1 +1,12 @@
 /* pages/create/create.wxss */
+
+.name {
+margin-top:100rpx;
+font-weight:bold;
+font-size:60rpx;
+line-height: 80px;
+text-shadow: 0 13.36px 8.896px #1AAB8A,0 -2px 1px #fff;
+}
+.submit {
+  margin-top:50rpx;
+}
