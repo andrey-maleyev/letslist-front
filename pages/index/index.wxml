@@ -8,7 +8,7 @@
 
     <!-- <image style="width: 300rpx; height: 300rpx"  src="/images/letslist.png"></image> -->
   <view>
-    <button bindtap="goToCreate">Start</button>
+    <button bindtap="goToHome">Start</button>
   </view>
 </view>
 
