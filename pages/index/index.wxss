@@ -29,9 +29,9 @@
   text-align: center;
 }
  /* background-image: url("paper.gif"); */
-html,body{
+/* html,body{
   height:100%;
-}
+} */
 body{
   text-align:center;
 }
@@ -46,13 +46,13 @@ button{
   color:#fff;
   border:none;
   position:relative;
-  height:60px;
+  height:100rpx;
   font-size:1.6em;
   cursor:pointer;
   transition:800ms ease all;
   outline:none;
-  margin-top:400px;
-  width:100px;
+  margin-top:400rpx;
+  width:150rpx;
   text-align: center;
 }
 button:hover{
@@ -64,7 +64,7 @@ button:before,button:after{
   position:absolute;
   top:0;
   right:0;
-  height:2px;
+  height:2rpx;
   width:0;
   background: #1AAB8A;
   transition:400ms ease all;
@@ -83,7 +83,7 @@ button:hover:before,button:hover:after{
 #letslist {
   display:inline-block;
   color:white;
-  margin-top:300px;
-  font-size:50px;
-  text-shadow: 5px 5px #1AAB8A;
+  margin-top:300rpx;
+  font-size:100rpx;
+  text-shadow: 5rpx 5rpx #1AAB8A;
 }
