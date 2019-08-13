@@ -1,2 +1,39 @@
 <!--pages/create/create.wxml-->
-<text>pages/create/create.wxml</text>
+
+<!-- <view class="name"><text>Event name</text></view> -->
+<form>
+  <view class="name"><text>Event name</text></view>
+	<view class="cu-form-group margin-top">
+	<input placeholder="type event name"></input>
+	</view>
+   <view class="name"><text>Event description</text></view>
+
+  <view class="cu-form-group margin-top">
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="type event description here"></textarea>
+	</view>
+
+  <view class="section">
+   <view class="name"><text>Date</text></view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        Click here to choose date: {{date}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="section">
+   <view class="name"><text>Choose event type</text></view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+       Click here to choose event type：{{array[index]}}
+    </view>
+  </picker>
+  </view>
+
+
+
+ <view class="btn-area">
+    <button form-type="submit" class = "submit">Submit</button>
+    <button form-type="reset">Reset</button>
+  </view>
+</form>

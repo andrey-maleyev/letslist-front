@@ -5,7 +5,38 @@ Page({
    * 页面的初始数据
    */
   data: {
+    array: ['Birthday', 'Picnic', 'Conference', 'Others'],
+    objectArray: [
+      {
+        id: 0,
+        name: 'Birthday'
+      },
+      {
+        id: 1,
+        name: 'Picnic'
+      },
+      {
+        id: 2,
+        name: 'Conference'
+      },
+      {
+        id: 3,
+        name: 'Others'
+      }
+    ],
 
+  },
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
   },
 
   /**

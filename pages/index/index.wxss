@@ -82,8 +82,10 @@ button:hover:before,button:hover:after{
 
 #letslist {
   display:inline-block;
-  color:white;
+  color:#1AAB8A;
   margin-top:300rpx;
   font-size:100rpx;
-  text-shadow: 5rpx 5rpx #1AAB8A;
+  text-shadow: 5rpx 5rpx white;
+  background:rgb(0,0,0,0.1);
+
 }
