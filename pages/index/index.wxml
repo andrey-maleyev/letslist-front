@@ -1,13 +1,35 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <!-- <view class="userinfo">
+<button wx:if="{{!hasUserInfo && canIUse}}"       open-type="getUserInfo"           bindgetuserinfo="getUserInfo"> Avatar </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
-  </view>
-  <view class="usermotto">
+  </view> -->
+  <!-- <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+  </view> -->
+
+<!-- <image src="/images/avatar6.png" alt="avatar"class="avatar"/>
+
+<view class="container-create">
+  <h2>Create an event</h2>
+    <view class="create-event">
+      click to create
+    </view>
+
+  <view class="container-upcoming">
+    <h2>My upcoming events</h2>
+    <button class="dropdown-btn">view events</button>
+    <view class="dropdown-content">
+      <navigator></navigator> url="javascript:void(0)">Demo Day on Aug 24th</a>
+      <a href="javascript:void(0)">Wine Appreciation on Aug 31st</a>
+      <a href="javascript:void(0)">Car Exhibition on Sept 11</a>
+    </view>
+     
   </view>
-</view>
+
+</view> -->
+
+
+
