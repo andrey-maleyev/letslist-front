@@ -43,10 +43,10 @@ Page({
       })
     }
   },
-  goToCreate: function () {
+  goToHome: function () {
     setTimeout(function () {
       wx.navigateTo({
-        url: '/pages/create/create',
+        url: '/pages/home/home',
       })
     }, 700);
   }
