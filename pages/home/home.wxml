@@ -11,9 +11,9 @@
       <text class="upcoming">My upcoming events</text>
       <!-- <button class="dropdown-btn">view events</button> -->
       <view class="upcoming-content">
-        <view><text class="demo">📅 Demo Day on Aug 24th</text></view>
-        <text class="wine">📅 Wine Appreciation on Aug 31st</text>
-        <text class="car">📅 Car Exhibition on Sept 11</text>
+        <button><text class="demo">📅 Demo Day on Aug 24th</text></button>
+        <button><text class="wine">📅 Wine Appreciation on Aug 31st</text></button>
+        <button><text class="car">📅 Car Exhibition on Sept 11</text></button>
       </view>
     </view>
   </view>
