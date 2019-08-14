@@ -1,0 +1,65 @@
+/* pages/home/home.wxss */
+.avatar {
+  border-radius: 50%;
+  height: 200rpx;
+  width: 200rpx;
+  border: 2px light black;
+  display: block;
+  align-items: center;
+  margin-bottom: 60rpx;
+} 
+
+.create-event {
+  display: flex;
+  width: 100%;
+  border: none;
+  background-color: #4CAF50;
+  padding: 60px 100px;
+  font-size: 16px;
+  cursor: pointer;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.block {
+  margin: 30rpx;
+  padding: 40rpx;
+}
+.upcoming {
+  font-size: 35rpx;
+  padding: 10rpx;
+}
+
+.demo{
+  margin: 20rpx;
+  padding: 10rpx;
+}
+
+.wine {
+  margin: 10rpx;
+  display: block;
+}
+
+.car {
+  margin: 10rpx:
+  display: block;
+}
+
+.container-create {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  margin: 20rpx;
+} 
+
+.container-upcoming {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  margin: 5rpx;
+} 

@@ -1,7 +1,7 @@
-/* *index.wxss*
 .userinfo {
   flex-direction: column;
   align-items: center;
+  font-weight: bold;
 }
 
 .userinfo-avatar {
@@ -15,69 +15,25 @@
   color: #aaa;
 }
 
-.usermotto {
-  margin-top: 200px; */
-/* } */
-
-
 .div-index {
   background-image: url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  justify-content: center;
   text-align: center;
 }
- /* background-image: url("paper.gif"); */
+
+/* background-image: url("paper.gif"); */
+
 /* html,body{
   height:100%;
 } */
-body{
-  text-align:center;
-}
-body:before{
+
+body:before {
   content:'';
   height:100%;
   display:inline-block;
   vertical-align:middle;
-}
-button{
-  background:#1AAB8A;
-  color:#fff;
-  border:none;
-  position:relative;
-  height:100rpx;
-  font-size:1.6em;
-  cursor:pointer;
-  transition:800ms ease all;
-  outline:none;
-  margin-top:400rpx;
-  width:150rpx;
-  text-align: center;
-}
-button:hover{
-  background:#fff;
-  color:#1AAB8A;
-}
-button:before,button:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2rpx;
-  width:0;
-  background: #1AAB8A;
-  transition:400ms ease all;
-}
-button:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-button:hover:before,button:hover:after{
-  width:100%;
-  transition:800ms ease all;
 }
 
 #letslist {
@@ -87,5 +43,51 @@ button:hover:before,button:hover:after{
   font-size:100rpx;
   text-shadow: 5rpx 5rpx white;
   background:rgb(0,0,0,0.1);
+}
 
+.btn-green {
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+
+  height:110rpx;
+  width:150rpx;
+
+  font-size:1.6em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  margin-top:400rpx;
+
+  display: flex;
+  align-items: center;
+}
+
+button:hover {
+  background:#fff;
+  color:#1AAB8A;
+}
+
+button:before, button:after {
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2rpx;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+
+button:after {
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+
+button:hover:before, button:hover:after {
+  width:100%;
+  transition:800ms ease all;
 }
