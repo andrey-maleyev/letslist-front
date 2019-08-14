@@ -1,4 +1,5 @@
-// pages/home/home.js
+import apiClient from "../../utils/apiClient.js"
+
 Page({
 
   /**
@@ -18,8 +19,23 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
+  onLoad: function () {
+    const page = this
 
+    const options = {
+      success: function (res) {
+        const myEvents = res.data.participants
+        console.log(myEvents)
+        page.setData({
+          myEvents
+        })
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    }
+
+    apiClient.getMyEvents(options)
   },
 
   /**

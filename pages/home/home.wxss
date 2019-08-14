@@ -23,7 +23,7 @@
 
 .create-event {
   height: 90rpx;
-  width: 700rpx;
+  width: 80vw;
   color: #FFF; 
   font-size: Regular 17pt;
   background-color: #09bb07; 
@@ -40,6 +40,7 @@
   padding: 10rpx;
   background-color: #576b95;
   color: #fff;
+  width: 80vw;
 }
 
 button::after {
