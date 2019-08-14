@@ -35,13 +35,13 @@
   margin: 5rpx;
 }
 
-.date-box {
+/* .date-box {
   margin: 20rpx;
   padding: 10rpx;
   background-color: #576b95;
   color: #fff;
   width: 80vw;
-}
+} */
 
 button::after {
   border: none;
@@ -65,3 +65,46 @@ button::after {
   box-sizing: border-box;
   margin-top: 100rpx;
 } 
+
+
+.card-category {
+  background-size:cover;
+  background-color:white;
+  color:black;
+  background-repeat: no-repeat;
+  background-image:cover;
+  align-items:center;
+  justify-content:center;
+  height:200rpx;
+  width:700rpx;
+  font-size:50rpx;
+  border-radius:10rpx;
+  margin-bottom:20rpx;
+  margin-left:10rpx;
+  margin-right:10rpx;
+  box-shadow: 5rpx 5rpx 5rpx rgb(200,200,200);
+}
+page {
+  background-color:rgb(245, 244, 244);
+}
+
+.event {
+  display:flex;
+  text-align:center;
+  align-items:center;
+  justify-content:center;
+
+}
+.one {
+  margin-top:60rpx;
+}
+#calendar {
+ /* display:block; */
+margin-left:10rpx;
+margin-top:30rpx;
+font-size:30rpx;
+color:rgba(128, 128, 128, 0.877);
+}
+.cuIcon-calendar{
+  margin:10rpx;
+}
