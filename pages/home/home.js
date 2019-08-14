@@ -8,6 +8,13 @@ Page({
 
   },
 
+  goToCreate: function () {
+    setTimeout(function () {
+      wx.navigateTo({
+        url: '/pages/create/create',
+      })
+    }, 700);
+  },
   /**
    * Lifecycle function--Called when page load
    */
