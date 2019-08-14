@@ -26,7 +26,8 @@
   width: 80vw;
   color: #FFF; 
   font-size: Regular 17pt;
-  background-color: #09bb07; 
+  color:#28a745;
+  border: 1px solid #28a745;
 }
 
 .upcoming {
