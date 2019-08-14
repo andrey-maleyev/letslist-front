@@ -1,0 +1,20 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+
+  <view class="container-create">
+    <image src="/images/avatar6.png" alt="avatar"class="avatar"/>
+
+  <button type="create-event" class="block">Create an Event
+  </button>
+      
+    <view class="container-upcoming">
+      <text class="upcoming">My upcoming events</text>
+      <!-- <button class="dropdown-btn">view events</button> -->
+      <view class="upcoming-content">
+        <button><text class="demo">📅 Demo Day on Aug 24th</text></button>
+        <button><text class="wine">📅 Wine Appreciation on Aug 31st</text></button>
+        <button><text class="car">📅 Car Exhibition on Sept 11</text></button>
+      </view>
+    </view>
+  </view>
+</view>

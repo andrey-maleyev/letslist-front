@@ -2,22 +2,18 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
+    "pages/home/home",
     "pages/create/create"
   ],
-  
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "Letslist",
+    "navigationBarTextStyle": "white",
     "navigationStyle": "custom"
   },
   "sitemapLocation": "sitemap.json",
-  
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
   }
 }
-
-
-
