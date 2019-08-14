@@ -6,27 +6,42 @@ Page({
    */
   data: {
     items: [
-      { name: 'Hamberger', value: '美国' },
-      { name: 'Sandwich', value: '中国' },
-      { name: 'Frog', value: '巴西' },
+      { name: 'Hamburgers', value: '美国' },
+      { name: 'Sandwiches', value: '中国' },
+      { name: 'Cake', value: '巴西' },
       { name: 'Beef', value: '日本' },
       { name: 'Rice', value: '英国' },
-      { name: 'TUR', value: '法国' },
+      { name: 'Hotdogs', value: '英国' },
+      { name: 'Pancake', value: '英国' },
+      { name: 'Sausage rolls', value: '英国' },
+      { name: 'French toast', value: '英国' },
+      { name: 'Crispy potato chips', value: '英国'},
+      { name: 'Chicken', value: '英国' }
     ],
     tools: [
       { name: 'Projector', value: '美国' },
       { name: 'Folders', value: '中国'},
       { name: 'Chargers', value: '巴西' },
-      { name: 'Pen', value: '日本' },
-      { name: 'Books', value: '英国' },
-      { name: 'Gifts', value: '法国' },
+      { name: 'Candels', value: '日本' },
+      { name: 'Gifts', value: '英国' },
+      { name: 'Balloons', value: '英国' },
+      { name: 'Banners', value: '英国' },
+      { name: 'Party blowers', value: '英国' },
+      { name: 'Party hats', value: '英国' },
+      { name: 'Confetti', value: '英国' },
+
     ],
     beverage: [
       { name: 'Cola', value: '美国' },
-      { name: 'Sevenup', value: '中国' },
+      { name: 'Seven Up', value: '中国' },
       { name: 'Milk', value: '巴西' },
       { name: 'Water', value: '日本' },
-      { name: 'Redbull', value: '英国' },
+      { name: 'Coffee', value: '英国' },
+      { name: 'Spirit', value: '英国' },
+      { name: 'Green tea', value: '英国' },
+      { name: 'Black tea', value: '英国' },
+      { name: 'Juices', value: '英国' },
+      { name: 'Soda', value: '英国' },
     ]
 
 

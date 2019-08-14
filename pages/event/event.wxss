@@ -1,24 +1,30 @@
 /* pages/event/event.wxss */
 
+
 page{
-  background-color:#EFEBE1;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://www.toptal.com/designers/subtlepatterns/patterns/dynamic-style.png"), no-repeat;
+  /* background-size:cover; */
+  
 }
 
 .title{
-  margin-top:50rpx;
+  margin-top:120rpx;
   text-align:center;
   font-size:60rpx;
   font-weight:bold;
+  margin-bottom:100rpx;
+  text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }
 
 .one {
   margin-top:30rpx;
-  margin-bottom:30rpx;  
+  margin-bottom:100rpx;  
 }
 .big {
   font-size:30px;
   margin-bottom:20rpx;
-  margin-left:10rpx;
+  margin-left:20rpx;
+  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
 
 }
 .two {
@@ -110,9 +116,10 @@ page{
 display:flex;
 flex-wrap: wrap;
 
-
 }
 
 .word {
   padding-right:25rpx;
+  margin-left:20rpx;  
+
 }
