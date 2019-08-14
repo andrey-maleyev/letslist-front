@@ -12,9 +12,15 @@
     <text class="upcoming">My upcoming events</text>
     <!-- <button class="dropdown-btn">view events</button> -->
     <view class="upcoming-content">
-      <button class="date-box">📅 Demo Day on Aug 24th</button>
-      <button class="date-box">📅 Wine Appreciation on Aug 31st</button>
-      <button class="date-box">📅 Car Exhibition on Sept 11</button>
+
+
+      <block
+      wx:for="{{myEvents}}"
+      wx:key="index"
+      wx:for-item="myEvent"
+      >
+       <button class="date-box">{{myEvent.event}}</button>
+      </block>
     </view>
   </view>
   
