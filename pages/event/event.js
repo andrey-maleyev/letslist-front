@@ -12,9 +12,9 @@ Page({
       { name: 'Beef', value: '日本' },
       { name: 'Rice', value: '英国' },
       { name: 'Hotdogs', value: '英国' },
-      { name: 'Pancake', value: '英国' },
+      { name: 'Pancakes', value: '英国' },
       { name: 'Sausage rolls', value: '英国' },
-      { name: 'French toast', value: '英国' },
+      { name: 'French toasts', value: '英国' },
       { name: 'Crispy potato chips', value: '英国'},
       { name: 'Chicken', value: '英国' }
     ],
@@ -37,10 +37,10 @@ Page({
       { name: 'Milk', value: '巴西' },
       { name: 'Water', value: '日本' },
       { name: 'Coffee', value: '英国' },
-      { name: 'Spirit', value: '英国' },
+      { name: 'Sprite', value: '英国' },
       { name: 'Green tea', value: '英国' },
       { name: 'Black tea', value: '英国' },
-      { name: 'Juices', value: '英国' },
+      { name: 'Juice', value: '英国' },
       { name: 'Soda', value: '英国' },
     ]
 
