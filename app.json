@@ -2,8 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/home/home",
-    "pages/create/create"
+    "pages/create/create",
+    "pages/event/event",
+    "pages/home/home"
   ],
   "window": {
     "backgroundTextStyle": "light",
