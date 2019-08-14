@@ -6,53 +6,54 @@
   border: 2px light black;
   display: block;
   align-items: center;
-  margin-bottom: 60rpx;
+  margin-bottom: 40rpx;
 } 
 
-.create-event {
-  display: flex;
+/* .create-event {
+  /* display: flex;
   width: 100%;
   border: none;
   background-color: #4CAF50;
+  color: #09BB07 rgb(9,187,7);
   padding: 60px 100px;
   font-size: 16px;
   cursor: pointer;
   justify-content: flex-start;
-  flex-direction: column;
+  flex-direction: column; */
+
+.create-event {
+  height: 90rpx;
+  width: 700rpx;
+  color: #FFF; 
+  font-size: Regular 17pt;
+  background-color: #09bb07; 
 }
 
-.block {
-  margin: 30rpx;
-  padding: 40rpx;
-}
 .upcoming {
   font-size: 35rpx;
   padding: 10rpx;
+  margin: 5rpx;
 }
 
-.demo{
+.date-box {
   margin: 20rpx;
   padding: 10rpx;
+  background-color: #576b95;
+  color: #fff;
 }
 
-.wine {
-  margin: 10rpx;
-  display: block;
-}
-
-.car {
-  margin: 10rpx:
-  display: block;
+button::after {
+  border: none;
 }
 
 .container-create {
-  height: 100vh;
+  /* height: 30vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   box-sizing: border-box;
-  margin: 20rpx;
+  margin-bottom: 10rpx;
 } 
 
 .container-upcoming {
@@ -61,5 +62,5 @@
   align-items: center;
   justify-content: space-evenly;
   box-sizing: border-box;
-  margin: 5rpx;
+  margin-top: 100rpx;
 } 
