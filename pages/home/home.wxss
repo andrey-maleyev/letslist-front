@@ -170,7 +170,7 @@ color:rgba(128, 128, 128, 0.877);
   padding:8rpx;
 }
 
-.modify {
+.view-create-event {
   display:flex;
   align-items:center;
 }
