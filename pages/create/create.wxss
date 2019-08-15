@@ -1,12 +1,65 @@
 /* pages/create/create.wxss */
 
 .name {
-margin-top:100rpx;
-font-weight:bold;
-font-size:60rpx;
-line-height: 80px;
-text-shadow: 0 13.36px 8.896px #1AAB8A,0 -2px 1px #fff;
+margin:0 30rpx;
+margin-top:30rpx;
+/* font-weight:bold; */
+font-size:40rpx;
+margin-bottom:30rpx;
+/* line-height: 50rpx; */
 }
 .submit {
   margin-top:50rpx;
+  width:30%;
+  margin-bottom:10px;
+  color:#1AAB8A;
+  border:1px solid #1AAB8A;
+}
+.main {
+margin-top:50rpx;
+background-color:rgb(245, 245, 245);
+
+}
+
+.cu-form-group {
+  display:flex;
+  border-radius:15rpx;
+  margin:0 30rpx;
+  text-align:center;
+  align-items:center;
+  justify-content: center;
+  font-size:30rpx;
+  color:grey;
+    /* box-shadow: 10rpx 10rpx 10rpx rgb(200,200,200); */
+
+
+}
+
+.cu-custom {
+  background-color:#1AAB8A;
+  color:white;
+}
+
+.back  {
+  /* color:white; */
+  font-size:40rpx;
+}
+.nav {
+  /* color:white; */
+  font-size:40rpx;
+
+}
+
+.type {
+  font-size:30rpx;
+  color:grey;
+}
+.cuIcon-time {
+  margin:0 10rpx;
+}
+.cuIcon-calendar {
+  margin: 0 10rpx;
+}
+.cuIcon-crown {
+  margin: 0 10rpx;
 }
