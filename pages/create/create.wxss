@@ -1,12 +1,51 @@
 /* pages/create/create.wxss */
 
 .name {
-margin-top:100rpx;
+margin:0 20rpx;
+margin-top:30rpx;
 font-weight:bold;
-font-size:60rpx;
-line-height: 80px;
-text-shadow: 0 13.36px 8.896px #1AAB8A,0 -2px 1px #fff;
+font-size:40rpx;
+margin-bottom:10rpx;
+/* line-height: 50rpx; */
 }
 .submit {
   margin-top:50rpx;
+}
+.main {
+margin-top:100rpx
+}
+
+.cu-form-group {
+  display:flex;
+  border-radius:15rpx;
+  margin:0 10rpx;
+  text-align:center;
+  align-items:center;
+  justify-content: center;
+  font-size:30rpx;
+  color:grey;
+
+}
+
+.cu-custom {
+  background-color:#1AAB8A;
+  color:white;
+}
+
+.back  {
+  /* color:white; */
+  font-size:40rpx;
+}
+.nav {
+  /* color:white; */
+  font-size:40rpx;
+
+}
+
+.type {
+  font-size:30rpx;
+  color:grey;
+}
+.cuIcon-time {
+  margin-left:10rpx;
 }
