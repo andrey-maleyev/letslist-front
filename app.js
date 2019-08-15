@@ -10,7 +10,7 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        const baseUrl = `http://localhost:3000/api/v1/`
+        const baseUrl = `http://letslist.wogengapp.cn/api/v1/`
         // console.log("wx.login success: res")
         // console.log(res)
         wx.request({
