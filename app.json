@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
+    "pages/event/event",
     "pages/create/create",
     "pages/home/home",
     "pages/invite/invite"
