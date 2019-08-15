@@ -23,12 +23,13 @@
 
 .create-event {
   height: 90rpx;
-  color: #FFF; 
+  margin-top: 40rpx;
   font-size: 40rpx;
-  color:#1AAB8A;
-  border: 1px solid#1AAB8A ;
   font-weight: bold;
+  color:#1AAB8A;
+  border: 1px solid#1AAB8A;
 }
+
 .create-event:hover {
   background-color:#1AAB8A;
   color:white;
@@ -73,7 +74,6 @@ button::after {
   margin-top: 100rpx;
 } 
 
-
 .card-category {
   background-size:cover;
   background-color:white;
@@ -97,11 +97,11 @@ page {
 
 }
 
-.event {
-  /* align-items:center;
-  justify-content:center; */
+/* .event {
+  align-items:center;
+  justify-content:center;
+} */
 
-}
 .one {
   margin-top:60rpx;
   font-family:sans-serif;
@@ -109,6 +109,7 @@ page {
   text-align:center;
 
 }
+
 #calendar {
  /* display:block; */
 margin-left:10rpx;
@@ -116,8 +117,8 @@ margin-top:30rpx;
 font-size:30rpx;
 color:rgba(128, 128, 128, 0.877);
 /* font-family:serif; */
-
 }
+
 .cuIcon-calendar{
   margin:10rpx;
 }
@@ -130,9 +131,11 @@ margin-left:10rpx;
   display:flex;
   justify-content: center;
 } */
+
 .name {
   text-align:center;
 }
+
 .people {
   font-size:30rpx;
  color:#1AAB8A;
@@ -140,5 +143,4 @@ margin-left:10rpx;
   border: 1px solid #1AAB8A;
   border-radius:10rpx;
   padding:8rpx;
-
 }

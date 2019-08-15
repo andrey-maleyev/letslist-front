@@ -2,17 +2,17 @@
 <view class="container">
 
   <view class="container-create">
-    <image src="/images/avatar6.png" alt="avatar"class="avatar"/>
+    <image wx:if="{{hasUserInfo}}" class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <text wx:if="{{hasUserInfo}}">{{userInfo.nickName}}</text>
 
-    <button class="create-event" bindtap="goToCreate">Create new Event
-    </button>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" class="create-event" bindgetuserinfo="getUserInfo">Login to create new Event</button>
+    <button wx:else class="create-event" bindtap="goToCreate">Create new Event</button>
   </view>
 
   <view class="container-upcoming">
     <text class="upcoming">My upcoming events</text>
     <!-- <button class="dropdown-btn">view events</button> -->
     <view class="upcoming-content">
-
 
       <block
       wx:for="{{myEvents}}"
@@ -35,6 +35,7 @@
           </view>
         </view>
       </block>
+
     </view>
   </view>
   
