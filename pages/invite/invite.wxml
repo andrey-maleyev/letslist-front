@@ -1,0 +1,64 @@
+<!--pages/invite/invite.wxml-->
+<view class="container">
+
+  <view class="banner">Zoe's Birthday</view>
+
+  <view class="invite">
+    <button class="add-invite">+</button> 
+    <view class="invite-txt">Invite friends</view>
+  </view>
+  
+  <view class="column1">
+
+    <view class="profile-box">
+      <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
+      <view class="friend-name">Maggie brings </view>
+    </view>
+        
+      <view class="view-btn">
+        <button class="item">item</button>
+        <button class="item">item</button>
+        <button class="item">item</button>
+      </view>
+  </view>
+  
+  <view class="column2">
+    <view class="profile-box">
+      <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
+      <view class="friend-name">Andrey brings</view>
+    </view>
+    <view>
+      <view class="view-btn">
+        <button class="item">item</button>
+        <button class="item">item</button>
+        <button class="item">item</button>
+        <button class="item">item</button>
+        <button class="item">item</button>
+        <button class="item">item</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="line">
+    <text>----------------------------------------------------------</text>
+    <button class="add-items">+</button>
+    <view class="items-to-bring">Items to bring </view>
+  </view>
+
+  <view class="profile-box">
+      <view class="view-btn">
+        <button class="item">item</button> 
+        <button class="item">item</button>
+        <button class="item">item</button> 
+        <button class="item">item</button>
+        <button class="item">item</button> 
+        <button class="item">item</button>
+        <button class="item">item</button> 
+        <button class="item">item</button>
+        <button class="item">item</button>
+        <button class="item">item</button> 
+        <button class="item">item</button>
+        <button class="item">item</button>
+      </view>
+  </view>
+</view>

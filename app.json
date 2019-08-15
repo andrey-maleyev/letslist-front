@@ -3,8 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/create/create",
-    "pages/event/event",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/invite/invite"
   ],
   "window": {
     "backgroundTextStyle": "light",

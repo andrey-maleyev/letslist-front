@@ -1,0 +1,127 @@
+/* pages/invite/invite.wxss */
+.container {
+  font-family: sans-serif;
+  background-color: rgb(245, 245, 245);
+  justify-content: space-around;
+  padding: 0 !important;
+  height: 100vh;
+  width: 100vw;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 190rpx;
+  display: flex;
+  width: 750rpx;
+  justify-content: center;
+  align-items: center;
+  color: #1AAB8A;
+  font-size: 40rpx;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 150rpx;
+}
+
+.title{
+  margin-top:120rpx;
+  text-align:center;
+  font-size:40rpx;
+  font-weight:regular;
+  margin-bottom:100rpx;
+}
+
+#avatar {
+  border-radius: 50%;
+  height: 100rpx;
+  width: 100rpx;
+  border: 2px solid black;
+  display: block;
+  margin-right: 30rpx;
+
+}
+
+.invite {
+  display: flex;
+  margin-right: 380rpx;
+  margin-top:40rpx;
+}
+
+.invite-txt {
+  margin-left:20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.centre-display{
+  display: flex;
+}
+
+.friend-name {
+  /* margin-left:80rpx;
+  margin-top:-70rpx;
+  margin-right:60rpx;
+  margin-bottom:30rpx; */
+  
+  font-size: 10pt;
+}
+ 
+.add-items {
+  margin-left: 600rpx;
+
+}
+
+.profile-box {
+  display: flex; 
+  justify-content: flex-start; 
+  align-items: center;
+  /* width: 400rpx !important; */
+}
+
+.column1 {
+  margin-top:40rpx;
+  margin-bottom:50rpx;  
+  margin-left:20rpx;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;  */
+}
+
+.column2 {
+  margin-top:-10rpx;
+  margin-bottom:50rpx;  
+  margin-left:20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: content-box;
+  max-width: 610rpx;
+}
+
+.item {
+  font-size: 10pt;
+  width:200rpx;
+}
+
+.items-to-bring {
+  margin-top:-80rpx;
+  margin-bottom: 50rpx;
+  margin-left: 370rpx;
+}
+/* .view-btn-middle{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 60rpx;
+  justify-content: flex-start;
+} */
+
+.view-btn {
+  display:flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  margin-top: 30rpx;
+  width: 600rpx;
+}
