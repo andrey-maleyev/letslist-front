@@ -54,7 +54,7 @@
   margin:10rpx;
   padding:20rpx;
   font-size:35rpx;
-  background-color:blue;
+  background-color:#1AAB8A;
   color:white;
   text-decoration: none;
 
@@ -64,7 +64,7 @@
   margin:10rpx;
   padding:20rpx;
   font-size:35rpx;
-  background-color:#1AAB8A;
+  background-color:rgb(161, 190, 184);
   color:white;
   text-decoration: none;
 }
@@ -72,6 +72,7 @@
 .suggestions {
   display:flex;
  flex-wrap: wrap;
+ margin:0 30rpx;
 }
 .chosen {
   background-color:#1AAB8A;
