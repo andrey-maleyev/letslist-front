@@ -9,10 +9,14 @@
     <image wx:if="{{hasUserInfo}}" class="avatar" src="{{userInfo.avatarUrl}}"></image>
     <text wx:if="{{hasUserInfo}}">{{userInfo.nickName}}</text>
 
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" class="create-event" bindgetuserinfo="getUserInfo">Login to create new Event</button>
-    <button wx:else class="create-event" bindtap="goToCreate">Create new Event</button>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" class="create-event" bindgetuserinfo="getUserInfo">
+    <view class= "modify">Login to create new Event</view>
+    </button>
+    <button wx:else class="create-event" bindtap="goToCreate">
+    <view class= "modify">Create new Event</view>
+    </button>
   </view>
-
+  
   <view class="container-upcoming">
     <text class="upcoming">My upcoming events</text>
     <!-- <button class="dropdown-btn">view events</button> -->
@@ -27,6 +31,7 @@
          <view class = "event" >
            <view id = "owner">
             <text wx:if="{{myEvent.is_creator == true}}" class="people">Creator</text>
+           <text wx:if="{{!myEvent.is_creator == true}}" class="none"></text>
            </view>
            <view class = "name">
             <text class ="one" >{{myEvent.event}}</text>
