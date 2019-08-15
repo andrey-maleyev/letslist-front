@@ -1,29 +1,37 @@
 /* pages/create/create.wxss */
 
 .name {
-margin:0 20rpx;
+margin:0 30rpx;
 margin-top:30rpx;
-font-weight:bold;
+/* font-weight:bold; */
 font-size:40rpx;
-margin-bottom:10rpx;
+margin-bottom:30rpx;
 /* line-height: 50rpx; */
 }
 .submit {
   margin-top:50rpx;
+  width:30%;
+  margin-bottom:10px;
+  color:#1AAB8A;
+  border:1px solid #1AAB8A;
 }
 .main {
-margin-top:100rpx
+margin-top:50rpx;
+background-color:rgb(245, 245, 245);
+
 }
 
 .cu-form-group {
   display:flex;
   border-radius:15rpx;
-  margin:0 10rpx;
+  margin:0 30rpx;
   text-align:center;
   align-items:center;
   justify-content: center;
   font-size:30rpx;
   color:grey;
+    /* box-shadow: 10rpx 10rpx 10rpx rgb(200,200,200); */
+
 
 }
 
@@ -47,5 +55,11 @@ margin-top:100rpx
   color:grey;
 }
 .cuIcon-time {
-  margin-left:10rpx;
+  margin:0 10rpx;
+}
+.cuIcon-calendar {
+  margin: 0 10rpx;
+}
+.cuIcon-crown {
+  margin: 0 10rpx;
 }

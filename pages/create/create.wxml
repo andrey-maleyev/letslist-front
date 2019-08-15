@@ -17,22 +17,22 @@
     </view>
 
     <view class="section">
-    <view class="name"><text>Date</text></view>
-      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="name">Date</view>
+      <picker mode="date" value="{{date}}" start="2019-01-01" end="2050-07-19" bindchange="bindDateChange">
         <view class="picker">
           <view class="cu-form-group margin-top">
-            Pick the date{{date}}
+            <text class = "cuIcon-calendar"></text>{{date}}
           </view>
         </view>
       </picker>
     </view>
     
     <view class="section">
-      <view class="name">Time<text class = "cuIcon-time"></text></view>
-      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+      <view class="name">Time</view>
+      <picker mode="time" value="{{time}}" start="00:00" end="24:00" bindchange="bindTimeChange">
         <view class="picker">
           <view class="cu-form-group margin-top">
-            Pick the time{{time}}
+            <text class = "cuIcon-time"></text>{{time}}
           </view>
         </view>
       </picker>
@@ -44,7 +44,7 @@
       <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
         <view class="picker">
          <view class="cu-form-group margin-top">
-            Pick an event{{array[index]}}
+            <text class = "cuIcon-crown"></text>{{array[index]}}
           </view>
         </view>
       </picker>
@@ -52,7 +52,7 @@
 
   <view class="btn-area">
       <button form-type="submit" class = "submit">Submit</button>
-      <button form-type="reset">Reset</button>
+      <!-- <button form-type="reset" class = >Reset</button> -->
     </view>
   </form>
 </view>
