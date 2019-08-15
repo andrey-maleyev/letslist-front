@@ -52,7 +52,7 @@
 
   <view class="btn-area">
       <button form-type="submit" class = "submit">Submit</button>
-      <!-- <button form-type="reset" class = >Reset</button> -->
     </view>
+    
   </form>
 </view>

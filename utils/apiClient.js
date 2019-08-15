@@ -11,6 +11,17 @@ const getMyEvents = options => {
   })
 }
 
+const getItems = options => {
+  const { success, fail } = options
+
+  return wx.request({
+    url: baseUrl + "items",
+    method: "get",
+    success,
+    fail
+  })
+}
+ 
 const updateUser = options => {
   const { id, data, success, fail } = options
 
@@ -25,5 +36,6 @@ const updateUser = options => {
 
 export default {
   getMyEvents,
+  getItems,
   updateUser
 }

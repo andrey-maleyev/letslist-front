@@ -4,11 +4,12 @@
     "pages/logs/logs",
     "pages/create/create",
     "pages/event/event",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/items/items"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#000000",
+    "navigationBarBackgroundColor": "#1AAB8A",
     "navigationBarTitleText": "Letslist",
     "navigationBarTextStyle": "white",
     "navigationStyle": "custom"

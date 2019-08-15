@@ -1,0 +1,80 @@
+/* pages/items/items.wxss */
+.cu-custom {
+  background-color:#1AAB8A;
+  color:white;
+}
+
+.back  {
+  /* color:white; */
+  font-size:40rpx;
+}
+.nav {
+  /* color:white; */
+  font-size:40rpx;
+
+}
+
+.main {
+  margin-top:50rpx;
+}
+
+.h2 {
+  font-size:40rpx;
+  margin-bottom:30rpx;
+  margin-left:30rpx;
+}
+.form {
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:0 30rpx;
+  margin-bottom:30rpx;
+  
+}
+
+
+.add {
+  color:#1AAB8A;
+  border:1px solid #1AAB8A;
+
+}
+
+.add:hover {
+  background-color:#1AAB8A;
+  color:white;
+
+}
+
+.cu-form-group {
+  border-radius:10rpx;
+}
+
+.select {
+  border: 1px solid #1AAB8A;
+  margin:10rpx;
+  padding:20rpx;
+  font-size:35rpx;
+  background-color:#1AAB8A;
+  color:white;
+  text-decoration: none;
+
+}
+.unselect {
+  border: 1px solid #1AAB8A;
+  margin:10rpx;
+  padding:20rpx;
+  font-size:35rpx;
+  background-color:rgb(161, 190, 184);
+  color:white;
+  text-decoration: none;
+}
+
+.suggestions {
+  display:flex;
+ flex-wrap: wrap;
+ margin:0 30rpx;
+}
+.chosen {
+  background-color:#1AAB8A;
+}
+

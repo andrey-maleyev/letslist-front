@@ -1,4 +1,21 @@
 /* pages/home/home.wxss */
+
+.cu-custom {
+  background-color:#1AAB8A;
+  color:white;
+}
+
+.back  {
+  /* color:white; */
+  font-size:32rpx;
+}
+
+.nav {
+  /* color:white; */
+  font-size:40rpx;
+
+}
+
 .avatar {
   border-radius: 50%;
   height: 200rpx;
@@ -7,7 +24,6 @@
   display: block;
   align-items: center;
   margin-bottom: 40rpx;
-  
 } 
 
 /* .create-event {
@@ -44,7 +60,6 @@
   margin: 5rpx;
 }
   
-
 /* .date-box {
   margin: 20rpx;
   padding: 10rpx;
@@ -74,7 +89,7 @@ button::after {
   justify-content: space-evenly;
   box-sizing: border-box;
   margin-top: 100rpx;
-} 
+}
 
 .card-category {
   background-size:cover;
@@ -126,7 +141,7 @@ color:rgba(128, 128, 128, 0.877);
 }
 
 #owner {
-margin-left:10rpx;
+  margin-left:10rpx;
 }
 
 /* .name {
