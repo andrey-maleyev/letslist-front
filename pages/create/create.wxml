@@ -8,17 +8,17 @@
   <form>
     <view class="name"><text>Event name</text></view>
     <view class="cu-form-group margin-top">
-    <input class = "type" placeholder="Type event name here"></input>
+      <input class = "type" placeholder="Type event name here" bindinput="handleEventNameInput"></input>
     </view>
-    <view class="name"><text>Event description</text></view>
 
+    <!-- <view class="name"><text>Event description</text></view>
     <view class="cu-form-group margin-top">
       <textarea class = "type" maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="Type event description here"></textarea>
-    </view>
+    </view> -->
 
     <view class="section">
     <view class="name">Date</view>
-      <picker mode="date" value="{{date}}" start="2019-01-01" end="2050-07-19" bindchange="bindDateChange">
+      <picker mode="date" value="{{date}}" start="2019-01-01" end="2030-07-19" bindchange="bindDateChange">
         <view class="picker">
           <view class="cu-form-group margin-top">
             <text class = "cuIcon-calendar"></text>{{date}}
@@ -51,7 +51,7 @@
     </view>
 
   <view class="btn-area">
-      <button form-type="submit" class = "submit">Submit</button>
+      <button form-type="submit" class = "submit" bindtap="submitEvent">Submit</button>
     </view>
     
   </form>
