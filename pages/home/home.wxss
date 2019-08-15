@@ -7,7 +7,7 @@
 
 .back  {
   /* color:white; */
-  font-size:40rpx;
+  font-size:32rpx;
 }
 
 .nav {
