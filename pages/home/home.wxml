@@ -19,7 +19,21 @@
       wx:key="index"
       wx:for-item="myEvent"
       >
-       <button class="date-box">{{myEvent.event}}</button>
+        <view class="card-category">
+         <view class = "event" >
+           <view id = "owner">
+            <text class="people">Creator</text>
+           </view>
+           <view class = "name">
+            <text class ="one" >{{myEvent.event}}</text>
+           </view>
+          </view>
+
+          <view id = "calendar">
+            <text class="cuIcon-calendar" ></text>
+            <text>{{myEvent.date}}</text>
+          </view>
+        </view>
       </block>
     </view>
   </view>

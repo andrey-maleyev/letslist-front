@@ -23,25 +23,32 @@
 
 .create-event {
   height: 90rpx;
-  width: 80vw;
   color: #FFF; 
-  font-size: Regular 17pt;
-  background-color: #09bb07; 
+  font-size: 40rpx;
+  color:#1AAB8A;
+  border: 1px solid#1AAB8A ;
+  font-weight: bold;
+}
+.create-event:hover {
+  background-color:#1AAB8A;
+  color:white;
+
 }
 
 .upcoming {
-  font-size: 35rpx;
+  font-size: 40rpx;
   padding: 10rpx;
   margin: 5rpx;
 }
+  
 
-.date-box {
+/* .date-box {
   margin: 20rpx;
   padding: 10rpx;
   background-color: #576b95;
   color: #fff;
   width: 80vw;
-}
+} */
 
 button::after {
   border: none;
@@ -60,8 +67,78 @@ button::after {
 .container-upcoming {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: space-evenly;
   box-sizing: border-box;
   margin-top: 100rpx;
 } 
+
+
+.card-category {
+  background-size:cover;
+  background-color:white;
+  color:black;
+  background-repeat: no-repeat;
+  background-image:cover;
+  align-items:center;
+  justify-content:center;
+  height:200rpx;
+  width:700rpx;
+  font-size:50rpx;
+  border-radius:10rpx;
+  margin-bottom:30rpx;
+  margin-left:10rpx;
+  margin-right:10rpx;
+  box-shadow: 10rpx 10rpx 10rpx rgb(200,200,200);
+    }
+page {
+  background-color:rgb(245, 244, 244);
+    /* background-color:#f9f7f7; */
+
+}
+
+.event {
+  /* align-items:center;
+  justify-content:center; */
+
+}
+.one {
+  margin-top:60rpx;
+  font-family:sans-serif;
+  font-size:50rpx;
+  text-align:center;
+
+}
+#calendar {
+ /* display:block; */
+margin-left:10rpx;
+margin-top:30rpx;
+font-size:30rpx;
+color:rgba(128, 128, 128, 0.877);
+/* font-family:serif; */
+
+}
+.cuIcon-calendar{
+  margin:10rpx;
+}
+
+#owner {
+margin-left:10rpx;
+}
+
+/* .name {
+  display:flex;
+  justify-content: center;
+} */
+.name {
+  text-align:center;
+}
+.people {
+  font-size:30rpx;
+ color:#1AAB8A;
+  margin-left:10rpx;
+  border: 1px solid #1AAB8A;
+  border-radius:10rpx;
+  padding:8rpx;
+
+}
