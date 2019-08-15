@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -68,6 +68,13 @@
 					"id": -1,
 					"name": "pages/create/create",
 					"pathName": "pages/create/create",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/event/event",
+					"pathName": "pages/event/event",
 					"query": "",
 					"scene": null
 				},

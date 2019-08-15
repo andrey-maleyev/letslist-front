@@ -8,7 +8,7 @@
     <button class="btn-green" bindtap="goToHome">Start</button>
   </view>
 </view>
-
+  
 <!-- <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>

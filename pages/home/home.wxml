@@ -12,9 +12,29 @@
     <text class="upcoming">My upcoming events</text>
     <!-- <button class="dropdown-btn">view events</button> -->
     <view class="upcoming-content">
-      <button class="date-box">📅 Demo Day on Aug 24th</button>
-      <button class="date-box">📅 Wine Appreciation on Aug 31st</button>
-      <button class="date-box">📅 Car Exhibition on Sept 11</button>
+
+
+      <block
+      wx:for="{{myEvents}}"
+      wx:key="index"
+      wx:for-item="myEvent"
+      >
+        <view class="card-category">
+         <view class = "event" >
+           <view id = "owner">
+            <text class="people">Creator</text>
+           </view>
+           <view class = "name">
+            <text class ="one" >{{myEvent.event}}</text>
+           </view>
+          </view>
+
+          <view id = "calendar">
+            <text class="cuIcon-calendar" ></text>
+            <text>{{myEvent.date}}</text>
+          </view>
+        </view>
+      </block>
     </view>
   </view>
   

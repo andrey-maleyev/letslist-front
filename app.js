@@ -10,6 +10,22 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        const baseUrl = `http://letslist.wogengapp.cn/api/v1/`
+        // console.log("wx.login success: res")
+        // console.log(res)
+        wx.request({
+          url: baseUrl + 'login',
+          method: 'post',
+          data: {
+            code: res.code
+          },
+          success: (res) => {
+            // console.log("UserId:")
+            // console.log(res)
+            this.globalData.userId = res.data.userId
+          }
+        })
+
       }
     })
 
