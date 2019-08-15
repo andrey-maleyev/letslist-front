@@ -10,10 +10,10 @@
     <text wx:if="{{hasUserInfo}}">{{userInfo.nickName}}</text>
 
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" class="create-event" bindgetuserinfo="getUserInfo">
-    <view class= "modify">Login to create new Event</view>
+    <view class= "view-create-event">Login to create new Event</view>
     </button>
     <button wx:else class="create-event" bindtap="goToCreate">
-    <view class= "modify">Create new Event</view>
+    <view class= "view-create-event">Create new Event</view>
     </button>
   </view>
   
