@@ -1,18 +1,14 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        const baseUrl = `http://letslist.wogengapp.cn/api/v1/`
-        // console.log("wx.login success: res")
-        // console.log(res)
+        const baseUrl = `https://letslist.wogengapp.cn/api/v1/`
         wx.request({
           url: baseUrl + 'login',
           method: 'post',
@@ -20,9 +16,9 @@ App({
             code: res.code
           },
           success: (res) => {
-            // console.log("UserId:")
-            // console.log(res)
-            this.globalData.userId = res.data.userId
+            this.globalData.user = res.data.user
+            console.log("home.js User in DB:")
+            console.log(this.globalData.user)
           }
         })
 
@@ -64,4 +60,3 @@ App({
     userInfo: null
   }
 })
-

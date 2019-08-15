@@ -1,4 +1,5 @@
 import apiClient from "../../utils/apiClient.js"
+const app = getApp()
 
 Page({
 
@@ -6,7 +7,9 @@ Page({
    * Page initial data
    */
   data: {
-
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
   goToCreate: function () {
@@ -16,10 +19,44 @@ Page({
       })
     }, 700);
   },
+
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function () {
+
+
+    if (app.globalData.userInfo) {
+      console.log("home.js onLoad #1")
+      console.log(app.globalData.userInfo)
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true
+      })
+    } else if (this.data.canIUse) {
+      app.userInfoReadyCallback = res => {
+        console.log("home.js onLoad #2")
+        console.log(res.userInfo)
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      }
+    } else {
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          console.log("home.js onLoad #3")
+          console.log(res.userInfo)
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+        }
+      })
+    }
+
+
     const page = this
 
     const options = {
@@ -84,5 +121,36 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  getUserInfo: function (e) {
+    app.globalData.userInfo = e.detail.userInfo
+
+    // update user nickname in db
+    const nickName = app.globalData.userInfo.nickName
+    const id = app.globalData.user.id
+    console.log("nickname: " + nickName)
+    console.log("user.id: " + id)
+
+    const options = {
+      id,
+      data: {
+        "user": { "nickname": nickName }
+      },
+      success: function (res) {
+        console.log(res)
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    }
+
+    apiClient.updateUser(options)
+    // END
+
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
   }
 })

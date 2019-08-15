@@ -3,7 +3,8 @@
     <text id="letslist">Letslist</text>
   </view>
 
-    <!-- <image style="width: 300rpx; height: 300rpx"  src="/images/letslist.png"></image> -->
+  <!-- <image style="width: 300rpx; height: 300rpx"  src="/images/letslist.png"></image> -->
+
   <view>
     <button class="btn-green" bindtap="goToHome">Start</button>
   </view>
