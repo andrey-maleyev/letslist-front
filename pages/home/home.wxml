@@ -3,9 +3,9 @@
 
   <view class="container-create">
     <image src="/images/avatar6.png" alt="avatar"class="avatar"/>
-
-    <button class="create-event" bindtap="goToCreate">Create new Event
-    </button>
+      <view>
+       <text class="create-event" bindtap="goToCreate">Create new Event</text>
+      </view>
   </view>
 
   <view class="container-upcoming">
@@ -22,7 +22,7 @@
         <view class="card-category">
          <view class = "event" >
            <view id = "owner">
-            <text class="people">Creator</text>
+            <text wx:if="{{myEvent.is_creator == true}}" class="people">Creator</text>
            </view>
            <view class = "name">
             <text class ="one" >{{myEvent.event}}</text>
