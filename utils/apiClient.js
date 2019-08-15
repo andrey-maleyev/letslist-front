@@ -4,7 +4,7 @@ const getMyEvents = options => {
   const { success, fail } = options
 
   return wx.request({
-    url: baseUrl + "users/1/participants",
+    url: baseUrl + "users/6/participants",
     method: "get",
     success,
     fail

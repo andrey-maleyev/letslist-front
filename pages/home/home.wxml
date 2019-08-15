@@ -21,12 +21,17 @@
       >
         <view class="card-category">
          <view class = "event" >
-           <text class ="one" >{{myEvent.event}}</text>
+           <view id = "owner">
+            <text class="people">Creator</text>
+           </view>
+           <view class = "name">
+            <text class ="one" >{{myEvent.event}}</text>
+           </view>
           </view>
 
           <view id = "calendar">
             <text class="cuIcon-calendar" ></text>
-            <text>August 24th 2019</text>
+            <text>{{myEvent.date}}</text>
           </view>
         </view>
       </block>
