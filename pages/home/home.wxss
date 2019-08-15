@@ -1,4 +1,5 @@
 /* pages/home/home.wxss */
+
 .cu-custom {
   background-color:#1AAB8A;
   color:white;
@@ -8,11 +9,13 @@
   /* color:white; */
   font-size:40rpx;
 }
+
 .nav {
   /* color:white; */
   font-size:40rpx;
 
 }
+
 .avatar {
   border-radius: 50%;
   height: 200rpx;
@@ -21,26 +24,34 @@
   display: block;
   align-items: center;
   margin-bottom: 40rpx;
-  
 } 
 
+/* .create-event {
+  /* display: flex;
+  width: 100%;
+  border: none;
+  background-color: #4CAF50;
+  color: #09BB07 rgb(9,187,7);
+  padding: 60px 100px;
+  font-size: 16px;
+  cursor: pointer;
+  justify-content: flex-start;
+  flex-direction: column; */
 
 .create-event {
   height: 90rpx;
-  color: #FFF; 
+  margin-top: 40rpx;
   font-size: 40rpx;
-  color:#1AAB8A;
-  border: 1px solid#1AAB8A ;
   font-weight: bold;
-  padding:20rpx;
-  border-radius:10rpx;
-
-  
+  color: #1AAB8A;
+  border: 1px solid #1AAB8A;
+  padding: 20rpx;
+  border-radius: 10rpx;
 }
+
 .create-event:hover {
   background-color:#1AAB8A;
   color:white;
-
 }
 
 .upcoming {
@@ -49,7 +60,13 @@
   margin: 5rpx;
 }
   
-
+/* .date-box {
+  margin: 20rpx;
+  padding: 10rpx;
+  background-color: #576b95;
+  color: #fff;
+  width: 80vw;
+} */
 
 button::after {
   border: none;
@@ -72,8 +89,7 @@ button::after {
   justify-content: space-evenly;
   box-sizing: border-box;
   margin-top: 100rpx;
-} 
-
+}
 
 .card-category {
   background-size:cover;
@@ -94,8 +110,14 @@ button::after {
     }
 page {
   background-color:rgb(245, 244, 244);
+    /* background-color:#f9f7f7; */
 
 }
+
+/* .event {
+  align-items:center;
+  justify-content:center;
+} */
 
 .one {
   margin-top:60rpx;
@@ -104,6 +126,7 @@ page {
   text-align:center;
 
 }
+
 #calendar {
  /* display:block; */
 margin-left:10rpx;
@@ -111,20 +134,25 @@ margin-top:30rpx;
 font-size:30rpx;
 color:rgba(128, 128, 128, 0.877);
 /* font-family:serif; */
-
 }
+
 .cuIcon-calendar{
   margin:10rpx;
 }
 
 #owner {
-margin-left:10rpx;
+  margin-left:10rpx;
 }
 
+/* .name {
+  display:flex;
+  justify-content: center;
+} */
 
 .name {
   text-align:center;
 }
+
 .people {
   font-size:30rpx;
  color:#1AAB8A;
@@ -132,5 +160,4 @@ margin-left:10rpx;
   border: 1px solid #1AAB8A;
   border-radius:10rpx;
   padding:8rpx;
-
 }
