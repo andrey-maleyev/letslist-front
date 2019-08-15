@@ -25,8 +25,6 @@ Page({
     const options = {
       success: function (res) {
         const myEvents = res.data.participants
-        console.log(myEvents[0].is_creator)
-        console.log(myEvents)
         page.setData({
           myEvents
         })
