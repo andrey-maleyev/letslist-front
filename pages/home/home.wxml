@@ -22,7 +22,7 @@
         <view class="card-category">
          <view class = "event" >
            <view id = "owner">
-            <text class="people">Creator</text>
+            <text wx:if="{{myEvent.is_creator == true}}" class="people">Creator</text>
            </view>
            <view class = "name">
             <text class ="one" >{{myEvent.event}}</text>
@@ -38,5 +38,5 @@
 
     </view>
   </view>
-  
+
 </view>
