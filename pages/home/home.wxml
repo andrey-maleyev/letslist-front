@@ -1,27 +1,51 @@
 <!--pages/home/home.wxml-->
+<cu-custom isBack="{{true}}">
+    <view slot="backText" class = "back">back</view>
+    <view slot="content" class = "nav">Letslist</view>
+</cu-custom>
 <view class="container">
 
   <view class="container-create">
-    <image src="/images/avatar6.png" alt="avatar"class="avatar"/>
+    <image wx:if="{{hasUserInfo}}" class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <text wx:if="{{hasUserInfo}}">{{userInfo.nickName}}</text>
 
-    <button class="create-event" bindtap="goToCreate">Create new Event
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" class="create-event" bindgetuserinfo="getUserInfo">
+    <view class= "view-create-event">Login to create new Event</view>
+    </button>
+    <button wx:else class="create-event" bindtap="goToCreate">
+    <view class= "view-create-event">Create new Event</view>
     </button>
   </view>
-
+  
   <view class="container-upcoming">
     <text class="upcoming">My upcoming events</text>
     <!-- <button class="dropdown-btn">view events</button> -->
     <view class="upcoming-content">
-
 
       <block
       wx:for="{{myEvents}}"
       wx:key="index"
       wx:for-item="myEvent"
       >
-       <button class="date-box">{{myEvent.event}}</button>
+        <view class="card-category">
+         <view class = "event" >
+           <view id = "owner">
+            <text wx:if="{{myEvent.is_creator == true}}" class="people">Creator</text>
+           <text wx:if="{{!myEvent.is_creator == true}}" class="none"></text>
+           </view>
+           <view class = "name">
+            <text class ="one" >{{myEvent.event}}</text>
+           </view>
+          </view>
+
+          <view id = "calendar">
+            <text class="cuIcon-calendar" ></text>
+            <text>{{myEvent.date}}</text>
+          </view>
+        </view>
       </block>
+
     </view>
   </view>
-  
+
 </view>

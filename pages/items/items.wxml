@@ -1,0 +1,46 @@
+<!--pages/items/items.wxml-->
+<cu-custom isBack="{{true}}">
+    <view slot="backText" class = "back">back</view>
+    <view slot="content" class = "nav">Letslist</view>
+</cu-custom>
+<view class = "main">
+  <view  class = "h2">
+   <text>Add customized items</text>
+  </view>
+ 
+  <form >
+   <view class = "form">
+    <view class="cu-form-group">
+      <input class = "type" placeholder="Type item name here"></input>
+    </view> 
+
+    <view class="btn-area">
+      <button form-type="submit" class = "add">Add</button>
+    </view> 
+   </view>    
+  </form>
+
+  <view class = "h2">
+    <text >Suggestions</text>
+  </view>
+
+  
+  <view class = "suggestions">
+    <block
+        wx:for="{{enriched_items}}"
+        wx:key="index"
+        wx:for-item="myItem">
+    <!-- <text>{{myItem.name}}</text> -->
+      
+      <text wx:if="{{myItem.clicked}}" data-index="{{index}}" 
+      bindtap="clickItem" 
+      class="select">{{myItem.name}}</text>
+      <text wx:if="{{!myItem.clicked}}" data-index="{{index}}" 
+      bindtap="clickItem" 
+      class="unselect">{{myItem.name}}</text>
+      
+    </block>  
+
+
+  </view>
+</view>

@@ -1,3 +1,5 @@
+import apiClient from "../../utils/apiClient.js"
+
 // pages/create/create.js
 Page({
 
@@ -32,10 +34,18 @@ Page({
       index: e.detail.value
     })
   },
+
   bindDateChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    // console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       date: e.detail.value
+    })
+  },
+
+  bindTimeChange: function (e) {
+    // console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      time: e.detail.value
     })
   },
 
@@ -93,5 +103,47 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  handleEventNameInput: function (e) {
+    const newEvent = this.data.newEvent || {}
+    newEvent.name = e.detail.value;
+
+    this.setData({
+      newEvent
+    })
+  },
+
+  // handleEventDescriptionInput: function (e) {
+  //   const value = e.detail.value;
+  //   const newEvent = this.data.newEvent || {}
+  //   newEvent.description = value
+
+  //   this.setData({
+  //     newEvent
+  //   })
+  // },
+
+  submitEvent: function () {
+
+    const newEvent = this.data.newEvent
+    // console.log('this.data.date', this.data.date)
+    newEvent.date = this.data.date + ' ' + this.data.time
+
+    console.log(newEvent)
+
+    const options = {
+      data: {
+        event: newEvent
+      },
+      success: function (res) {
+        console.log(res)
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    }
+
+    apiClient.createEvent(options)
   }
 })

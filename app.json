@@ -2,14 +2,15 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/create/create",
-    "pages/home/home",
     "pages/temp/temp",
-    "pages/event/event"
+    "pages/home/home",
+    "pages/create/create",
+    "pages/event/event",
+    "pages/items/items"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#000000",
+    "navigationBarBackgroundColor": "#1AAB8A",
     "navigationBarTitleText": "Letslist",
     "navigationBarTextStyle": "white",
     "navigationStyle": "custom"
