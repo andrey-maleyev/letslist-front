@@ -9,6 +9,7 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         const baseUrl = `https://letslist.wogengapp.cn/api/v1/`
+        // const baseUrl = "http://localhost:3000/api/v1/"
         wx.request({
           url: baseUrl + 'login',
           method: 'post',
@@ -17,8 +18,8 @@ App({
           },
           success: (res) => {
             this.globalData.user = res.data.user
-            // console.log("app.js User in DB:")
-            // console.log(this.globalData.user)
+            console.log("app.js User in DB:")
+            console.log(this.globalData.user)
           }
         })
 
