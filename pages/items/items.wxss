@@ -2,20 +2,28 @@
 .cu-custom {
   background-color:#1AAB8A;
   color:white;
+  position:sticky;
+  top: 0;
 }
 
 .back  {
   /* color:white; */
   font-size:40rpx;
+  position:sticky;
+
 }
+
 .nav {
   /* color:white; */
   font-size:40rpx;
+  position:sticky;
+
 
 }
 
 .main {
   margin-top:50rpx;
+  /* height:100vh; */
 }
 
 .h2 {
@@ -72,6 +80,7 @@
   display:flex;
  flex-wrap: wrap;
  margin:0 30rpx;
+ /* margin-bottom:30rpx; */
  padding:50rpx;
 
 }
@@ -87,12 +96,14 @@
 
 }
 .save_button {
+  margin-top:30rpx;
   width:30%;
   border-radius:10rpx;
   color:white;
   background-color:#1AAB8A;
   border:1px solid #1AAB8A;
-  position:fixed;
+  /* position:fixed;
+  bottom:0; */
 
 }
 /* .save_button:hover {
@@ -105,4 +116,3 @@
 
 
 } */
-
