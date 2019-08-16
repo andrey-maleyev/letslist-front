@@ -3,21 +3,70 @@
   <view class="banner">Zoe's Birthday</view>
 
   <view class="invite">
-    <button class="add-invite">+</button> 
+    <text class="cuIcon-friendadd"></text> 
     <view class="invite-txt">Invite friends</view>
   </view>
   
-  <view class="column1">
+  <view class="column2">
 
     <view class="profile-box">
       <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
-      <view class="friend-name">Maggie brings </view>
+
+      <view class="friend-name"> Maggie brings</view>
+
+      <!-- <view>
+        <form >
+          <view class = "form">
+            <view class="cu-form-group">
+              <input class = "type" placeholder="input price"></input>
+            </view> 
+            <view>
+             <button form-type="submit" class = "add">Add</button>
+            </view>
+          </view>    
+        </form>
+      </view> -->
+
+
+
+
+
+<!-- 
+          <view class = "price">
+            <view class="friend-name"> Maggie brings</view>
+            <view>
+              <form >
+                <view class = "form">
+                  <view class="cu-form-group">
+                    <input class = "type" placeholder="Type total price here"></input>
+                  </view> 
+                  <button form-type="submit" class = "add">Add</button>
+                </view>    
+              </form>
+            </view>
+          <view>
+
+        </view>
+       </view> --> 
+       
     </view>
         
       <view class="view-btn">
-        <button class="item">item</button>
-        <button class="item">item</button>
-        <button class="item">item</button>
+        <text class="buy">bread</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        
+
       </view>
   </view>
   
@@ -26,38 +75,57 @@
       <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
       <view class="friend-name">Andrey brings</view>
     </view>
-    <view>
+
+    <view class = "two">
       <view class="view-btn">
-        <button class="item">item</button>
-        <button class="item">item</button>
-        <button class="item">item</button>
-        <button class="item">item</button>
-        <button class="item">item</button>
-        <button class="item">item</button>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+
+        
       </view>
     </view>
   </view>
 
-  <view class="line">
-    <text>----------------------------------------------------------</text>
-    <button class="add-items">+</button>
-    <view class="items-to-bring">Items to bring </view>
+  <view class = "bring">
+    <view class="add">
+      <view>Items to bring</view>
+      <view><text class="cuIcon-roundadd"></text></view>
+    </view>
+
+    <view class="profile-box">
+        <view class="view-btn">
+          <text class="item">item</text> 
+          <text class="item">item</text>
+          <text class="item">item</text> 
+          <text class="item">item</text>
+          <text class="item">item</text> 
+          <text class="item">item</text>
+          <text class="item">item</text> 
+          <text class="item">item</text>
+          <text class="item">item</text>
+          <text class="item">item</text> 
+          <text class="item">item</text>
+          <text class="item">item</text>
+          <text class="item">item</text> 
+          <text class="item">item</text>
+          <text class="item">item</text> 
+          <text class="item">item</text>
+          <text class="item">item</text> 
+          <text class="item">item</text>
+          <text class="item">item</text> 
+          <text class="item">item</text>
+          <text class="item">item</text>
+          <text class="item">item</text> 
+          <text class="item">item</text>
+          <text class="item">item</text>
+        </view>
+    </view>
   </view>
 
-  <view class="profile-box">
-      <view class="view-btn">
-        <button class="item">item</button> 
-        <button class="item">item</button>
-        <button class="item">item</button> 
-        <button class="item">item</button>
-        <button class="item">item</button> 
-        <button class="item">item</button>
-        <button class="item">item</button> 
-        <button class="item">item</button>
-        <button class="item">item</button>
-        <button class="item">item</button> 
-        <button class="item">item</button>
-        <button class="item">item</button>
-      </view>
-  </view>
 </view>
