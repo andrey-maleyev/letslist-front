@@ -33,6 +33,7 @@ Page({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
+      this.showMyEvents()
     } else if (this.data.canIUse) {
       app.userInfoReadyCallback = res => {
         console.log("home.js onLoad #2")
@@ -41,6 +42,7 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+        this.showMyEvents()
       }
     } else {
       wx.getUserInfo({
@@ -52,26 +54,30 @@ Page({
             userInfo: res.userInfo,
             hasUserInfo: true
           })
+          this.showMyEvents()
         }
       })
     }
 
+    // // SHOW MY EVENTS
+    // const page = this
+    // const userId = app.globalData.user.id
+    // console.log(userId)
+    // const myEventOptions = {
+    //   userId,
+    //   success: function (res) {
+    //     const myEvents = res.data.participants
+    //     page.setData({
+    //       myEvents
+    //     })
+    //   },
+    //   fail: function (err) {
+    //     console.log(err)
+    //   }
+    // }
 
-    const page = this
-
-    const options = {
-      success: function (res) {
-        const myEvents = res.data.participants
-        page.setData({
-          myEvents
-        })
-      },
-      fail: function (err) {
-        console.log(err)
-      }
-    }
-
-    apiClient.getMyEvents(options)
+    // apiClient.getMyEvents(myEventOptions)
+    // // END
   },
 
   /**
@@ -152,5 +158,25 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  showMyEvents: function () {
+    const page = this
+    const userId = app.globalData.user.id
+    console.log(userId)
+    const myEventOptions = {
+      userId,
+      success: function (res) {
+        const myEvents = res.data.participants
+        page.setData({
+          myEvents
+        })
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    }
+
+    apiClient.getMyEvents(myEventOptions)
   }
 })
