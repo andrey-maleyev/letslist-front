@@ -43,4 +43,11 @@
 
 
   </view>
+
+  <view class = "save">
+   <button  bindtap = "submitItems" class = "save_button">submit</button>
+  </view>
+
+
+
 </view>

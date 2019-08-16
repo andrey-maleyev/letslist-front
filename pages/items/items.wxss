@@ -39,11 +39,10 @@
 
 }
 
-.add:hover {
+/* .add:hover {
   background-color:#1AAB8A;
-  color:white;
+  color:white; */
 
-}
 
 .cu-form-group {
   border-radius:10rpx;
@@ -73,8 +72,37 @@
   display:flex;
  flex-wrap: wrap;
  margin:0 30rpx;
+ padding:50rpx;
+
 }
 .chosen {
   background-color:#1AAB8A;
 }
+
+.save {
+  margin:30rpx;
+  display:flex;
+  justify-content: center;
+  
+
+}
+.save_button {
+  width:30%;
+  border-radius:10rpx;
+  color:white;
+  background-color:#1AAB8A;
+  border:1px solid #1AAB8A;
+  position:fixed;
+
+}
+/* .save_button:hover {
+  width:30%;
+  border-radius:10rpx;
+  background-color: transparent;
+  color:#1AAB8A;
+  border:1px solid #1AAB8A;
+  position:fixed;
+
+
+} */
 
