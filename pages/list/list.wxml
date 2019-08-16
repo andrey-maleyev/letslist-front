@@ -1,0 +1,23 @@
+
+<view class="container"> 
+  <view class="header">Expense list</view>
+
+  <view class="box">
+    <view class="expense">Total expense: $200</view>
+    <view class="expense">Average expense: $50</view>
+  </view>
+
+  <text>__________________________________________________</text>
+
+<view class="name">
+  <text class="name">Maggie gets $5</text>
+  <text class="name">Zoe gets $10</text>
+  <text class="name">Gugu gets $15</text>
+  <text class="name">Alan owns $10</text>
+</view>
+
+  <button class="home-btn" bindtap="goToHome"> home </button>
+
+</view>
+
+
