@@ -54,7 +54,7 @@ Page({
       wx.navigateTo({
         url: '/pages/home/home',
       })
-    }, 700);
+    }, 1000);
   },
   getUserInfo: function(e) {
     console.log("getUserInfo function(e), line 60")

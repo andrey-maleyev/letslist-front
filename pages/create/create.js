@@ -138,7 +138,13 @@ Page({
         event: newEvent
       },
       success: function (res) {
-        console.log(res)
+        // Saving event ID
+        app.globalData.eventId = res.data.event.id
+        app.globalData.eventName = res.data.event.name
+        
+        wx.navigateTo({
+          url: '/pages/event/event',
+        })
       },
       fail: function (err) {
         console.log(err)
