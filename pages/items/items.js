@@ -104,11 +104,42 @@ Page({
      enriched_items.forEach(function (x) {
       let chosen_items = page.data.chosen_items
       if (x.clicked === true) {
-      chosen_items.push(x.name);
+      chosen_items.push(x);
       }
    })
+   
    console.log(chosen_items)
   }
+
+  // submitEventItems: function () {
+
+  //   const chosen_items = this.data.chosen_items
+  //   chosen_items.forEach(function (x) {
+      
+  //   })
+
+  //   const options = {
+  //     data: {
+  //       event: newEvent
+  //     },
+  //     success: function (res) {
+  //       // Saving event id/ item id
+  //       app.globalData.eventId = res.data.event.id
+  //       app.globalData.eventName = res.data.event.name
+
+  //       wx.navigateTo({
+  //         url: '/pages/event/event',
+  //       })
+  //     },
+  //     fail: function (err) {
+  //       console.log(err)
+  //     }
+  //   }
+
+  //   apiClient.addEventItems(options)
+  // }
+
+
     // chosen_items.push(chosen_item)
 
 

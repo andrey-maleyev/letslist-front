@@ -1,8 +1,9 @@
 <!--pages/items/items.wxml-->
-<cu-custom isBack="{{true}}">
+<cu-custom isBack="{{true}}" class = "cu-custom">
     <view slot="backText" class = "back">back</view>
     <view slot="content" class = "nav">Letslist</view>
 </cu-custom>
+
 <view class = "main">
   <view  class = "h2">
    <text>Add customized items</text>

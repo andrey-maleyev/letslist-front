@@ -1,5 +1,5 @@
-const baseUrl = "https://letslist.wogengapp.cn/api/v1/"
-// const baseUrl = "http://localhost:3000/api/v1/"
+// const baseUrl = "https://letslist.wogengapp.cn/api/v1/"
+const baseUrl = "http://localhost:3000/api/v1/"
 
 const getMyEvents = options => {
   const { userId, success, fail } = options
@@ -30,6 +30,17 @@ const getItems = options => {
   return wx.request({
     url: baseUrl + "items",
     method: "get",
+    success,
+    fail
+  })
+}
+
+const createEventItems = options => {
+  const { success, fail } = options
+
+  return wx.request({
+    url: baseUrl + "events/${eventId}/items",
+    method: "post",
     success,
     fail
   })
