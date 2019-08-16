@@ -1,147 +1,63 @@
-<!--pages/event/event.wxml-->
-<view class = "title">
-  <text >Birthday planner</text>
-</view>
+<view class="container">
 
-<view class = "one">
-  <view class = "big">
-    <text>Food</text>
+  <view class="banner">Zoe's Birthday</view>
+
+  <view class="invite">
+    <button class="add-invite">+</button> 
+    <view class="invite-txt">Invite friends</view>
   </view>
-    <view class = "words">
-      <view class = "two btn-gradient.red ">
-          <text class="word" >{{items[0].name}}</text><checkbox bindchange="checkboxChange" checked="{{items[0].checked}}"/>
-        </view>
-      <view class = "two btn-gradient.purple">
-        <text class="word">{{items[1].name}}</text><checkbox bindchange="checkboxChange" checked="{{items[1].checked}}"/>
-      </view>
+  
+  <view class="column1">
 
-      <view class = "two btn-gradient.orange">
-        <text class="word" >{{items[2].name}}</text><checkbox bindchange="checkboxChange" checked="{{items[2].checked}}"/>
-      </view>
-
-      <view class = "two btn-gradient.blue">
-        <text class="word">{{items[3].name}}</text><checkbox bindchange="checkboxChange" checked="{{items[3].checked}}"/>
-      </view>
-
-      <view class = "two btn-gradient.cyan">
-        <text class="word">{{items[4].name}}</text><checkbox bindchange="checkboxChange" checked="{{items[4].checked}}"/>
-      </view>
-      
-      <view class = "two btn-gradient.cyan">
-        <text class="word">{{items[5].name}}</text><checkbox bindchange="checkboxChange" checked="{{items[4].checked}}"/>
-      </view>
-
-      <view class = "two btn-gradient.red ">
-          <text class="word" >{{items[6].name}}</text><checkbox bindchange="checkboxChange" checked="{{items[0].checked}}"/>
-        </view>
-
-      <view class = "two btn-gradient.purple">
-        <text class="word">{{items[7].name}}</text><checkbox bindchange="checkboxChange" checked="{{items[1].checked}}"/>
-      </view>
-
-       <view class = "two btn-gradient.orange">
-        <text class="word" >{{items[8].name}}</text><checkbox bindchange="checkboxChange" checked="{{items[2].checked}}"/>
-      </view>
-
-       <view class = "two btn-gradient.blue">
-        <text class="word">{{items[9].name}}</text><checkbox bindchange="checkboxChange" checked="{{items[3].checked}}"/>
-      </view>
-
+    <view class="profile-box">
+      <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
+      <view class="friend-name">Maggie brings </view>
     </view>
-</view>
-
-<view class = "one">
-  <view class = "big">
-    <text>Tools</text>
+        
+      <view class="view-btn">
+        <button class="item">item</button>
+        <button class="item">item</button>
+        <button class="item">item</button>
+      </view>
   </view>
-
-    <view class = "words">
-      <view class = "two btn-gradient.yellow">
-        <text class="word" >{{tools[0].name}}</text><checkbox bindchange="checkboxChange" checked="{{tools[0].checked}}"/>
-      </view>
-
-      <view  class = "two btn-gradient.red">      
-       <text class="word">{{tools[1].name}}</text><checkbox bindchange="checkboxChange" checked="{{tools[1].checked}}"/>
-      </view>
-
-      <view class = "two btn-gradient.purple">
-      <text class="word">{{tools[2].name}}</text><checkbox bindchange="checkboxChange" checked="{{tools[2].checked}}"/>
-      </view>
-      
-      <view class = "two btn-gradient.orange">
-       <text class="word" >{{tools[3].name}}</text><checkbox bindchange="checkboxChange" checked="{{tools[3].checked}}"/>
-      </view>
-
-      <view class = "two btn-gradient.green">
-      <text class="word">{{tools[4].name}}</text><checkbox bindchange="checkboxChange" checked="{{tools[4].checked}}"/>   
-      </view>
-
-      <view class = "two btn-gradient.blue">
-      <text class="word">{{tools[5].name}}</text><checkbox bindchange="checkboxChange" checked="{{tools[5].checked}}"/>   
-      </view>
-
-      <view class = "two btn-gradient.yellow">
-      <text class="word">{{tools[6].name}}</text><checkbox bindchange="checkboxChange" checked="{{tools[6].checked}}"/> 
-      </view>  
-
-      <view class = "two btn-gradient.orange">
-      <text class="word">{{tools[7].name}}</text><checkbox bindchange="checkboxChange" checked="{{tools[7].checked}}"/>   
-      </view>
-
-
-      <view class = "two btn-gradient.cyan">
-      <text class="word">{{tools[8].name}}</text><checkbox bindchange="checkboxChange" checked="{{tools[8].checked}}"/>   
-      </view>
-      
-      <view class = "two btn-gradient.green">
-      <text class="word">{{tools[9].name}}</text><checkbox bindchange="checkboxChange" checked="{{tools[9].checked}}"/>   
-      </view>
-
-      
-
+  
+  <view class="column2">
+    <view class="profile-box">
+      <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
+      <view class="friend-name">Andrey brings</view>
     </view>
-</view>
-
-<view class = "one">
-  <view class = "big">
-    <text>Beverages</text>
-  </view>
-    <view class = "words">
-      <view class = "two btn-gradient.blue">
-        <text class="word" >{{beverage[0].name}}</text><checkbox bindchange="checkboxChange" checked="{{beverage[0].checked}}"/>
-      </view>
-
-      <view class = "two btn-gradient.cyan">
-        <text  class="word">{{beverage[1].name}}</text><checkbox bindchange="checkboxChange" checked="{{beverage[1].checked}}"/>
-      </view>
-
-      <view class = "two btn-gradient.yellow"> 
-        <text class="word" >{{beverage[2].name}}</text><checkbox bindchange="checkboxChange" checked="{{beverage[2].checked}}"/>
-      </view>
-
-      <view class = "two btn-gradient.green">
-        <text class="word">{{beverage[3].name}}</text><checkbox bindchange="checkboxChange" checked="{{beverage[3].checked}}"/>
-      </view>
-    
-      <view class = "two btn-gradient.orange">
-        <text class="word">{{beverage[4].name}}</text><checkbox bindchange="checkboxChange" checked="{{beverage[4].checked}}"/>
-      </view>
-
-      <view class = "two btn-gradient.purple">
-        <text class="word">{{beverage[5].name}}</text><checkbox bindchange="checkboxChange" checked="{{beverage[5].checked}}"/>
-      </view>
-
-      <view class = "two btn-gradient.red">
-        <text class="word">{{beverage[6].name}}</text><checkbox bindchange="checkboxChange" checked="{{beverage[6].checked}}"/>
-      </view>
-
-      <view class = "two btn-gradient.cyan">
-        <text class="word">{{beverage[7].name}}</text><checkbox bindchange="checkboxChange" checked="{{beverage[7].checked}}"/>
-      </view>
-
-      <view class = "two btn-gradient.blue">
-        <text class="word">{{beverage[8].name}}</text><checkbox bindchange="checkboxChange" checked="{{beverage[8].checked}}"/>
+    <view>
+      <view class="view-btn">
+        <button class="item">item</button>
+        <button class="item">item</button>
+        <button class="item">item</button>
+        <button class="item">item</button>
+        <button class="item">item</button>
+        <button class="item">item</button>
       </view>
     </view>
-</view>
+  </view>
 
+  <view class="line">
+    <text>----------------------------------------------------------</text>
+    <button class="add-items">+</button>
+    <view class="items-to-bring">Items to bring </view>
+  </view>
+
+  <view class="profile-box">
+      <view class="view-btn">
+        <button class="item">item</button> 
+        <button class="item">item</button>
+        <button class="item">item</button> 
+        <button class="item">item</button>
+        <button class="item">item</button> 
+        <button class="item">item</button>
+        <button class="item">item</button> 
+        <button class="item">item</button>
+        <button class="item">item</button>
+        <button class="item">item</button> 
+        <button class="item">item</button>
+        <button class="item">item</button>
+      </view>
+  </view>
+</view>

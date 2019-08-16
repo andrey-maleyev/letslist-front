@@ -2,9 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
+    "pages/temp/temp",
+    "pages/home/home",
     "pages/create/create",
     "pages/event/event",
-    "pages/home/home",
     "pages/items/items"
   ],
   "window": {
