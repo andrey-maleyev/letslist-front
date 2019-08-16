@@ -1,6 +1,6 @@
 <view class="container">
 
-  <view class="banner">Zoe's Birthday</view>
+  <view class="banner">{{eventName}}</view>
 
   <view class="invite">
     <button class="add-invite">+</button> 

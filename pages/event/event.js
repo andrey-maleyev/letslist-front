@@ -1,3 +1,5 @@
+const app = getApp()
+
 Page({
 
   data: {
@@ -5,6 +7,9 @@ Page({
 
   // Lifecycle function--Called when page load
   onLoad: function (options) {
+    this.setData({
+      eventName: app.globalData.eventName
+    })
   },
 
   //Lifecycle function--Called when page is initially rendered
