@@ -156,3 +156,12 @@ border-radius:15rpx;
 width:100rpx;
 font-size:30rpx;
 }
+
+.price {
+  border: 1px solid grey;
+  border-radius:15rpx;
+  padding:10rpx;
+}
+.friend-name {
+  margin-bottom:10rpx;
+}

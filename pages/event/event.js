@@ -12,6 +12,13 @@ Page({
     })
   },
 
+  addItems: function () {
+      wx.navigateTo({
+        url: '/pages/items/items',
+      })
+
+  },
+
   //Lifecycle function--Called when page is initially rendered
 
   onReady: function () {

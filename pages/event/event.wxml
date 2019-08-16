@@ -11,44 +11,12 @@
 
     <view class="profile-box">
       <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
-
-      <view class="friend-name"> Maggie brings</view>
-
-      <!-- <view>
-        <form >
-          <view class = "form">
-            <view class="cu-form-group">
-              <input class = "type" placeholder="input price"></input>
-            </view> 
-            <view>
-             <button form-type="submit" class = "add">Add</button>
-            </view>
-          </view>    
-        </form>
-      </view> -->
-
-
-
-
-
-<!-- 
-          <view class = "price">
-            <view class="friend-name"> Maggie brings</view>
-            <view>
-              <form >
-                <view class = "form">
-                  <view class="cu-form-group">
-                    <input class = "type" placeholder="Type total price here"></input>
-                  </view> 
-                  <button form-type="submit" class = "add">Add</button>
-                </view>    
-              </form>
-            </view>
-          <view>
-
-        </view>
-       </view> --> 
-       
+      <view>
+       <view class="friend-name"> Maggie brings</view>
+       <view class = "price">
+        <text>input price here</text>
+       </view>
+      </view>   
     </view>
         
       <view class="view-btn">
@@ -71,9 +39,14 @@
   </view>
   
   <view class="column2">
-    <view class="profile-box">
+     <view class="profile-box">
       <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
-      <view class="friend-name">Andrey brings</view>
+      <view>
+       <view class="friend-name"> Andrey brings</view>
+       <view class = "price">
+        <text>input price here</text>
+       </view>
+      </view>   
     </view>
 
     <view class = "two">
@@ -95,7 +68,7 @@
   <view class = "bring">
     <view class="add">
       <view>Items to bring</view>
-      <view><text class="cuIcon-roundadd"></text></view>
+      <view><text class="cuIcon-roundadd" bindtap="addItems"></text></view>
     </view>
 
     <view class="profile-box">
