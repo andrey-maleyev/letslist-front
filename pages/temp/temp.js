@@ -15,12 +15,12 @@ Page({
       { name: 'Pancakes', value: '英国' },
       { name: 'Sausage rolls', value: '英国' },
       { name: 'French toasts', value: '英国' },
-      { name: 'Crispy potato chips', value: '英国'},
+      { name: 'Crispy potato chips', value: '英国' },
       { name: 'Chicken', value: '英国' }
     ],
     tools: [
       { name: 'Projector', value: '美国' },
-      { name: 'Folders', value: '中国'},
+      { name: 'Folders', value: '中国' },
       { name: 'Chargers', value: '巴西' },
       { name: 'Candels', value: '日本' },
       { name: 'Gifts', value: '英国' },
@@ -47,7 +47,7 @@ Page({
 
   },
 
- checkboxChange: function (e) {
+  checkboxChange: function (e) {
     console.log('checkbox发生change事件，携带value值为：', e.detail.value)
   },
 
