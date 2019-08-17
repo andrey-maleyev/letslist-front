@@ -8,3 +8,7 @@
   padding: 100rpx 0;
   /* box-sizing: border-box; */
 }
+page {
+background-color:rgb(245, 245, 245);
+
+}
