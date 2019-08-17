@@ -77,11 +77,13 @@ Page({
   clickItem: function (event) {
     const page = this 
     const enriched_items = page.data.enriched_items
+    // console.log(enriched_items)
     const chosen_item = event.currentTarget.dataset.name
-    console.log(event)
+    // console.log(event)
     let index = event.currentTarget.dataset.index
     enriched_items[index].clicked = !enriched_items[index].clicked
     page.setData({enriched_items: enriched_items})
+    
     // chosen_items.push(chosen_item) 
     // console.log(chosen_items)
     // page.setData({
@@ -93,14 +95,71 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
 
-  },
+  submitItems: function () {
+    const page = this
+    let chosen_items = page.data.chosen_items
+    const enriched_items = page.data.enriched_items
+    console.log(enriched_items)
+     enriched_items.forEach(function (x) {
+      let chosen_items = page.data.chosen_items
+      if (x.clicked === true) {
+      chosen_items.push(x);
+      }
+   })
+   
+   console.log(chosen_items)
+  }
+
+  // submitEventItems: function () {
+
+  //   const chosen_items = this.data.chosen_items
+  //   chosen_items.forEach(function (x) {
+      
+  //   })
+
+  //   const options = {
+  //     data: {
+  //       event: newEvent
+  //     },
+  //     success: function (res) {
+  //       // Saving event id/ item id
+  //       app.globalData.eventId = res.data.event.id
+  //       app.globalData.eventName = res.data.event.name
+
+  //       wx.navigateTo({
+  //         url: '/pages/event/event',
+  //       })
+  //     },
+  //     fail: function (err) {
+  //       console.log(err)
+  //     }
+  //   }
+
+  //   apiClient.addEventItems(options)
+  // }
+
+
+    // chosen_items.push(chosen_item)
+
+
+  //   if (condition) {
+  //     //  block of code to be executed if the condition is true
+  //   } else {
+  //     //  block of code to be executed if the condition is false
+  //   }
+  //   console.log(chosen_item)
+
+  // },
+
+  // onReachBottom: function () {
+
+  // },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  // onShareAppMessage: function () {
 
-  }
+  // }
 })

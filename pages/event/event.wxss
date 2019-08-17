@@ -1,0 +1,167 @@
+page {
+  font-family: sans-serif;
+  background-color: rgb(245, 245, 245);
+  /* padding: 0 !important; */
+  height: 100vh;
+  width: 100vw;
+   margin-top:50rpx;
+}
+
+.container{
+  /* margin: 0 30rpx; */
+  padding:30rpx;
+}
+
+.banner {
+  background-position: center;
+  padding:40rpx;
+  height: 200rpx;
+  display: flex;
+  width: 100%;
+  font-size:50rpx;
+  justify-content: center;
+  align-items: center;
+  color: #1AAB8A;
+  font-weight: bold;
+  /* text-shadow: 1px 1px 3px rgba(0,0,0,0.2); */
+  box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
+  }
+
+.title{
+  margin-top:120rpx;
+  text-align:center;
+  font-size:40rpx;
+  font-weight:regular;
+  margin-bottom:100rpx;
+}
+
+#avatar {
+  border-radius: 50%;
+  height: 150rpx;
+  width: 150rpx;
+  border: 1px solid grey;
+  display: block;
+  margin-right: 30rpx;
+
+}
+
+.invite {
+  display: flex;
+  margin-right: 380rpx;
+  margin-top:40rpx;
+  margin-bottom:40rpx;
+  align-items:center;
+}
+
+.invite-txt {
+  margin-left:20rpx;
+  flex-direction: column;
+  justify-content: center; 
+  font-size:40rpx;
+}
+
+.centre-display{
+  display: flex;
+}
+
+.friend-name {
+   font-size: 35rpx;
+}
+ 
+.add-items {
+  margin-left: 600rpx;
+
+}
+
+.profile-box {
+  display: flex; 
+  /* justify-content: flex-start;  */
+  align-items: center;
+}
+
+
+
+.column2 {
+  /* margin-left:20rpx; */
+  display: flex;
+  flex-direction: column;
+  flex-shrink: none;
+  flex-grow:none;
+  margin-bottom:50rpx;
+  /* justify-content: flex-start; */
+  /* box-sizing: content-box; */
+}
+
+
+.view-btn {
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+}
+
+.cuIcon-friendadd{
+  font-size:50rpx;
+  border-radius:20rpx;
+  padding:0rpx 0rpx;
+}
+.item {
+  border: 1px solid #1AAB8A;
+  margin:10rpx;
+  padding:20rpx;
+  font-size:35rpx;
+  background-color:#1AAB8A;
+  color:white;
+  text-decoration: none;
+  border-radius:10rpx;
+}
+.buy {
+  border: 1px solid #1AAB8A;
+  margin:10rpx;
+  padding:20rpx;
+  font-size:35rpx;
+  color:#1AAB8A;
+  background-color:white;
+  text-decoration: none;
+  border-radius:10rpx;
+}
+
+.add {
+  display:flex;
+  /* padding:0 20rpx; */
+  align-items:center;
+  justify-content:space-between;
+  font-size:40rpx;
+  /* width:90%; */
+}
+
+.bring {
+  height: 30vh;
+  position: sticky;
+  bottom: 0;
+  background-color:rgb(245, 245, 245);
+
+
+
+}
+price {
+  display:flex;
+}
+
+.form {
+  display:flex;
+}
+
+.cu-form-group{
+border-radius:15rpx;
+width:100rpx;
+font-size:30rpx;
+}
+
+.price {
+  border: 1px solid grey;
+  border-radius:15rpx;
+  padding:10rpx;
+}
+.friend-name {
+  margin-bottom:10rpx;
+}

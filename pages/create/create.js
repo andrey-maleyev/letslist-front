@@ -1,4 +1,5 @@
 import apiClient from "../../utils/apiClient.js"
+const app = getApp()
 
 // pages/create/create.js
 Page({
@@ -127,8 +128,8 @@ Page({
   submitEvent: function () {
 
     const newEvent = this.data.newEvent
-    // console.log('this.data.date', this.data.date)
     newEvent.date = this.data.date + ' ' + this.data.time
+    newEvent.userId = app.globalData.user.id
 
     console.log(newEvent)
 
@@ -137,7 +138,13 @@ Page({
         event: newEvent
       },
       success: function (res) {
-        console.log(res)
+        // Saving event ID
+        app.globalData.eventId = res.data.event.id
+        app.globalData.eventName = res.data.event.name
+        
+        wx.navigateTo({
+          url: '/pages/event/event',
+        })
       },
       fail: function (err) {
         console.log(err)
