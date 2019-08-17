@@ -6,7 +6,8 @@
     "pages/home/home",
     "pages/create/create",
     "pages/event/event",
-    "pages/items/items"
+    "pages/items/items",
+    "pages/list/list"
   ],
   "window": {
     "backgroundTextStyle": "light",
