@@ -79,7 +79,7 @@
 .suggestions {
   display:flex;
  flex-wrap: wrap;
- margin:0 30rpx;
+ margin:0 20rpx;
  /* margin-bottom:30rpx; */
  padding:50rpx;
 
