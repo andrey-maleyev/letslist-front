@@ -111,7 +111,7 @@ button::after {
   box-shadow: 10rpx 10rpx 10rpx rgb(200,200,200);
     }
 page {
-  background-color:rgb(245, 244, 244);
+  background-color:rgb(245, 245, 245);
     /* background-color:#f9f7f7; */
 
 }
