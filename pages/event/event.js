@@ -47,7 +47,13 @@ Page({
   onReady: function () {
 
   },
+  
+  goToHome: function () {
+    wx.navigateTo({
+      url: '/pages/home/home',
+   })
 
+  },
   clickPrice: function (e) {
     console.log(e)
     const a = true

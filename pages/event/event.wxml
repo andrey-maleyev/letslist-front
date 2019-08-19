@@ -1,15 +1,15 @@
-<cu-custom isBack="{{true}}">
-    <view slot="backText" class = "back">back</view>
+<cu-custom bindtap = "goToHome"isBack="{{true}}">
+    <view bindtap = "goToHome"slot="backText" class = "back">Home</view>
     <view slot="content" class = "nav">Letslist</view>
 </cu-custom>
 <view class="container">
 
   <view class="banner">{{event.name}}</view>
 
-  <view class="invite">
+  <!-- <view class="invite">
     <text class="cuIcon-friendadd"></text> 
     <view class="invite-txt">Invite friends</view>
-  </view>
+  </view> -->
   
   <view class="column2">
 
@@ -40,6 +40,7 @@
             </view>    
         </form>
        </view>
+      
 
 
       </view>   
@@ -51,15 +52,6 @@
         <text class="buy">item</text>
         <text class="buy">item</text>
         <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        
 
       </view>
   </view>
@@ -74,6 +66,7 @@
        <view class = "price">
         <text>input price here</text>
        </view>
+    
       </view>   
     </view>
 
@@ -83,10 +76,7 @@
         <text class="buy">item</text>
         <text class="buy">item</text>
         <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
+
 
         
       </view>
