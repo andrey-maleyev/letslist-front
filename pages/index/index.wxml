@@ -1,13 +1,17 @@
 <view class="div-index">
 
+  
+
   <view class="logo">
     <!-- <text id="letslist">Letslist</text> -->
-    <image src="/images/lets.jpeg"></image>
+    <image id = "logo" src="/images/lets.jpeg"></image>
+  
+  </view>
+  <view>
+   <image class ="words"style="width: 356rpx; height: 287rpx" src ="/images/items.png"></image>
   </view>
 
-  <!-- <image style="width: 300rpx; height: 300rpx"  src="/images/letslist.png"></image> -->
-
-  <view>
+  <view class = "button">
     <button class="btn-green" bindtap="goToHome">Start</button>
   </view>
 </view>
