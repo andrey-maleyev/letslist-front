@@ -52,15 +52,6 @@
         <text class="buy">item</text>
         <text class="buy">item</text>
         <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        
 
       </view>
   </view>
@@ -72,7 +63,10 @@
         </view>
       <view>
        <view class="friend-name"> Andrey brings</view>
-       
+       <view class = "price">
+        <text>input price here</text>
+       </view>
+    
       </view>   
     </view>
 
@@ -82,10 +76,7 @@
         <text class="buy">item</text>
         <text class="buy">item</text>
         <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
+
 
         
       </view>
