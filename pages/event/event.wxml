@@ -81,32 +81,23 @@
       <view><text class="cuIcon-roundadd" bindtap="addItems"></text></view>
     </view>
 
+
     <view class="profile-box">
         <view class="view-btn">
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text>
+
+
+        <block
+            wx:for="{{event.not_taken_items}}"
+            wx:key="index"
+            wx:for-item="myItem"
+        >
+          
+          <text class="item">{{myItem.name}}</text>
+
+          
+        </block>  
+
+
         </view>
     </view>
   </view>
