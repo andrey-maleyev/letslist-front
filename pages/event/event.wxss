@@ -157,6 +157,7 @@ page {
 }
 
 .bring {
+  overflow: scroll;
   border-top: 1rpx solid #1AAB8A;
   height: 30vh;
   position: sticky;
