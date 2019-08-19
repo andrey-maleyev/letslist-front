@@ -139,9 +139,10 @@ Page({
       },
       success: function (res) {
         // Saving event ID
-        app.globalData.eventId = res.data.event.id
-        app.globalData.eventName = res.data.event.name
-        
+        // app.globalData.eventId = res.data.event.id
+        // app.globalData.eventName = res.data.event.name
+        app.globalData.event = res.data.event
+
         wx.navigateTo({
           url: '/pages/event/event',
         })

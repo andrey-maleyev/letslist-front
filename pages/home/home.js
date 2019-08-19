@@ -58,26 +58,6 @@ Page({
         }
       })
     }
-
-    // // SHOW MY EVENTS
-    // const page = this
-    // const userId = app.globalData.user.id
-    // console.log(userId)
-    // const myEventOptions = {
-    //   userId,
-    //   success: function (res) {
-    //     const myEvents = res.data.participants
-    //     page.setData({
-    //       myEvents
-    //     })
-    //   },
-    //   fail: function (err) {
-    //     console.log(err)
-    //   }
-    // }
-
-    // apiClient.getMyEvents(myEventOptions)
-    // // END
   },
 
   /**
@@ -163,11 +143,11 @@ Page({
   showMyEvents: function () {
     const page = this
     const userId = app.globalData.user.id
-    console.log(userId)
     const myEventOptions = {
       userId,
       success: function (res) {
         const myEvents = res.data.participants
+        console.log(myEvents)
         page.setData({
           myEvents
         })
@@ -178,5 +158,15 @@ Page({
     }
 
     apiClient.getMyEvents(myEventOptions)
+  },
+
+  handleClick: event => {
+    // console.log(event)
+    const event_id = event.currentTarget.dataset.eventid
+    // console.log("home.js, event_id: ", event_id)
+
+    wx.navigateTo({
+      url: `/pages/event/event?event_id=${event_id}`
+    })
   }
 })
