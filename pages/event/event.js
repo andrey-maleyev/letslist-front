@@ -26,6 +26,14 @@ Page({
 
   },
 
+  clickPrice: function (e) {
+    console.log(e)
+    const a = true
+    this.setData ({
+      a
+    })
+  },
+
   // back: function () {
   //   wx.navigateTo({
   //     url: '/pages/home/home',

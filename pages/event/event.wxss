@@ -21,7 +21,7 @@ page {
  font-size:40rpx;
  position:relative;
  top:20rpx;
-  /* z-index:1; */
+  z-index:1;
 
 
  
@@ -162,10 +162,27 @@ page {
   position: sticky;
   bottom: 0;
   background-color:rgb(245, 245, 245);
+}
 
-
+.input {
+  background-color:white;
+  margin-right:20rpx;
+  padding:10rpx;
+  font-size:30rpx; 
+ 
+}
+.add_p {
+  font-size:30rpx;
+  color:#1AAB8A;
+  border:1px solid #1AAB8A;
 
 }
+.form {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
 price {
   display:flex;
 }
@@ -184,6 +201,7 @@ font-size:30rpx;
   border: 1px solid grey;
   border-radius:15rpx;
   padding:10rpx;
+  font-size:30rpx;
 }
 .friend-name {
   margin-bottom:10rpx;
@@ -193,6 +211,7 @@ font-size:30rpx;
   color:white;
   position:sticky;
   top: 0;
+  z-index:2;
 }
 
 .back  {

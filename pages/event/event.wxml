@@ -21,9 +21,27 @@
 
       <view>
        <view class="friend-name"> Maggie brings</view>
-       <view class = "price">
+       <view wx:if="{{!a == true}}"class = "price" bindtap = "clickPrice">
         <text>input price here</text>
        </view>
+
+       <view wx:elif="{{a == true}}">
+        <form >
+            <view class = "form">
+
+              <view class="input">
+                <input class = "type" placeholder="Type total price"></input>
+              </view> 
+
+              <view class="add_price">
+                <button form-type="submit" class = "add_p">Add</button>
+              </view> 
+
+            </view>    
+        </form>
+       </view>
+
+
       </view>   
     </view>
         
