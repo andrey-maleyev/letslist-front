@@ -14,13 +14,36 @@
 .userinfo-nickname {
   color: #aaa;
 }
+image {
+  /* padding-top:100rpx; */
+  width:400rpx;
+  height:128rpx;
+  border:4rpx solid rgba(26, 171, 138, 0.3);
+  border-radius: 10rpx;
 
+}
+.logo {
+  display:flex;
+  justify-content:center;
+  padding-top:300rpx;
+
+}
 .div-index {
-  background-image: url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  height:100%;
   text-align: center;
+  /* background-image:cover; */
+  /* background-repeat: no-repeat; */
+  /* background-position: 50% 50%; */
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+page {
+  background-image: url("https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+
 }
 
 /* background-image: url("paper.gif"); */
@@ -62,6 +85,7 @@ body:before {
 
   display: flex;
   align-items: center;
+  margin-bottom:200px;
 }
 
 button:hover {
