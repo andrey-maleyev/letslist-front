@@ -22,7 +22,6 @@ Page({
           event
         })
 
-
       },
       fail: function (err) {
         console.log(err)
@@ -31,9 +30,9 @@ Page({
 
     apiClient.getEvent(getOptions)
 
-    this.setData({
-      event: app.globalData.event
-    })
+    // this.setData({
+    //   event: app.globalData.event
+    // })
   },
 
   addItems: function () {
