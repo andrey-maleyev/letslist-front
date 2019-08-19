@@ -47,9 +47,6 @@
 
 }
 
-/* .add:hover {
-  background-color:#1AAB8A;
-  color:white; */
 
 
 .cu-form-group {
@@ -79,7 +76,7 @@
 .suggestions {
   display:flex;
  flex-wrap: wrap;
- margin:0 30rpx;
+ margin:0 20rpx;
  /* margin-bottom:30rpx; */
  padding:50rpx;
 
@@ -92,8 +89,13 @@
   margin:30rpx;
   display:flex;
   justify-content: center;
+  position:sticky;
+  bottom:30rpx;
   
 
+}
+page {
+  height:100vh;
 }
 .save_button {
   margin-top:30rpx;
@@ -102,17 +104,6 @@
   color:white;
   background-color:#1AAB8A;
   border:1px solid #1AAB8A;
-  /* position:fixed;
-  bottom:0; */
+
 
 }
-/* .save_button:hover {
-  width:30%;
-  border-radius:10rpx;
-  background-color: transparent;
-  color:#1AAB8A;
-  border:1px solid #1AAB8A;
-  position:fixed;
-
-
-} */

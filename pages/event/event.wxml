@@ -1,3 +1,7 @@
+<cu-custom isBack="{{true}}">
+    <view slot="backText" class = "back">back</view>
+    <view slot="content" class = "nav">Letslist</view>
+</cu-custom>
 <view class="container">
 
   <view class="banner">{{eventName}}</view>

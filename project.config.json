@@ -101,8 +101,8 @@
 				},
 				{
 					"id": -1,
-					"name": "pages/add/add",
-					"pathName": "pages/add/add",
+					"name": "pages/list/list",
+					"pathName": "pages/list/list",
 					"scene": null
 				}
 			]
