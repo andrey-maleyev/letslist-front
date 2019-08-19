@@ -3,8 +3,9 @@
   <view class="banner">{{eventName}}</view>
 
   <view class="invite">
-    <text class="cuIcon-friendadd"></text> 
+    <text class="cuIcon-friendadd" bindtap='onShareAppMessage' open-type="share"></text> 
     <view class="invite-txt">Invite friends</view>
+    <!-- <button style='opacity: 100;' class="button" hover-class="btn-hover" bindtap='onShareAppMessage' open-type="share"> -->
   </view>
   
   <view class="column2">

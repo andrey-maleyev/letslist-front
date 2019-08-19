@@ -79,8 +79,6 @@ page {
   align-items: center;
 }
 
-
-
 .column2 {
   /* margin-left:20rpx; */
   display: flex;
@@ -91,7 +89,6 @@ page {
   /* justify-content: flex-start; */
   /* box-sizing: content-box; */
 }
-
 
 .view-btn {
   display:flex;
@@ -139,8 +136,6 @@ page {
   position: sticky;
   bottom: 0;
   background-color:rgb(245, 245, 245);
-
-
 
 }
 price {

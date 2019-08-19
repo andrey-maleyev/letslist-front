@@ -8,7 +8,7 @@ background-color: light grey;
 
 .name {
   display: inline-block;
-  vertical-align: middle
+  vertical-align: middle;
   text-align: center;
   font-size: 16pt;
   word-spacing: 15rpx;
@@ -16,7 +16,6 @@ background-color: light grey;
   margin-top:30rpx;
   margin-bottom:30rpx; */
 }
-
 
 .box {
   margin:0 30rpx;
