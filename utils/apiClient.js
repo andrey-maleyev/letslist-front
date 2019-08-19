@@ -11,15 +11,7 @@ const getMyEvents = options => {
     fail
   })
 }
-const showEvent = options => {
-  const { userId, success, fail } = options
-  return wx.request({
-    url: baseUrl + `events/${id}`,
-    method: "get",
-    success,
-    fail
-  })
-}
+
 const createEvent = options => {
   const { data, success, fail } = options
 
