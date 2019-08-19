@@ -49,6 +49,13 @@ Page({
 
   },
 
+  // back: function () {
+  //   wx.navigateTo({
+  //     url: '/pages/home/home',
+  //   })
+
+  // },
+
   // Lifecycle function--Called when page show
   onShow: function () {
 

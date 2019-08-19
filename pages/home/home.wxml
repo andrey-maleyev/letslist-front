@@ -20,31 +20,34 @@
   <view class="container-upcoming">
     <text class="upcoming">My upcoming events</text>
     <!-- <button class="dropdown-btn">view events</button> -->
-    <view class="upcoming-content">
+    <view class = "box">
+      <view class="upcoming-content">
 
       <block
       wx:for="{{myEvents}}"
       wx:key="index"
       wx:for-item="myEvent"
       >
-        <view class="card-category">
-         <view class = "event" data-eventid="{{myEvent.event_id}}" bindtap="handleClick">
+        <view class="card-category" data-eventid="{{myEvent.event_id}}" bindtap="handleClick">
+         <view class = "event">
            <view id = "owner">
-            <text wx:if="{{myEvent.is_creator == true}}" class="people">Creator</text>
-           <text wx:if="{{!myEvent.is_creator == true}}" class="none"></text>
+             <text wx:if="{{myEvent.is_creator == true}}" class="people">Creator</text>
+             <text wx:if="{{!myEvent.is_creator == true}}" class="none"></text>
            </view>
            <view class = "name">
-            <text class ="one" >{{myEvent.event}}</text>
+             <text class ="one" >{{myEvent.event}}</text>
            </view>
-          </view>
+         </view>
 
-          <view id = "calendar">
-            <text class="cuIcon-calendar" ></text>
-            <text>{{myEvent.date}}</text>
-          </view>
-        </view>
-      </block>
 
+            <view id = "calendar">
+              <text class="cuIcon-calendar" ></text>
+              <text>{{myEvent.date}}</text>
+            </view>
+          </view>
+        </block>
+
+      </view>
     </view>
   </view>
 

@@ -4,7 +4,28 @@ page {
   /* padding: 0 !important; */
   height: 100vh;
   width: 100vw;
-   margin-top:50rpx;
+   /* margin-top:50rpx; */
+}
+
+.master {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  margin-right: 30rpx;
+
+
+}
+
+.cuIcon-crownfill{
+ color:#FFBB48;
+ font-size:40rpx;
+ position:relative;
+ top:20rpx;
+  /* z-index:1; */
+
+
+ 
+
 }
 
 .container{
@@ -41,7 +62,7 @@ page {
   width: 150rpx;
   border: 1px solid grey;
   display: block;
-  margin-right: 30rpx;
+  /* margin-right: 30rpx; */
 
 }
 
@@ -127,6 +148,7 @@ page {
 
 .add {
   display:flex;
+  margin-top:20rpx;
   /* padding:0 20rpx; */
   align-items:center;
   justify-content:space-between;
@@ -135,6 +157,7 @@ page {
 }
 
 .bring {
+  border-top: 1rpx solid #1AAB8A;
   height: 30vh;
   position: sticky;
   bottom: 0;
@@ -165,3 +188,25 @@ font-size:30rpx;
 .friend-name {
   margin-bottom:10rpx;
 }
+.cu-custom {
+  background-color:#1AAB8A;
+  color:white;
+  position:sticky;
+  top: 0;
+}
+
+.back  {
+  /* color:white; */
+  font-size:40rpx;
+  position:sticky;
+
+}
+
+.nav {
+  /* color:white; */
+  font-size:40rpx;
+  position:sticky;
+
+
+}
+

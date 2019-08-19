@@ -38,15 +38,22 @@ background-color:rgb(245, 245, 245);
 .cu-custom {
   background-color:#1AAB8A;
   color:white;
+  position:sticky;
+  top: 0;
 }
 
 .back  {
   /* color:white; */
   font-size:40rpx;
+  position:sticky;
+
 }
+
 .nav {
   /* color:white; */
   font-size:40rpx;
+  position:sticky;
+
 
 }
 
