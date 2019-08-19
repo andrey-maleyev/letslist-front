@@ -12,11 +12,12 @@
   </view>
   
   <view class="column2">
+  <!-- {{avatarUrl}} -->
 
     <view class="profile-box">
       <view class = "master">
         <text class="cuIcon-crownfill"></text>
-        <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
+        <view class="avatar"><image id="avatar" src="https://ca.slack-edge.com/T02NE0241-UKGDWU4D8-cae60da31f98-72"></image></view>
       </view>
 
       <view>
