@@ -1,6 +1,8 @@
 <view class="div-index">
+
   <view class="logo">
-    <text id="letslist">Letslist</text>
+    <!-- <text id="letslist">Letslist</text> -->
+    <image src="/images/lets.jpeg"></image>
   </view>
 
   <!-- <image style="width: 300rpx; height: 300rpx"  src="/images/letslist.png"></image> -->
