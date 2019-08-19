@@ -1,6 +1,6 @@
 <view class="container">
 
-  <view class="banner">{{eventName}}</view>
+  <view class="banner">{{event.name}}</view>
 
   <view class="invite">
     <text class="cuIcon-friendadd"></text> 
