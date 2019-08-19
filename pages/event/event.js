@@ -1,6 +1,4 @@
 const app = getApp()
-import apiClient from "../../utils/apiClient.js"
-
 
 Page({
 
@@ -9,11 +7,10 @@ Page({
 
   // Lifecycle function--Called when page load
   onLoad: function (options) {
-    console.log("line 10", app.globalData)
+
     this.setData({
       eventName: app.globalData.eventName
     })
-    this.showEvent (options) 
   },
 
   addItems: function () {
@@ -70,27 +67,6 @@ Page({
 
   onShareAppMessage: function () {
 
-  },
-
-  showEvent: function () {
-    const page = this
-
-    // const EventId = app.globalData.user.id
-    // console.log(userId)
-    // const myEventOptions = {
-    //   userId,
-    //   success: function (res) {
-    //     const myEvents = res.data.participants
-    //     page.setData({
-    //       myEvents
-    //     })
-    //   },
-    //   fail: function (err) {
-    //     console.log(err)
-    //   }
-    // }
-
-    // apiClient.getMyEvents(myEventOptions)
   }
 })
 // Page({
