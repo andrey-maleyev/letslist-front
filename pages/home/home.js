@@ -79,16 +79,6 @@ Page({
     // apiClient.getMyEvents(myEventOptions)
     // // END
   },
-  
-  eventClick: event => {
-   console.log(event)
-   const id = event.currentTarget.dataset.id
-
-   wx.navigateTo({
-     url: '/pages/event/event?id=${id}',
-   })
-
-  },
 
   /**
    * Lifecycle function--Called when page is initially rendered
