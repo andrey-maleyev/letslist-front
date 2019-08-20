@@ -1,7 +1,7 @@
 import apiClient from "../../utils/apiClient.js"
 const app = getApp()
 
-Page ({
+Page({
 
   data: {
   },
