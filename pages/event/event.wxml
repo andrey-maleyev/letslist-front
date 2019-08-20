@@ -21,11 +21,11 @@
     <view class="profile-box">
       <view class = "master">
         <text class="cuIcon-crownfill"></text>
-        <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
+        <image class="avatar" src="{{event.creator[0].avatar}}"></image>
       </view>
 
       <view>
-       <view class="friend-name"> Maggie brings</view>
+       <view class="friend-name">{{event.creator[0].nickname}} brings</view>
        <view wx:if="{{!a == true}}"class = "price" bindtap = "clickPrice">
         <text>input price here</text>
        </view>
@@ -59,29 +59,42 @@
         <text class="buy">item</text>
       </view>
   </view>
-  
-  <view class="column2">
-     <view class="profile-box">
-        <view class = "master">
-          <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
-        </view>
-      <view>
-       <view class="friend-name"> Andrey brings</view>
-       <view class = "price">
-        <text>input price here</text>
-       </view>
-    
-      </view>   
-    </view>
 
-    <view class = "two">
-      <view class="view_1">
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
+
+  <block
+      wx:for="{{event.guests}}"
+      wx:key="index"
+      wx:for-item="guest"
+  >
+    
+    <view class="column2">
+      <view class="profile-box">
+          <view class = "master">
+            <image class="avatar" src="{{guest.avatar}}"></image>
+          </view>
+        <view>
+        <view class="friend-name">{{guest.nickname}} brings</view>
+        <view class = "price">
+          <text>input price here</text>
+        </view>
+      
+        </view>   
+      </view>
+
+      <view class = "two">
+        <view class="view_1">
+          <text class="buy">item</text>
+          <text class="buy">item</text>
+          <text class="buy">item</text>
+        </view>
       </view>
     </view>
-  </view>
+
+    
+  </block>  
+
+
+
 
   <view class = "bring">
     <view class="add">

@@ -54,10 +54,10 @@ page {
   margin-bottom:100rpx;
 }
 
-#avatar {
+.avatar {
   border-radius: 50%;
-  height: 150rpx;
-  width: 150rpx;
+  height: 125rpx;
+  width: 125rpx;
   border: 1px solid grey;
   display: block;
   /* margin-right: 30rpx; */
