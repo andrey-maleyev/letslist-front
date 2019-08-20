@@ -139,11 +139,15 @@ Page({
       },
       success: function (res) {
         // Saving event ID
-        app.globalData.eventId = res.data.event.id
-        app.globalData.eventName = res.data.event.name
-        
+        // app.globalData.eventId = res.data.event.id
+        // app.globalData.eventName = res.data.event.name
+        app.globalData.event = res.data.event
+        console.log("event id line 145", res.data.event.id)
+
+        const event_id = res.data.event.id
+
         wx.navigateTo({
-          url: '/pages/event/event',
+          url: `/pages/event/event?event_id=${event_id}`
         })
       },
       fail: function (err) {

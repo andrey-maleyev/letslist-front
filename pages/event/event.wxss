@@ -7,6 +7,27 @@ page {
    /* margin-top:50rpx; */
 }
 
+.master {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  margin-right: 30rpx;
+
+
+}
+
+.cuIcon-crownfill{
+ color:#FFBB48;
+ font-size:40rpx;
+ position:relative;
+ top:20rpx;
+  z-index:1;
+
+
+ 
+
+}
+
 .container{
   /* margin: 0 30rpx; */
   padding:30rpx;
@@ -41,7 +62,7 @@ page {
   width: 150rpx;
   border: 1px solid grey;
   display: block;
-  margin-right: 30rpx;
+  /* margin-right: 30rpx; */
 
 }
 
@@ -124,6 +145,7 @@ page {
 
 .add {
   display:flex;
+  margin-top:20rpx;
   /* padding:0 20rpx; */
   align-items:center;
   justify-content:space-between;
@@ -132,13 +154,34 @@ page {
 }
 
 .bring {
+  overflow: scroll;
   border-top: 1rpx solid #1AAB8A;
   height: 30vh;
   position: sticky;
   bottom: 0;
   background-color:rgb(245, 245, 245);
-
 }
+
+.input {
+  background-color:white;
+  margin-right:20rpx;
+  padding:10rpx;
+  font-size:30rpx; 
+ 
+}
+
+.add_p {
+  font-size:30rpx;
+  color:#1AAB8A;
+  border:1px solid #1AAB8A;
+}
+
+.form {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
 price {
   display:flex;
 }
@@ -157,6 +200,7 @@ font-size:30rpx;
   border: 1px solid grey;
   border-radius:15rpx;
   padding:10rpx;
+  font-size:30rpx;
 }
 .friend-name {
   margin-bottom:10rpx;
@@ -166,6 +210,7 @@ font-size:30rpx;
   color:white;
   position:sticky;
   top: 0;
+  z-index:2;
 }
 
 .back  {

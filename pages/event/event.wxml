@@ -1,26 +1,49 @@
-<cu-custom isBack="{{true}}">
-    <view slot="backText" class = "back">back</view>
+<cu-custom bindtap = "goToHome"isBack="{{true}}">
+    <view bindtap = "goToHome"slot="backText" class = "back">Home</view>
     <view slot="content" class = "nav">Letslist</view>
 </cu-custom>
 <view class="container">
 
-  <view class="banner">{{eventName}}</view>
+  <view class="banner">{{event.name}}</view>
 
   <view class="invite">
     <text class="cuIcon-friendadd" bindtap='onShareAppMessage' open-type="share"></text> 
     <view class="invite-txt">Invite friends</view>
     <!-- <button style='opacity: 100;' class="button" hover-class="btn-hover" bindtap='onShareAppMessage' open-type="share"> -->
   </view>
-  
+
   <view class="column2">
 
     <view class="profile-box">
-      <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
+      <view class = "master">
+        <text class="cuIcon-crownfill"></text>
+        <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
+      </view>
+
       <view>
        <view class="friend-name"> Maggie brings</view>
-       <view class = "price">
+       <view wx:if="{{!a == true}}"class = "price" bindtap = "clickPrice">
         <text>input price here</text>
        </view>
+
+       <view wx:elif="{{a == true}}">
+        <form >
+            <view class = "form">
+
+              <view class="input">
+                <input class = "type" placeholder="Type total price"></input>
+              </view> 
+
+              <view class="add_price">
+                <button form-type="submit" class = "add_p">Add</button>
+              </view> 
+
+            </view>    
+        </form>
+       </view>
+      
+
+
       </view>   
     </view>
         
@@ -30,27 +53,21 @@
         <text class="buy">item</text>
         <text class="buy">item</text>
         <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        
 
       </view>
   </view>
   
   <view class="column2">
      <view class="profile-box">
-      <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
+        <view class = "master">
+          <view class="avatar"><image id="avatar" src="{{avatarUrl}}"></image></view>
+        </view>
       <view>
        <view class="friend-name"> Andrey brings</view>
        <view class = "price">
         <text>input price here</text>
        </view>
+    
       </view>   
     </view>
 
@@ -60,10 +77,7 @@
         <text class="buy">item</text>
         <text class="buy">item</text>
         <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
+
 
         
       </view>
@@ -76,32 +90,23 @@
       <view><text class="cuIcon-roundadd" bindtap="addItems"></text></view>
     </view>
 
+
     <view class="profile-box">
         <view class="view-btn">
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text>
-          <text class="item">item</text> 
-          <text class="item">item</text>
-          <text class="item">item</text>
+
+
+        <block
+            wx:for="{{event.not_taken_items}}"
+            wx:key="index"
+            wx:for-item="myItem"
+        >
+          
+          <text class="item">{{myItem.name}}</text>
+
+          
+        </block>  
+
+
         </view>
     </view>
   </view>

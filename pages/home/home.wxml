@@ -23,21 +23,22 @@
     <view class = "box">
       <view class="upcoming-content">
 
-        <block
-        wx:for="{{myEvents}}"
-        wx:key="index"
-        wx:for-item="myEvent"
-        >
-          <view class="card-category">
-          <view class = "event" >
-            <view id = "owner">
-              <text wx:if="{{myEvent.is_creator == true}}" class="people">Creator</text>
-            <text wx:if="{{!myEvent.is_creator == true}}" class="none"></text>
-            </view>
-            <view class = "name">
-              <text class ="one" >{{myEvent.event}}</text>
-            </view>
-            </view>
+      <block
+      wx:for="{{myEvents}}"
+      wx:key="index"
+      wx:for-item="myEvent"
+      >
+        <view class="card-category" data-eventid="{{myEvent.event_id}}" bindtap="handleClick">
+         <view class = "event">
+           <view id = "owner">
+             <text wx:if="{{myEvent.is_creator == true}}" class="people">Creator</text>
+             <text wx:if="{{!myEvent.is_creator == true}}" class="none"></text>
+           </view>
+           <view class = "name">
+             <text class ="one" >{{myEvent.event}}</text>
+           </view>
+         </view>
+
 
             <view id = "calendar">
               <text class="cuIcon-calendar" ></text>

@@ -1,11 +1,22 @@
-// const baseUrl = "https://letslist.wogengapp.cn/api/v1/"
-const baseUrl = "http://localhost:3000/api/v1/"
+const baseUrl = "https://letslist.wogengapp.cn/api/v1/"
+// const baseUrl = "http://localhost:3000/api/v1/"
 
 const getMyEvents = options => {
   const { userId, success, fail } = options
 
   return wx.request({
     url: baseUrl + `users/${userId}/participants`,
+    method: "get",
+    success,
+    fail
+  })
+}
+
+const getEvent = options => {
+  const { event_id, success, fail } = options
+
+  return wx.request({
+    url: baseUrl + `events/${event_id}`,
     method: "get",
     success,
     fail
@@ -36,16 +47,16 @@ const getItems = options => {
 }
 
 const createEventItems = options => {
-  const { success, fail } = options
+  const { event_id, item_id, success, fail } = options
 
   return wx.request({
-    url: baseUrl + "events/${eventId}/items",
+    url: baseUrl + `events/${event_id}/items/${item_id}`,
     method: "post",
     success,
     fail
   })
 }
- 
+
 const updateUser = options => {
   const { id, data, success, fail } = options
 
@@ -60,7 +71,9 @@ const updateUser = options => {
 
 export default {
   getMyEvents,
+  getEvent,
   createEvent,
   getItems,
+  createEventItems,
   updateUser
 }

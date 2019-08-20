@@ -1,5 +1,5 @@
-// pages/items/items.js
 import apiClient from "../../utils/apiClient.js"
+const app = getApp()
 
 Page({
 
@@ -83,40 +83,50 @@ Page({
     let index = event.currentTarget.dataset.index
     enriched_items[index].clicked = !enriched_items[index].clicked
     page.setData({enriched_items: enriched_items})
-    
-    // chosen_items.push(chosen_item) 
-    // console.log(chosen_items)
-    // page.setData({
-    //   chosen_items
-    // }, () => {
-    //   console.log(page.data.chosen_items)
-    // })
   },
   /**
    * 页面上拉触底事件的处理函数
    */
 
-  submitItems: function () {
+  submitEventItems: function () {
     const page = this
     let chosen_items = page.data.chosen_items
     const enriched_items = page.data.enriched_items
     console.log(enriched_items)
-     enriched_items.forEach(function (x) {
+    enriched_items.forEach(function (x) {
       let chosen_items = page.data.chosen_items
       if (x.clicked === true) {
-      chosen_items.push(x);
+        chosen_items.push(x);
       }
    })
    
-   console.log(chosen_items)
-  }
+    console.log("chosen items: ", chosen_items)
+    console.log("event", app.globalData.event)
+    const event_id = app.globalData.event.id
 
-  // submitEventItems: function () {
+    chosen_items.forEach(function (x) {
+      const item_id = x.id
 
-  //   const chosen_items = this.data.chosen_items
-  //   chosen_items.forEach(function (x) {
-      
-  //   })
+      const options = {
+        event_id,
+        item_id,
+        success: function (res) {
+
+        },
+        fail: function (err) {
+          console.log(err)
+        }
+      }
+
+      apiClient.createEventItems(options)
+    })
+
+    console.log("event_id: ", app.globalData.event.id)
+    wx.navigateTo({
+      url: `/pages/event/event?event_id=${event_id}`
+    })
+  },
+
 
   //   const options = {
   //     data: {
@@ -140,15 +150,10 @@ Page({
   // }
 
 
-    // chosen_items.push(chosen_item)
 
 
-  //   if (condition) {
-  //     //  block of code to be executed if the condition is true
-  //   } else {
-  //     //  block of code to be executed if the condition is false
-  //   }
-  //   console.log(chosen_item)
+
+
 
   // },
 

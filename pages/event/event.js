@@ -1,3 +1,4 @@
+import apiClient from "../../utils/apiClient.js"
 const app = getApp()
 
 Page ({
@@ -7,9 +8,31 @@ Page ({
 
   // Lifecycle function--Called when page load
   onLoad: function (options) {
-    this.setData({
-      eventName: app.globalData.eventName
-    })
+    const page = this
+    const { event_id } = options
+
+    const getOptions = {
+      event_id,
+      success: function (res) {
+        const event = res.data.event
+        app.globalData.event = event
+        console.log("event.js, event:", app.globalData.event)
+
+        page.setData({
+          event
+        })
+
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    }
+
+    apiClient.getEvent(getOptions)
+
+    // this.setData({
+    //   event: app.globalData.event
+    // })
   },
 
   addItems: function () {
@@ -23,6 +46,20 @@ Page ({
 
   onReady: function () {
 
+  },
+  
+  goToHome: function () {
+    wx.navigateTo({
+      url: '/pages/home/home',
+   })
+
+  },
+  clickPrice: function (e) {
+    console.log(e)
+    const a = true
+    this.setData ({
+      a
+    })
   },
 
   // back: function () {
