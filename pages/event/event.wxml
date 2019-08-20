@@ -57,18 +57,6 @@
         <text class="buy">item</text>
         <text class="buy">item</text>
         <text class="buy">item</text>
-        <text class="buy">bread</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">bread</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-
-
       </view>
   </view>
   
@@ -91,10 +79,6 @@
         <text class="buy">item</text>
         <text class="buy">item</text>
         <text class="buy">item</text>
-        <text class="buy">item</text>
-
-
-        
       </view>
     </view>
   </view>
