@@ -7,9 +7,6 @@
     <image id = "logo" src="/images/lets.jpeg"></image>
   
   </view>
-  <view>
-   <image class ="words"style="width: 356rpx; height: 287rpx" src ="/images/items.png"></image>
-  </view>
 
   <view class = "button">
     <button class="btn-green" bindtap="goToHome">Start</button>

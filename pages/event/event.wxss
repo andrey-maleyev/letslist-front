@@ -28,6 +28,7 @@ page {
 }
 
 .banner {
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/memphis-colorful.png');
   background-position: center;
   padding:40rpx;
   height: 200rpx;
@@ -36,10 +37,13 @@ page {
   font-size:50rpx;
   justify-content: center;
   align-items: center;
-  color: #1AAB8A;
+  color:black;
+  /* opacity:0.8; */
   font-weight: bold;
   /* text-shadow: 1px 1px 3px rgba(0,0,0,0.2); */
   box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
+  /* text-shadow: 1px 1px 1px black; */
+
   }
 
 .title{
@@ -61,16 +65,13 @@ page {
 
 .invite {
   display: flex;
-  margin-right: 380rpx;
   margin-top:40rpx;
   margin-bottom:40rpx;
   align-items:center;
 }
 
 .invite-txt {
-  margin-left:20rpx;
-  flex-direction: column;
-  justify-content: center; 
+  /* margin-left:10rpx; */
   font-size:40rpx;
 }
 
@@ -129,6 +130,21 @@ page {
   color:white;
   text-decoration: none;
   border-radius:10rpx;
+}
+
+.button {
+  border: none !important;
+  margin-left:0rpx !important;
+  margin-right:20rpx !important;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  text-align:center;
+  height:80rpx;
+  width:80rpx;
+  background-color:rgba(235, 235, 235, 0.877);
+  background-size: cover !important;
 }
 
 .buy {
