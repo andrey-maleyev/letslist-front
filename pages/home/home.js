@@ -25,6 +25,8 @@ Page({
     })
     // end temp
 
+    // this.createParticipant()
+
     if (app.globalData.userInfo) {
       console.log("home.js > onLoad #1 > app.globalData.userInfo:", app.globalData.userInfo)
       this.setData({
@@ -184,18 +186,20 @@ Page({
 
     // const event_id = app.globalData.event_id
     const user_id = app.globalData.user.id
-    const event_id = 86
+    const event_id = app.globalData.event_id
+    console.log("home.js > createParticipant > user_id", user_id)
+    console.log("home.js > createParticipant > event_id", event_id)
 
     const options = {
       data: {
-        participant: { event_id, user_id }
+        participant: { user_id, event_id }
       },
       success: function (res) {
-        console.log(res)
+        console.log("home.js > createParticipant > res", res)
         page.showMyEvents()
       },
       fail: function (err) {
-        console.log(err)
+        console.log("home.js > createParticipant > err", err)
       }
     }
 
