@@ -47,7 +47,13 @@ Page({
   onReady: function () {
 
   },
+  
+  goToHome: function () {
+    wx.navigateTo({
+      url: '/pages/home/home',
+   })
 
+  },
   clickPrice: function (e) {
     console.log(e)
     const a = true
@@ -94,8 +100,24 @@ Page({
 
 
   // Called when user click on the top right corner to share
+  onShareAppMessage: function (ops) {
+    // if (ops.from === 'button') {
+    //   console.log(ops.target)
+    // }
 
-  onShareAppMessage: function () {
+    // console.log("onShare, event_id: ", app.globalData.event)
+    const event_id = app.globalData.event.id
 
+    return {
+      title: 'Letslist',
+      imageUrl: 'https://media.giphy.com/media/lf9PrYyjFOQta/giphy.gif',
+      path:`/pages/index/index?event_id=${event_id}`,
+      success: function (res) {
+        console.log(res);
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    }
   }
 })
