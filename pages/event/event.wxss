@@ -100,8 +100,6 @@ page {
   align-items: center;
 }
 
-
-
 .column2 {
   /* margin-left:20rpx; */
   display: flex;
@@ -112,7 +110,6 @@ page {
   /* justify-content: flex-start; */
   /* box-sizing: content-box; */
 }
-
 
 .view-btn {
   display:flex;
@@ -172,12 +169,13 @@ page {
   font-size:30rpx; 
  
 }
+
 .add_p {
   font-size:30rpx;
   color:#1AAB8A;
   border:1px solid #1AAB8A;
-
 }
+
 .form {
   display:flex;
   align-items:center;

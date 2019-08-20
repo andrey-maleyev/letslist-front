@@ -14,6 +14,25 @@
   top: 0;
 }
 
+
+.name {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 16pt;
+  word-spacing: 15rpx;
+  /* margin:0 30rpx;
+  margin-top:30rpx;
+  margin-bottom:30rpx; */
+}
+
+.box {
+  margin:0 30rpx;
+  margin-top:30rpx;
+  font-size:30rpx;
+  margin-bottom:30rpx;
+}
+
 .back  {
   /* color:white; */
   font-size:40rpx;
@@ -25,8 +44,6 @@
   /* color:white; */
   font-size:40rpx;
   position:sticky;
-
-
 }
 
 .card {

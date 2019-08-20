@@ -100,8 +100,21 @@ Page({
 
 
   // Called when user click on the top right corner to share
+  onShareAppMessage: function (ops) {
+    if (ops.from === 'button') {
+      console.log(ops.target)
+    }
 
-  onShareAppMessage: function () {
-
+    return {
+      title: 'letslist',
+      imageUrl: 'https://media.giphy.com/media/lf9PrYyjFOQta/giphy.gif',
+      path:`/pages/index/index?event_id=${event_id}`,// 用户点击首先进入的当前页面
+      success: function (res) {
+        console.log("转发成功:");
+      },
+      fail: function (res) {
+        console.log("转发失败:");
+      }
+    }
   }
 })
