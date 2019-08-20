@@ -15,7 +15,11 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  onLoad: function (options) {
+
+    const { event_id } = options
+    app.globalData.event_id = event_id
+
     if (app.globalData.userInfo) {
       console.log("index.js line 20")
       console.log(app.globalData.userInfo)

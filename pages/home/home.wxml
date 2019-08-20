@@ -3,6 +3,7 @@
     <view slot="backText" class = "back">back</view>
     <view slot="content" class = "nav">Letslist</view>
 </cu-custom>
+<text>{{event_id}}</text>
 <view class="container">
 
   <view class="container-create">

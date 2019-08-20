@@ -12,8 +12,6 @@ page {
   flex-direction: column;
   align-items:center;
   margin-right: 30rpx;
-
-
 }
 
 .cuIcon-crownfill{
@@ -22,10 +20,6 @@ page {
  position:relative;
  top:20rpx;
   z-index:1;
-
-
- 
-
 }
 
 .container{
@@ -63,7 +57,6 @@ page {
   border: 1px solid grey;
   display: block;
   /* margin-right: 30rpx; */
-
 }
 
 .invite {
@@ -91,7 +84,6 @@ page {
  
 .add-items {
   margin-left: 600rpx;
-
 }
 
 .profile-box {
@@ -122,6 +114,7 @@ page {
   border-radius:20rpx;
   padding:0rpx 0rpx;
 }
+
 .item {
   border: 1px solid #1AAB8A;
   margin:10rpx;
@@ -132,6 +125,7 @@ page {
   text-decoration: none;
   border-radius:10rpx;
 }
+
 .buy {
   border: 1px solid #1AAB8A;
   margin:10rpx;
@@ -167,7 +161,7 @@ page {
   margin-right:20rpx;
   padding:10rpx;
   font-size:30rpx; 
- 
+
 }
 
 .add_p {
@@ -202,9 +196,11 @@ font-size:30rpx;
   padding:10rpx;
   font-size:30rpx;
 }
+
 .friend-name {
   margin-bottom:10rpx;
 }
+
 .cu-custom {
   background-color:#1AAB8A;
   color:white;
@@ -217,14 +213,11 @@ font-size:30rpx;
   /* color:white; */
   font-size:40rpx;
   position:sticky;
-
 }
 
 .nav {
   /* color:white; */
   font-size:40rpx;
   position:sticky;
-
-
 }
 
