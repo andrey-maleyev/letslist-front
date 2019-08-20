@@ -104,7 +104,19 @@ page {
   /* box-sizing: content-box; */
 }
 
-.view-btn {
+.view_1 {
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+  padding-bottom: 20rpx;
+  overflow: scroll;
+  position: sticky;
+  bottom: 0;
+  /* height:25vh; */
+
+}
+
+.view_2 {
   display:flex;
   flex-wrap: wrap;
   margin-top: 30rpx;
@@ -114,6 +126,7 @@ page {
   height:25vh;
 
 }
+
 
 .cuIcon-friendadd{
   font-size:50rpx;

@@ -51,12 +51,23 @@
       </view>   
     </view>
         
-      <view class="view-btn">
+      <view class="view_1">
         <text class="buy">bread</text>
         <text class="buy">item</text>
         <text class="buy">item</text>
         <text class="buy">item</text>
         <text class="buy">item</text>
+        <text class="buy">bread</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">bread</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+        <text class="buy">item</text>
+
 
       </view>
   </view>
@@ -76,7 +87,7 @@
     </view>
 
     <view class = "two">
-      <view class="view-btn">
+      <view class="view_1">
         <text class="buy">item</text>
         <text class="buy">item</text>
         <text class="buy">item</text>
@@ -96,7 +107,7 @@
 
 
     <view class="profile-box">
-        <view class="view-btn">
+        <view class="view_2">
 
 
         <block
