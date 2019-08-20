@@ -131,7 +131,7 @@ Page({
     newEvent.date = this.data.date + ' ' + this.data.time
     newEvent.userId = app.globalData.user.id
 
-    console.log(newEvent)
+    console.log("create.js > submitEvent function > newEvent: ", newEvent)
 
     const options = {
       data: {

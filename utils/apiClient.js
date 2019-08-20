@@ -35,6 +35,18 @@ const createEvent = options => {
   })
 }
 
+const createParticipant = options => {
+  const { data, success, fail } = options
+
+  return wx.request({
+    url: baseUrl + 'participants',
+    method: "post",
+    data,
+    success,
+    fail
+  })
+}
+
 const getItems = options => {
   const { success, fail } = options
 
@@ -73,6 +85,7 @@ export default {
   getMyEvents,
   getEvent,
   createEvent,
+  createParticipant,
   getItems,
   createEventItems,
   updateUser

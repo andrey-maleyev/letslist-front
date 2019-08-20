@@ -12,42 +12,46 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
-  goToCreate: function () {
-    setTimeout(function () {
-      wx.navigateTo({
-        url: '/pages/create/create',
-      })
-    }, 700);
-  },
-
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function () {
 
+    // temp
     const event_id = app.globalData.event_id
 
     this.setData({
       event_id
     })
+    // end temp
 
     if (app.globalData.userInfo) {
-      console.log("home.js onLoad #1")
-      console.log(app.globalData.userInfo)
+      console.log("home.js > onLoad #1 > app.globalData.userInfo:", app.globalData.userInfo)
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-      this.showMyEvents()
+      if (event_id) {
+        console.log("shared event_id: ", event_id)
+        this.createParticipant()
+      } else {
+        console.log("no shared event id")
+        this.showMyEvents()
+      }
     } else if (this.data.canIUse) {
       app.userInfoReadyCallback = res => {
-        console.log("home.js onLoad #2")
-        console.log(res.userInfo)
+        console.log("home.js > onLoad #2 > res.userInfo", res.userInfo)
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
-        this.showMyEvents()
+        if (event_id) {
+          console.log("shared event_id: ", event_id)
+          this.createParticipant()
+        } else {
+          console.log("no shared event id")
+          this.showMyEvents()
+        }
       }
     } else {
       wx.getUserInfo({
@@ -59,7 +63,13 @@ Page({
             userInfo: res.userInfo,
             hasUserInfo: true
           })
-          this.showMyEvents()
+          if (event_id) {
+            console.log("shared event_id: ", event_id)
+            this.createParticipant()
+          } else {
+            console.log("no shared event id")
+            this.showMyEvents()
+          }
         }
       })
     }
@@ -117,8 +127,9 @@ Page({
   getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
 
-    // update user nickname in db
+    // update user nickname and avatar in db
     const nickName = app.globalData.userInfo.nickName
+    const avatarUrl = app.globalData.userInfo.avatarUrl
     const id = app.globalData.user.id
     console.log("nickname: " + nickName)
     console.log("user.id: " + id)
@@ -126,7 +137,10 @@ Page({
     const options = {
       id,
       data: {
-        "user": { "nickname": nickName }
+        "user": {
+          "nickname": nickName,
+          "avatar": avatarUrl
+        }
       },
       success: function (res) {
         console.log(res)
@@ -152,7 +166,7 @@ Page({
       userId,
       success: function (res) {
         const myEvents = res.data.participants
-        console.log(myEvents)
+        console.log("home.js > showMyEvents:", myEvents)
         page.setData({
           myEvents
         })
@@ -165,6 +179,29 @@ Page({
     apiClient.getMyEvents(myEventOptions)
   },
 
+  createParticipant: function () {
+    const page = this
+
+    // const event_id = app.globalData.event_id
+    const user_id = app.globalData.user.id
+    const event_id = 86
+
+    const options = {
+      data: {
+        participant: { event_id, user_id }
+      },
+      success: function (res) {
+        console.log(res)
+        page.showMyEvents()
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    }
+
+    apiClient.createParticipant(options)
+  },
+
   handleClick: event => {
     // console.log(event)
     const event_id = event.currentTarget.dataset.eventid
@@ -173,5 +210,13 @@ Page({
     wx.navigateTo({
       url: `/pages/event/event?event_id=${event_id}`
     })
+  },
+
+  goToCreate: function () {
+    setTimeout(function () {
+      wx.navigateTo({
+        url: '/pages/create/create',
+      })
+    }, 700);
   }
 })

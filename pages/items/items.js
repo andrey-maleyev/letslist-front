@@ -122,7 +122,7 @@ Page({
     })
 
     console.log("event_id: ", app.globalData.event.id)
-    wx.navigateTo({
+    wx.reLaunch({
       url: `/pages/event/event?event_id=${event_id}`
     })
   },
