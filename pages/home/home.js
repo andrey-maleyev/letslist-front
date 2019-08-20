@@ -25,6 +25,11 @@ Page({
    */
   onLoad: function () {
 
+    const event_id = app.globalData.event_id
+
+    this.setData({
+      event_id
+    })
 
     if (app.globalData.userInfo) {
       console.log("home.js onLoad #1")
