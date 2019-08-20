@@ -118,6 +118,11 @@ page {
   display:flex;
   flex-wrap: wrap;
   margin-top: 30rpx;
+  overflow: scroll;
+  position: sticky;
+  bottom: 0;
+  height:25vh;
+
 }
 
 .cuIcon-friendadd{
@@ -137,6 +142,7 @@ page {
 }
 .buy {
   border: 1px solid #1AAB8A;
+  box-shadow: 1px 1px 1px #1AAB8A;
   margin:10rpx;
   padding:20rpx;
   font-size:35rpx;
@@ -147,21 +153,27 @@ page {
 }
 
 .add {
+  background-color: #1AAB8A;
+  opacity:0.8;
+  padding:10rpx;
+  color:white;
   display:flex;
-  margin-top:20rpx;
+  /* margin-top:20rpx; */
   /* padding:0 20rpx; */
   align-items:center;
   justify-content:space-between;
   font-size:40rpx;
+  position:sticky;
+  bottom:326rpx;
   /* width:90%; */
 }
 
 .bring {
+  background-color: #f9f7f7;
   border-top: 1rpx solid #1AAB8A;
   height: 30vh;
   position: sticky;
-  bottom: 0;
-  background-color:rgb(245, 245, 245);
+  bottom: 0; 
 }
 
 .input {
@@ -209,10 +221,17 @@ font-size:30rpx;
 .cu-custom {
   background-color:#1AAB8A;
   color:white;
-  position:sticky;
   top: 0;
   z-index:2;
+position:sticky !important;
+
 }
+
+
+.cu-bar {
+  position: sticky !important;
+}
+
 
 .back  {
   /* color:white; */
