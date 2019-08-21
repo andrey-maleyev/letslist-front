@@ -6,6 +6,10 @@ page {
   width: 100vw;
    /* margin-top:50rpx; */
 }
+.profile-box {
+  display:flex;
+  align-items: center;
+}
 
 .master {
   display:flex;
@@ -216,11 +220,16 @@ page {
   justify-content: center;
 }
 
-price {
+.price {
   display:flex;
   background-color:rgba(235, 235, 235, 0.877);
-  
-
+  padding:10rpx;
+  text-align:center;
+  justify-content:center;
+  align-items: center;
+  border-radius:15rpx;
+  font-size:30rpx;
+  box-shadow: 2rpx 2rpx 2rpx rgb(104, 103, 103);
 }
 
 .form {
@@ -233,13 +242,6 @@ width:100rpx;
 font-size:30rpx;
 }
 
-.price {
-  border-radius:15rpx;
-  padding:10rpx;
-  font-size:30rpx;
-  background-color:rgba(235, 235, 235, 0.877);
-  box-shadow: 2rpx 2rpx 2rpx rgb(104, 103, 103);
-}
 
 .friend-name {
   margin-bottom:10rpx;
