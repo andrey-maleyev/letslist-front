@@ -69,6 +69,28 @@ const createEventItems = options => {
   })
 }
 
+const createItemInPersonalList = options => {
+  const { participant_id, events_item_id, success, fail } = options
+
+  return wx.request({
+    url: baseUrl + `participants/${participant_id}/eventsitems/${events_item_id}`,
+    method: "post",
+    success,
+    fail
+  })
+}
+
+const deleteItemFromPersonalList = options => {
+  const { participant_id, events_item_id, success, fail } = options
+
+  return wx.request({
+    url: baseUrl + `participants/${participant_id}/eventsitems/${events_item_id}`,
+    method: "delete",
+    success,
+    fail
+  })
+}
+
 const updateUser = options => {
   const { id, data, success, fail } = options
 
