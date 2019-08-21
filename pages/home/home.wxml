@@ -35,8 +35,13 @@
              <text wx:if="{{myEvent.is_creator == true}}" class="people">Creator</text>
              <text wx:if="{{!myEvent.is_creator == true}}" class="none"></text>
            </view>
+          
            <view class = "name">
              <text class ="one" >{{myEvent.event}}</text>
+           </view>
+           <view>
+            <text class="cuIcon-delete" ></text>
+
            </view>
          </view>
 

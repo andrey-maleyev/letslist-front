@@ -5,6 +5,16 @@
 
 }
 
+.delete {
+  display:flex;
+
+
+}
+.cuIcon-delete {
+ color:rgba(128, 128, 128, 0.877);
+  position:absolute;
+  right:30rpx;
+}
 .cu-custom {
   background-color:#1AAB8A;
   color:white;

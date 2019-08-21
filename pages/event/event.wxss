@@ -43,8 +43,7 @@ page {
   /* text-shadow: 1px 1px 3px rgba(0,0,0,0.2); */
   box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
   /* text-shadow: 1px 1px 1px black; */
-
-  }
+}
 
 .title{
   margin-top:120rpx;
@@ -113,7 +112,6 @@ page {
   position: sticky;
   bottom: 0;
   /* height:25vh; */
-
 }
 
 .view_2 {
@@ -124,7 +122,7 @@ page {
   position: sticky;
   bottom: 0;
   height:25vh;
-
+  padding-bottom:50rpx;
 }
 
 
@@ -139,6 +137,7 @@ page {
   margin:10rpx;
   padding:20rpx;
   font-size:35rpx;
+  height:40rpx;
   background-color:#1AAB8A;
   color:white;
   text-decoration: none;
@@ -158,12 +157,14 @@ page {
   width:80rpx;
   background-color:rgba(235, 235, 235, 0.877);
   background-size: cover !important;
+  border: 1rpx solid rgb(104, 103, 103);
 }
 
 .buy {
   border: 1px solid #1AAB8A;
   box-shadow: 1px 1px 1px #1AAB8A;
   margin:10rpx;
+  height:40rpx;
   padding:20rpx;
   font-size:35rpx;
   color:#1AAB8A;
@@ -218,6 +219,9 @@ page {
 
 price {
   display:flex;
+  background-color:rgba(235, 235, 235, 0.877);
+  
+
 }
 
 .form {
@@ -231,10 +235,11 @@ font-size:30rpx;
 }
 
 .price {
-  border: 1px solid grey;
   border-radius:15rpx;
   padding:10rpx;
   font-size:30rpx;
+  background-color:rgba(235, 235, 235, 0.877);
+  box-shadow: 2rpx 2rpx 2rpx rgb(104, 103, 103);
 }
 
 .friend-name {
@@ -246,10 +251,8 @@ font-size:30rpx;
   color:white;
   top: 0;
   z-index:2;
-position:sticky !important;
-
+  position:sticky !important;
 }
-
 
 .cu-bar {
   position: sticky !important;
@@ -267,4 +270,3 @@ position:sticky !important;
   font-size:40rpx;
   position:sticky;
 }
-
