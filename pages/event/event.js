@@ -13,6 +13,34 @@ Page({
 
     page.showEvent(event_id)
   },
+  clickPrice: function (e) {
+    console.log(e)
+    let inputPrice = true
+    this.setData({
+      inputPrice
+    })
+  },
+  handlePrice: function (e) {
+    console.log(e)
+    const page = this
+
+    const value = e.detail.value
+    const oldData = page.data
+    console.log(e)
+
+    oldData.price = value
+    page.setData({
+      ...oldData
+    })
+  },
+
+  showPrice: function () {
+    let inputPrice = false
+    this.setData({
+      inputPrice
+    })
+
+  },
 
   //Lifecycle function--Called when page is initially rendered
 
@@ -26,13 +54,13 @@ Page({
    })
 
   },
-  clickPrice: function (e) {
-    console.log(e)
-    const a = true
-    this.setData ({
-      a
-    })
-  },
+  // clickPrice: function (e) {
+  //   console.log(e)
+  //   const inputPrice = true
+  //   this.setData ({
+  //     inputPrice
+  //   })
+  // },
 
   // back: function () {
   //   wx.navigateTo({
