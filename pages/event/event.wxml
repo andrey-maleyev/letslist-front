@@ -9,12 +9,12 @@
 
     <view class="invite" bindtap='onShareAppMessage' open-type="share">
       <button style='opacity: 100;' class="button" bindtap='onShareAppMessage' open-type="share">
-      <view>
-      <text class="cuIcon-friendadd"></text> 
-      </view>
-    </button>
+        <view>
+          <text class="cuIcon-friendadd"></text> 
+        </view>
+      </button>
 
-    <text class="invite-txt">Invite friends</text>
+      <text class="invite-txt">Invite friends</text>
     </view>
 
     <view class="column2">
@@ -26,8 +26,8 @@
         </view>
 
         <view>
-        <view class="friend-name">{{event.creator[0].nickname}} brings</view>
-        <view wx:if="{{!a == true}}"class = "price" bindtap = "clickPrice">
+          <view class="friend-name">{{event.creator[0].nickname}} brings</view>
+          <view wx:if="{{!a == true}}"class = "price" bindtap = "clickPrice">
           <text>input price here</text>
         </view>
 
@@ -48,42 +48,17 @@
         </view>
         
 
+          <view class="view_1">
 
-        </view>   
-      </view>
-          
-        <view class="view_1">
-          <text class="buy">bread</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">bread</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">bread</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">bread</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">bread</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">bread</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-        </view>
+            <block
+                wx:for="{{event.creator[0].personal_list}}"
+                wx:key="index"
+                wx:for-item="myItem"
+            >
+              <text class="item">{{myItem.name}}</text>
+            </block>  
+
+       </view>
     </view>
 
 
@@ -93,7 +68,7 @@
         wx:for-item="guest"
     >
       
-      <!-- <view class="column2">
+      <view class="column2">
         <view class="profile-box">
             <view class = "master">
               <image class="avatar" src="{{guest.avatar}}"></image>
@@ -109,16 +84,20 @@
 
         <view class = "two">
           <view class="view_1">
-            <text class="buy">item</text>
-            <text class="buy">item</text>
-            <text class="buy">item</text>
+            <block
+                wx:for="{{guest.personal_list}}"
+                wx:key="index"
+                wx:for-item="myItem"
+            >
+              <text class="item">{{myItem.name}}</text>
+            </block>  
           </view>
         </view>
-      </view> -->
+      </view>
 
       
     </block>  
-  </view>
+
 
 
 
@@ -134,9 +113,11 @@
         <block
             wx:for="{{event.not_taken_items}}"
             wx:key="index"
-            wx:for-item="myItem"
+            wx:for-item="notTakenItem"
         >
-          <text class="item">{{myItem.name}}</text>
+          
+          <text class="item">{{notTakenItem.name}}</text>
+
         </block>  
 
         </view>
