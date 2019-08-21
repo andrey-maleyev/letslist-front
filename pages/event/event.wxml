@@ -52,11 +52,15 @@
     </view>
         
       <view class="view_1">
-        <text class="buy">bread</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
-        <text class="buy">item</text>
+
+        <block
+            wx:for="{{event.creator[0].personal_list}}"
+            wx:key="index"
+            wx:for-item="myItem"
+        >
+          <text class="item">{{myItem.name}}</text>
+        </block>  
+
       </view>
   </view>
 
@@ -83,9 +87,13 @@
 
       <view class = "two">
         <view class="view_1">
-          <text class="buy">item</text>
-          <text class="buy">item</text>
-          <text class="buy">item</text>
+        <block
+            wx:for="{{guest.personal_list}}"
+            wx:key="index"
+            wx:for-item="myItem"
+        >
+          <text class="item">{{myItem.name}}</text>
+        </block>  
         </view>
       </view>
     </view>
@@ -110,10 +118,10 @@
         <block
             wx:for="{{event.not_taken_items}}"
             wx:key="index"
-            wx:for-item="myItem"
+            wx:for-item="notTakenItem"
         >
           
-          <text class="item">{{myItem.name}}</text>
+          <text class="item">{{notTakenItem.name}}</text>
 
           
         </block>  

@@ -11,35 +11,7 @@ Page({
     const page = this
     const { event_id } = options
 
-    const getOptions = {
-      event_id,
-      success: function (res) {
-        const event = res.data.event
-        app.globalData.event = event
-        console.log("event.js, event:", app.globalData.event)
-
-        page.setData({
-          event
-        })
-
-      },
-      fail: function (err) {
-        console.log(err)
-      }
-    }
-
-    apiClient.getEvent(getOptions)
-
-    // this.setData({
-    //   event: app.globalData.event
-    // })
-  },
-
-  addItems: function () {
-      wx.navigateTo({
-        url: '/pages/items/items',
-      })
-
+    page.showEvent(event_id)
   },
 
   //Lifecycle function--Called when page is initially rendered
@@ -119,5 +91,33 @@ Page({
         console.log(err)
       }
     }
+  },
+
+  showEvent: function (event_id) {
+    const page = this
+
+    const getOptions = {
+      event_id,
+      success: function (res) {
+        const event = res.data.event
+        app.globalData.event = event
+        console.log("event.js, event:", app.globalData.event)
+        page.setData({
+          event
+        })
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    }
+
+    apiClient.getEvent(getOptions)
+  },
+
+  addItems: function () {
+    wx.navigateTo({
+      url: '/pages/items/items',
+    })
+
   }
 })
