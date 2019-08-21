@@ -142,6 +142,14 @@ Page({
     apiClient.getEvent(getOptions)
   },
 
+  addItemInPersonalList: function () {
+
+  },
+
+  deleteItemFromPersonalList: function () {
+
+  },
+
   addItems: function () {
     wx.navigateTo({
       url: '/pages/items/items',
