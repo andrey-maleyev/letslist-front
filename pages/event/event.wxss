@@ -86,11 +86,7 @@ page {
   margin-left: 600rpx;
 }
 
-.profile-box {
-  display: flex; 
-  /* justify-content: flex-start;  */
-  align-items: center;
-}
+
 
 .column2 {
   /* margin-left:20rpx; */
@@ -102,28 +98,20 @@ page {
   /* justify-content: flex-start; */
   /* box-sizing: content-box; */
 }
-
+.con_2 {
+  overflow:scroll;
+  height:1000rpx !important;
+  padding-bottom:40rpx;
+}
 .view_1 {
   display:flex;
   flex-wrap: wrap;
   margin-top: 30rpx;
   padding-bottom: 20rpx;
-  overflow: scroll;
-  position: sticky;
-  bottom: 0;
+
   /* height:25vh; */
 }
 
-.view_2 {
-  display:flex;
-  flex-wrap: wrap;
-  margin-top: 30rpx;
-  overflow: scroll;
-  position: sticky;
-  bottom: 0;
-  height:25vh;
-  padding-bottom:50rpx;
-}
 
 
 .cuIcon-friendadd{
@@ -195,6 +183,17 @@ page {
   height: 30vh;
   position: sticky;
   bottom: 0; 
+}
+
+.view_2 {
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+  overflow: scroll;
+  position: sticky;
+  bottom: 0;
+  height:203rpx;
+  padding-bottom:60rpx;
 }
 
 .input {
