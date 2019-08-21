@@ -79,7 +79,9 @@ Page({
     const rules = {
       event_name: {
         required: true,
-        minlength: 1
+        minlength: 1,
+        maxlength: 24
+
       },
       date: {
         required: true,
