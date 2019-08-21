@@ -2,13 +2,10 @@
 
 .container {
 
-
 }
 
 .delete {
   display:flex;
-
-
 }
 .cuIcon-delete {
  color:rgba(128, 128, 128, 0.877);
@@ -138,7 +135,7 @@ page {
 .one {
   margin-top:60rpx;
   font-family:sans-serif;
-  font-size:50rpx;
+  font-size:40rpx;
   text-align:center;
 
 }
