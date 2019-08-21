@@ -1,5 +1,5 @@
 <!--pages/home/home.wxml-->
-<cu-custom isBack="{{true}}">
+<cu-custom>
     <view slot="backText" class = "back">back</view>
     <view slot="content" class = "nav">Letslist</view>
 </cu-custom>

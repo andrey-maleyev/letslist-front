@@ -48,7 +48,7 @@ page {
   /* text-shadow: 1px 1px 3px rgba(0,0,0,0.2); */
   box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
   /* text-shadow: 1px 1px 1px black; */
-  margin-top: 80rpx;
+  margin-top: 10rpx;
 }
 
 .banner-date {
@@ -128,7 +128,7 @@ page {
   display:flex;
   flex-wrap: wrap;
   margin-top: 30rpx;
-  padding-bottom: 20rpx;
+  padding-bottom: 60rpx;
 
   /* height:25vh; */
 }
@@ -213,8 +213,8 @@ page {
   overflow: scroll;
   position: sticky;
   bottom: 0;
-  height:203rpx;
-  padding-bottom:60rpx;
+  height:230rpx;
+  padding-bottom:20rpx;
 }
 
 .input {
@@ -287,4 +287,28 @@ font-size:30rpx;
   /* color:white; */
   font-size:40rpx;
   position:sticky;
+}
+.finish {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:sticky;
+  bottom:10rpx;
+  width:100%;
+  /* margin-bottom:20rpx; */
+}
+.finish_button {
+  border-radius:10rpx;
+  background-color:white;
+  font-weight: bold;
+  padding:5rpx;
+  color:#1AAB8A;
+  box-shadow: 5rpx 5rpx 10rpx rgba(128, 128, 128, 0.877);
+  width:100%;
+  text-align:center;
+  font-size:40rpx;
+
+  
+
+
 }

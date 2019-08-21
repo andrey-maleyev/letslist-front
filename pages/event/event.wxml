@@ -143,5 +143,7 @@
         </view>
     </view>
   </view>
-
+ <view bindtap = "goToList"class = "finish">
+  <text class = "finish_button">Finish the event</text>
+ </view>
 </view>

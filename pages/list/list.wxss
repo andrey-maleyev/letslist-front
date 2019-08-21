@@ -14,12 +14,14 @@
   top: 0;
 }
 
-
+.credit {
+  font-size:35rpx;
+}
 .name {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  font-size: 16pt;
+  font-size:30rpx;
   word-spacing: 15rpx;
   /* margin:0 30rpx;
   margin-top:30rpx;
@@ -88,7 +90,7 @@
   background:cover;
   background-color:#1AAB8A;
   color:white;
-  font-size:30rpx;
+  font-size:35rpx;
   padding:20rpx;
   display:flex;
   justify-content: space-between;
@@ -100,7 +102,7 @@
    background:cover;
   background-color:white;
   color:black;
-  font-size:30rpx;
+  font-size:35rpx;
   padding:20rpx;
   display:flex;
   justify-content: space-between;
@@ -110,7 +112,7 @@
    background:cover;
   background-color:#f4f9f4;
   color:black;
-  font-size:30rpx;
+  font-size:35rpx;
   padding:20rpx;
   display:flex;
   justify-content: space-between;
