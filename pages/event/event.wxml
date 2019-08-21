@@ -2,13 +2,14 @@
     <view bindtap = "goToHome"slot="backText" class = "back">save</view>
     <view slot="content" class = "nav">Letslist</view>
 </cu-custom>
+
 <view class="container">
 
   <view class = "con_2">
-      <view class="banner">
-        <view>{{event.name}}</view>
-        <view class="banner-date">{{event.date}}</view>
-      </view>
+    <view class="banner">
+      <view>{{event.name}}</view>
+      <view class="banner-date">{{event.date}}</view>
+    </view>
 
     <view class="invite" bindtap='onShareAppMessage' open-type="share">
       <button style='opacity: 100;' class="button" bindtap='onShareAppMessage' open-type="share">
@@ -16,11 +17,10 @@
           <text class="cuIcon-friendadd"></text> 
         </view>
       </button>
-
       <text class="invite-txt">Invite friends</text>
     </view>
 
-    <view class="column2">
+    <view class="user-card">
 
       <view class="profile-box">
         <view class = "master">
@@ -29,31 +29,30 @@
         </view>
 
         <view>
+          <view class="friend-name">{{event.creator[0].nickname}} brings
+          </view>
+            
+          <view wx:if="{{inputPrice !== true}}" class="price" bindinput="handlePrice" bindtap = "clickPrice">
+            <text wx:if="{{price === undefined}}">input price here</text>
+            <text wx:elif="{{price !== undefined}}">{{price}}</text>
+          </view> 
 
+          <view wx:elif="{{inputPrice == true}}">
+            <form >
+                <view   wx:if="{{inputPrice== true}}" class = "form">
 
-        <view class="friend-name">{{event.creator[0].nickname}} brings</view>
-          
-        <view wx:if="{{inputPrice !== true}}"class = "price" bindinput = "handlePrice" bindtap = "clickPrice">
-          <text wx:if="{{price === undefined}}">input price here</text>
-          <text wx:elif="{{price !== undefined}}">{{price}}</text>
-        </view> 
+                  <view  class="input">
+                    <input class = "type" bindinput="handlePrice" placeholder="Type total price here"></input>
+                  </view> 
 
-        <view wx:elif="{{inputPrice == true}}">
-          <form >
-              <view   wx:if="{{inputPrice== true}}" class = "form">
-
-                <view  class="input">
-                  <input class = "type" bindinput="handlePrice" placeholder="Type total price here"></input>
-                </view> 
-
-                <view  class="add_price">
-                  <button form-type="submit" bindtap= "showPrice"class= "add_p">Add</button>
-                </view> 
-              </view>    
-          </form>  
+                  <view  class="add_price">
+                    <button form-type="submit" bindtap= "showPrice"class= "add_p">Add</button>
+                  </view> 
+                </view>    
+            </form>  
+          </view>
         </view>
 
-        </view>
       </view>
         
       <view class="view_1">
@@ -74,7 +73,7 @@
         wx:for-item="guest"
     >
 
-      <view class="column2">
+      <view class="user-card">
 
         <view class="profile-box">
           <view class = "master">
@@ -143,7 +142,9 @@
         </view>
     </view>
   </view>
- <view bindtap = "goToList"class = "finish">
-  <text class = "finish_button">Finish the event</text>
- </view>
+  
+  <view bindtap="goToList" class="finish">
+    <text class="finish_button">Finish the event</text>
+  </view>
+
 </view>

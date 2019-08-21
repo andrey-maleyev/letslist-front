@@ -1,12 +1,9 @@
 /* pages/home/home.wxss */
 
-.container {
-
-}
-
 .delete {
   display:flex;
 }
+
 .cuIcon-delete {
  color:rgba(128, 128, 128, 0.877);
   position:absolute;
@@ -20,19 +17,16 @@
   z-index:2;
 }
 
-.back  {
+.back {
   /* color:white; */
   font-size:40rpx;
   position:sticky;
-
 }
 
 .nav {
   /* color:white; */
   font-size:40rpx;
   position:sticky;
-
-
 }
 
 
@@ -57,10 +51,7 @@
   flex-direction: column;
   border: 1px solid #1AAB8A;
   border-radius: 10rpx;
-
 }
-
-
 
 .create-event:hover {
   background-color:#1AAB8A;
@@ -120,7 +111,8 @@ button::after {
   margin-left:10rpx;
   margin-right:10rpx;
   box-shadow: 10rpx 10rpx 10rpx rgb(200,200,200);
-    }
+}
+
 page {
   background-color:rgb(245, 245, 245);
     /* background-color:#f9f7f7; */

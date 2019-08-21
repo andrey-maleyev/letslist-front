@@ -4,10 +4,10 @@
 
 .container {
   height: 100%;
-  width:100%;
+  width: 100%;
   padding: 100rpx 0;
 }
-page {
-background-color:rgb(245, 245, 245);
 
+page {
+  background-color:rgb(245, 245, 245);
 }
