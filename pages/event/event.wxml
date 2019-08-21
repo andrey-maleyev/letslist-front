@@ -47,9 +47,8 @@
                   <button form-type="submit" bindtap= "showPrice"class= "add_p">Add</button>
                 </view> 
               </view>    
-          </form>
-          
-          </view>
+          </form>  
+        </view>
 
         </view>
       </view>
@@ -73,15 +72,35 @@
     >
 
       <view class="column2">
+
         <view class="profile-box">
           <view class = "master">
             <image class="avatar" src="{{guest.avatar}}"></image>
           </view>
+
           <view>
             <view class="friend-name">{{guest.nickname}} brings</view>
-            <view class = "price">
-              <text>input price here</text>
-            </view>
+         
+           <view wx:if="{{inputPrice !== true}}"class = "price" bindinput = "handlePrice" bindtap = "clickPrice">
+          <text wx:if="{{price === undefined}}">input price here</text>
+          <text wx:elif="{{price !== undefined}}">{{price}}</text>
+        </view> 
+
+        <view wx:elif="{{inputPrice == true}}">
+          <form >
+              <view   wx:if="{{inputPrice== true}}" class = "form">
+
+                <view  class="input">
+                  <input class = "type" bindinput = "handlePrice" placeholder="Type total price here"></input>
+                </view> 
+
+                <view  class="add_price">
+                  <button form-type="submit" bindtap= "showPrice"class= "add_p">Add</button>
+                </view> 
+              </view>    
+          </form>  
+        </view>
+
           </view>   
         </view>
 

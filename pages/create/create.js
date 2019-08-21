@@ -1,4 +1,6 @@
 import apiClient from "../../utils/apiClient.js"
+import WxValidate from '../../utils/WxValidate.js'
+
 const app = getApp()
 
 // pages/create/create.js
@@ -28,6 +30,8 @@ Page({
       }
     ],
 
+
+
   },
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -54,12 +58,96 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    rules: { }
+    messages: { }
 
   },
+  onLoad() {
+    // this.getuser()
+    this.initValidate()//验证规则函数
+  },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+  showModal(error) {
+    wx.showModal({
+      content: error.msg,
+      showCancel: false,
+    })
+  },
+  //验证函数
+  initValidate() {
+    
+    const rules = {
+      event_name: {
+        required: true,
+        minlength: 1
+      },
+      date: {
+        required: true,
+      }
+    }
+    const messages = {
+      event_name: {
+        required: 'please enter the event name'
+        // minlength: '请输入正确的名称'
+      },
+      date: {
+        required: 'please choose the date for the event'
+        // tel: '请填写正确的手机号'
+      }
+    }
+    this.WxValidate = new WxValidate(rules, messages)
+  },
+  //调用验证函数
+  formSubmit: function (e) {
+    console.log('form发生了submit事件，携带的数据为：', e.detail.value)
+    const params = e.detail.value
+    console.log("params", params)
+    //校验表单
+    if (!this.WxValidate.checkForm(params)) {
+      console.log("validation called")
+      const error = this.WxValidate.errorList[0]
+      this.showModal(error)
+      return false
+    } else {
+      const newEvent = this.data.newEvent
+      newEvent.name = params.event_name
+      newEvent.date = params.date
+      console.log(newEvent)
+      newEvent.date = this.data.date + ' ' + this.data.time
+      newEvent.userId = app.globalData.user.id
+
+      console.log("create.js > submitEvent function > newEvent: ", newEvent)
+      const options = {
+        data: {
+          event: newEvent
+        },
+        success: function (res) {
+          // Saving event ID
+          // app.globalData.eventId = res.data.event.id
+          // app.globalData.eventName = res.data.event.name
+          app.globalData.event = res.data.event
+          console.log("event id line 129", res.data.event.id)
+
+          const event_id = res.data.event.id
+
+          wx.navigateTo({
+            url: `/pages/event/event?event_id=${event_id}`
+          })
+        },
+        fail: function (err) {
+          console.log(err)
+        }
+      }
+
+      apiClient.createEvent(options)
+
+
+
+
+    }
+  },
+
+  
   onReady: function () {
 
   },
@@ -126,35 +214,35 @@ Page({
   // },
 
   submitEvent: function () {
+    
+    // const newEvent = this.data.newEvent
+    // newEvent.date = this.data.date + ' ' + this.data.time
+    // newEvent.userId = app.globalData.user.id
 
-    const newEvent = this.data.newEvent
-    newEvent.date = this.data.date + ' ' + this.data.time
-    newEvent.userId = app.globalData.user.id
+    // console.log("create.js > submitEvent function > newEvent: ", newEvent)
 
-    console.log("create.js > submitEvent function > newEvent: ", newEvent)
+    // const options = {
+    //   data: {
+    //     event: newEvent
+    //   },
+    //   success: function (res) {
+    //     // Saving event ID
+    //     // app.globalData.eventId = res.data.event.id
+    //     // app.globalData.eventName = res.data.event.name
+    //     app.globalData.event = res.data.event
+    //     console.log("event id line 145", res.data.event.id)
 
-    const options = {
-      data: {
-        event: newEvent
-      },
-      success: function (res) {
-        // Saving event ID
-        // app.globalData.eventId = res.data.event.id
-        // app.globalData.eventName = res.data.event.name
-        app.globalData.event = res.data.event
-        console.log("event id line 145", res.data.event.id)
+    //     const event_id = res.data.event.id
 
-        const event_id = res.data.event.id
+    //     wx.navigateTo({
+    //       url: `/pages/event/event?event_id=${event_id}`
+    //     })
+    //   },
+    //   fail: function (err) {
+    //     console.log(err)
+    //   }
+    // }
 
-        wx.navigateTo({
-          url: `/pages/event/event?event_id=${event_id}`
-        })
-      },
-      fail: function (err) {
-        console.log(err)
-      }
-    }
-
-    apiClient.createEvent(options)
+    // apiClient.createEvent(options)
   }
 })
