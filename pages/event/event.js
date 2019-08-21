@@ -110,7 +110,7 @@ Page({
 
     return {
       title: 'Letslist',
-      imageUrl: 'https://media.giphy.com/media/lf9PrYyjFOQta/giphy.gif',
+      imageUrl: 'http://lc-7tihnc4y.cn-n1.lcfile.com/ee0dc5a15af47785a8bf/landing.jpeg',
       path:`/pages/index/index?event_id=${event_id}`,
       success: function (res) {
         console.log(res);
