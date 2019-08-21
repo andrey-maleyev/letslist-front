@@ -6,6 +6,12 @@ page {
   width: 100vw;
    /* margin-top:50rpx; */
 }
+
+.container {
+  /* margin: 0 30rpx; */
+  padding: 20rpx;
+}
+
 .profile-box {
   display:flex;
   align-items: center;
@@ -26,11 +32,6 @@ page {
   z-index:1;
 }
 
-.container{
-  /* margin: 0 30rpx; */
-  padding:30rpx;
-}
-
 .banner {
   background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/memphis-colorful.png');
   background-position: center;
@@ -43,10 +44,11 @@ page {
   justify-content: center;
   align-items: center;
   position: relative;
-  color:black;
+  color:rgb(65, 65, 65);
   /* opacity:0.8; */
   /* text-shadow: 1px 1px 3px rgba(0,0,0,0.2); */
   box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
+  border-radius: 15rpx;
   /* text-shadow: 1px 1px 1px black; */
   margin-top: 10rpx;
 }
@@ -55,15 +57,14 @@ page {
   display: flex;
   font-size: 26rpx;
   font-weight: lighter;
-  color:black;
-  border: 1px solid #1AAB8A;
-  border-radius:10rpx;
+  color:rgb(65, 65, 65);
+  /* border: 1px solid #1AAB8A; */
+  /* border-radius:10rpx; */
   padding: 8rpx;
   position: absolute;
-  margin-top: -60rpx;
+  margin-top: -70rpx;
   text-align: left;
-  margin-left: -120rpx;
-
+  margin-left: -140rpx;
 }
 
 .title{
@@ -78,7 +79,7 @@ page {
   border-radius: 50%;
   height: 125rpx;
   width: 125rpx;
-  border: 1px solid grey;
+  border: 1rpx solid rgb(200, 200, 200);
   display: block;
   /* margin-right: 30rpx; */
 }
@@ -92,7 +93,7 @@ page {
 
 .invite-txt {
   /* margin-left:10rpx; */
-  font-size:40rpx;
+  font-size:32rpx;
 }
 
 .centre-display{
@@ -107,35 +108,39 @@ page {
   margin-left: 600rpx;
 }
 
-
-
-.column2 {
+.user-card {
   /* margin-left:20rpx; */
   display: flex;
   flex-direction: column;
   flex-shrink: none;
-  flex-grow:none;
+  flex-grow: none;
   margin-bottom:50rpx;
   /* justify-content: flex-start; */
   /* box-sizing: content-box; */
+  border-radius: 15rpx;
+  background-color:rgb(252, 252, 252);
+  box-shadow: 0rpx 0rpx 15rpx rgb(215, 215, 215);
+  padding: 15rpx;
 }
+
 .con_2 {
   overflow:scroll;
   height:1000rpx !important;
-  padding-bottom:40rpx;
+  padding-bottom: 40rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
 }
+
 .view_1 {
   display:flex;
   flex-wrap: wrap;
-  margin-top: 30rpx;
-  padding-bottom: 60rpx;
+  margin-top: 20rpx;
+  padding-bottom: 15rpx;
 
   /* height:25vh; */
 }
 
-
-
-.cuIcon-friendadd{
+.cuIcon-friendadd {
   font-size:50rpx;
   border-radius:20rpx;
   padding:0rpx 0rpx;
@@ -154,7 +159,7 @@ page {
 }
 
 .button {
-  border: none !important;
+  /* border: none !important; */
   margin-left:0rpx !important;
   margin-right:20rpx !important;
   border-radius:50%;
@@ -166,7 +171,7 @@ page {
   width:80rpx;
   background-color:rgba(235, 235, 235, 0.877);
   background-size: cover !important;
-  border: 1rpx solid rgb(104, 103, 103);
+  border: 1rpx solid rgb(200, 200, 200);
 }
 
 .buy {
@@ -183,37 +188,40 @@ page {
 }
 
 .add {
-  background-color: #1AAB8A;
+  /* background-color: rgb(172, 172, 172); */
   opacity:0.8;
   padding:10rpx;
-  color:white;
+  color:rgb(65, 65, 65);
   display:flex;
-  /* margin-top:20rpx; */
-  /* padding:0 20rpx; */
   align-items:center;
   justify-content:space-between;
   font-size:40rpx;
   position:sticky;
   bottom:326rpx;
-  /* width:90%; */
+  /* border-bottom: 1rpx solid #1AAB8A; */
 }
 
 .bring {
-  background-color: #f9f7f7;
-  border-top: 1rpx solid #1AAB8A;
+  /* border-top: 1rpx solid rgb(200, 200, 200); */
   height: 30vh;
   position: sticky;
-  bottom: 0; 
+  bottom: 85rpx;
+  background-color:rgb(252, 252, 252);
+  box-shadow: 0rpx -5rpx 15rpx rgb(215, 215, 215);
+  border-radius: 15rpx;
+  margin-left: 11rpx;
+  margin-right: 11rpx;
 }
 
 .view_2 {
   display:flex;
   flex-wrap: wrap;
-  margin-top: 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
   overflow: scroll;
   position: sticky;
   bottom: 0;
-  height:230rpx;
+  height: 340rpx;
   padding-bottom:20rpx;
 }
 
@@ -253,12 +261,11 @@ page {
   display:flex;
 }
 
-.cu-form-group{
+.cu-form-group {
 border-radius:15rpx;
 width:100rpx;
 font-size:30rpx;
 }
-
 
 .friend-name {
   margin-bottom:10rpx;
@@ -288,6 +295,7 @@ font-size:30rpx;
   font-size:40rpx;
   position:sticky;
 }
+
 .finish {
   display:flex;
   justify-content:center;
@@ -297,18 +305,15 @@ font-size:30rpx;
   width:100%;
   /* margin-bottom:20rpx; */
 }
+
 .finish_button {
-  border-radius:10rpx;
+  border-radius: 15rpx;
   background-color:white;
   font-weight: bold;
   padding:5rpx;
   color:#1AAB8A;
   box-shadow: 5rpx 5rpx 10rpx rgba(128, 128, 128, 0.877);
-  width:100%;
+  width:96%;
   text-align:center;
   font-size:40rpx;
-
-  
-
-
 }
