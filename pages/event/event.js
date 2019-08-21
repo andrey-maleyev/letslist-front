@@ -11,35 +11,7 @@ Page({
     const page = this
     const { event_id } = options
 
-    const getOptions = {
-      event_id,
-      success: function (res) {
-        const event = res.data.event
-        app.globalData.event = event
-        console.log("event.js, event:", app.globalData.event)
-
-        page.setData({
-          event
-        })
-
-      },
-      fail: function (err) {
-        console.log(err)
-      }
-    }
-
-    apiClient.getEvent(getOptions)
-
-    // this.setData({
-    //   event: app.globalData.event
-    // })
-  },
-
-  addItems: function () {
-      wx.navigateTo({
-        url: '/pages/items/items',
-      })
-
+    page.showEvent(event_id)
   },
   clickPrice: function (e) {
     console.log(e)
@@ -138,7 +110,7 @@ Page({
 
     return {
       title: 'Letslist',
-      imageUrl: 'https://media.giphy.com/media/lf9PrYyjFOQta/giphy.gif',
+      imageUrl: 'http://lc-7tihnc4y.cn-n1.lcfile.com/ee0dc5a15af47785a8bf/landing.jpeg',
       path:`/pages/index/index?event_id=${event_id}`,
       success: function (res) {
         console.log(res);
@@ -147,5 +119,33 @@ Page({
         console.log(err)
       }
     }
+  },
+
+  showEvent: function (event_id) {
+    const page = this
+
+    const getOptions = {
+      event_id,
+      success: function (res) {
+        const event = res.data.event
+        app.globalData.event = event
+        console.log("event.js, event:", app.globalData.event)
+        page.setData({
+          event
+        })
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    }
+
+    apiClient.getEvent(getOptions)
+  },
+
+  addItems: function () {
+    wx.navigateTo({
+      url: '/pages/items/items',
+    })
+
   }
 })
