@@ -6,6 +6,10 @@ page {
   width: 100vw;
    /* margin-top:50rpx; */
 }
+.profile-box {
+  display:flex;
+  align-items: center;
+}
 
 .master {
   display:flex;
@@ -86,11 +90,7 @@ page {
   margin-left: 600rpx;
 }
 
-.profile-box {
-  display: flex; 
-  /* justify-content: flex-start;  */
-  align-items: center;
-}
+
 
 .column2 {
   /* margin-left:20rpx; */
@@ -102,28 +102,20 @@ page {
   /* justify-content: flex-start; */
   /* box-sizing: content-box; */
 }
-
+.con_2 {
+  overflow:scroll;
+  height:1000rpx !important;
+  padding-bottom:40rpx;
+}
 .view_1 {
   display:flex;
   flex-wrap: wrap;
   margin-top: 30rpx;
   padding-bottom: 20rpx;
-  overflow: scroll;
-  position: sticky;
-  bottom: 0;
+
   /* height:25vh; */
 }
 
-.view_2 {
-  display:flex;
-  flex-wrap: wrap;
-  margin-top: 30rpx;
-  overflow: scroll;
-  position: sticky;
-  bottom: 0;
-  height:25vh;
-  padding-bottom:50rpx;
-}
 
 
 .cuIcon-friendadd{
@@ -197,6 +189,17 @@ page {
   bottom: 0; 
 }
 
+.view_2 {
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+  overflow: scroll;
+  position: sticky;
+  bottom: 0;
+  height:203rpx;
+  padding-bottom:60rpx;
+}
+
 .input {
   background-color:white;
   margin-right:20rpx;
@@ -217,11 +220,16 @@ page {
   justify-content: center;
 }
 
-price {
+.price {
   display:flex;
   background-color:rgba(235, 235, 235, 0.877);
-  
-
+  padding:10rpx;
+  text-align:center;
+  justify-content:center;
+  align-items: center;
+  border-radius:15rpx;
+  font-size:30rpx;
+  box-shadow: 2rpx 2rpx 2rpx rgb(104, 103, 103);
 }
 
 .form {
@@ -234,13 +242,6 @@ width:100rpx;
 font-size:30rpx;
 }
 
-.price {
-  border-radius:15rpx;
-  padding:10rpx;
-  font-size:30rpx;
-  background-color:rgba(235, 235, 235, 0.877);
-  box-shadow: 2rpx 2rpx 2rpx rgb(104, 103, 103);
-}
 
 .friend-name {
   margin-bottom:10rpx;
