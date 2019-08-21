@@ -18,8 +18,7 @@ App({
           },
           success: (res) => {
             this.globalData.user = res.data.user
-            console.log("app.js User in DB:")
-            console.log(this.globalData.user)
+            console.log("app.js > app.globalData.user (User in DB):", this.globalData.user)
           }
         })
 
