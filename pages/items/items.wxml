@@ -22,25 +22,14 @@
   </form>
 
   <view class = "suggestions">
-    <text class = "select">pig</text>
-    <text class = "select">frog</text>
-     <text class = "select">items</text>
-    <text class = "select">items</text>
-     <text class = "select">dfsdfsd</text>
-    <text class = "select">itdfdfdfems</text>
-     <text class = "select">items</text>
-    <text class = "select">items</text>
-     <text class = "select">items</text>
-    <text class = "select">items</text>
-
-  
+    <text class = "select">New item 1</text>
+    <text class = "select">New item 2</text>
   </view>
 
   <view class = "h2">
     <text >Suggestions</text>
   </view>
 
-  
   <view class = "suggestions">
     <block
         wx:for="{{enriched_items}}"

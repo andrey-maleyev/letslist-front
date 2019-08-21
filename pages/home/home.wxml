@@ -29,7 +29,7 @@
       wx:key="index"
       wx:for-item="myEvent"
       >
-        <view class="card-category" data-eventid="{{myEvent.event_id}}" bindtap="handleClick">
+        <view class="card-category" data-eventid="{{myEvent.event_id}}" data-participantid="{{myEvent.participant_id}}" bindtap="handleClick">
          <view class = "event">
            <view id = "owner">
              <text wx:if="{{myEvent.is_creator == true}}" class="people">Creator</text>

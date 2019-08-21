@@ -74,12 +74,13 @@ Page({
   onPullDownRefresh: function () {
 
   },
+
   clickItem: function (event) {
     const page = this 
     const enriched_items = page.data.enriched_items
-    // console.log(enriched_items)
+    // console.log("event.js > clickItem > enriched_items", enriched_items)
     const chosen_item = event.currentTarget.dataset.name
-    // console.log(event)
+    console.log("event.js > clickItem > clickEvent > index", event.currentTarget.dataset.index)
     let index = event.currentTarget.dataset.index
     enriched_items[index].clicked = !enriched_items[index].clicked
     page.setData({enriched_items: enriched_items})

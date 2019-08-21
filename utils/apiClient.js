@@ -110,5 +110,7 @@ export default {
   createParticipant,
   getItems,
   createEventItems,
-  updateUser
+  updateUser,
+  createItemInPersonalList,
+  deleteItemFromPersonalList
 }
