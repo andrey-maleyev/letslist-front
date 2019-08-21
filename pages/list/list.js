@@ -57,6 +57,12 @@ Page({
 
   },
 
+  goToHome:function () {
+    wx.navigateTo({
+      url: '/pages/home/home',
+    })
+  },
+
   /**
    * Called when user click on the top right corner to share
    */

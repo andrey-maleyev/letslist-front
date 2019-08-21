@@ -66,7 +66,11 @@ Page({
   },
 
   //Lifecycle function--Called when page is initially rendered
-
+  goToList: function () {
+    wx.navigateTo({
+      url: `/pages/list/list`
+    })
+  },
   onReady: function () {
 
   },
