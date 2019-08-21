@@ -129,7 +129,16 @@ Page({
   getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
 
-    // update user nickname and avatar in db
+    this.updateUserInfo()
+
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
+  },
+
+  // update user nickname and avatar in db
+  updateUserInfo: function () {
     const nickName = app.globalData.userInfo.nickName
     const avatarUrl = app.globalData.userInfo.avatarUrl
     const id = app.globalData.user.id
@@ -153,12 +162,6 @@ Page({
     }
 
     apiClient.updateUser(options)
-    // END
-
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
   },
 
   showMyEvents: function () {
@@ -179,6 +182,11 @@ Page({
     }
 
     apiClient.getMyEvents(myEventOptions)
+
+    // Update user info in DB if nickname or avatar are nill
+    if (!app.globalData.user.nickname || !app.globalData.user.avatar) {
+      this.updateUserInfo()
+    }
   },
 
   createParticipant: function () {
@@ -204,6 +212,8 @@ Page({
     }
 
     apiClient.createParticipant(options)
+
+    this.showMyEvents()
   },
 
   handleClick: event => {
