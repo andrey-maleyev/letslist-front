@@ -5,7 +5,10 @@
 <view class="container">
 
   <view class = "con_2">
-    <view class="banner">{{event.name}}</view>
+      <view class="banner">
+        <view>{{event.name}}</view>
+        <view class="banner-date">{{event.date}}</view>
+      </view>
 
     <view class="invite" bindtap='onShareAppMessage' open-type="share">
       <button style='opacity: 100;' class="button" bindtap='onShareAppMessage' open-type="share">
