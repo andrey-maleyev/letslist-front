@@ -58,12 +58,12 @@
           <text class="buy">item</text>
           <text class="buy">item</text>
           <text class="buy">item</text>
-            <text class="buy">bread</text>
+          <text class="buy">bread</text>
           <text class="buy">item</text>
           <text class="buy">item</text>
           <text class="buy">item</text>
           <text class="buy">item</text>
-            <text class="buy">bread</text>
+          <text class="buy">bread</text>
           <text class="buy">item</text>
           <text class="buy">item</text>
           <text class="buy">item</text>
@@ -128,22 +128,16 @@
       <view><text class="cuIcon-roundadd" bindtap="addItems"></text></view>
     </view>
 
-
     <view class="profile-box">
         <view class="view_2">
-
 
         <block
             wx:for="{{event.not_taken_items}}"
             wx:key="index"
             wx:for-item="myItem"
         >
-          
           <text class="item">{{myItem.name}}</text>
-
-          
         </block>  
-
 
         </view>
     </view>
