@@ -5,10 +5,10 @@
 </cu-custom>
 <!-- <view class="name"><text>Event name</text></view> -->
 <view class = "main">
-  <form>
+  <form bindsubmit='formSubmit'>
     <view class="name"><text>Event name</text></view>
     <view class="cu-form-group margin-top">
-      <input class = "type" placeholder="Type event name here" bindinput="handleEventNameInput"></input>
+      <input value='{{event_name}}'class = "type" placeholder="Type event name here" bindinput="handleEventNameInput" name = "event_name"></input>
     </view>
 
     <!-- <view class="name"><text>Event description</text></view>
@@ -18,7 +18,7 @@
 
     <view class="section">
     <view class="name">Date</view>
-      <picker mode="date" value="{{date}}" start="2019-01-01" end="2030-07-19" bindchange="bindDateChange">
+      <picker mode="date" value="{{date}}" start="2019-01-01" end="2030-07-19" bindchange="bindDateChange" name ="date">
         <view class="picker">
           <view class="cu-form-group margin-top">
             <text class = "cuIcon-calendar"></text>{{date}}
@@ -51,7 +51,7 @@
     </view>
 
   <view class="btn-area">
-      <button form-type="submit" class = "submit" bindtap="submitEvent">Submit</button>
+      <button  form-type="submit" class = "submit" >Submit</button>
     </view>
     
   </form>

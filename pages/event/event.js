@@ -12,6 +12,29 @@ Page({
     const { event_id } = options
 
     page.showEvent(event_id)
+
+    // const options = {
+    //   success: function (res) {
+    //     console.log(res)
+        // const myItems = res.data.items
+        // let items_array = []
+        // myItems.forEach(function (item) {
+        //   item.clicked = false
+        //   items_array.push(item)
+        // })
+      //   console.log(myItems)
+      //   page.setData({
+      //     enriched_items: items_array
+      //   })
+    //   },
+    //   fail: function (err) {
+    //     console.log(err)
+    //   }
+    // }
+
+
+
+
   },
   clickPrice: function (e) {
     console.log(e)
