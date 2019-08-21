@@ -4,7 +4,7 @@
 </cu-custom>
 <view class="container">
 
- <view class = "con_2">
+  <view class = "con_2">
     <view class="banner">{{event.name}}</view>
 
     <view class="invite" bindtap='onShareAppMessage' open-type="share">
@@ -28,37 +28,37 @@
         <view>
           <view class="friend-name">{{event.creator[0].nickname}} brings</view>
           <view wx:if="{{!a == true}}"class = "price" bindtap = "clickPrice">
-          <text>input price here</text>
+            <text>input price here</text>
+          </view>
+
+          <view wx:elif="{{a == true}}">
+            <form>
+                <view class = "form">
+
+                  <view class="input">
+                    <input class = "type" placeholder="Type total price here"></input>
+                  </view> 
+
+                  <view class="add_price">
+                    <button form-type="submit" class = "add_p">Add</button>
+                  </view> 
+
+                </view>    
+            </form>
+          
+          </view>
         </view>
-
-        <view wx:elif="{{a == true}}">
-          <form >
-              <view class = "form">
-
-                <view class="input">
-                  <input class = "type" placeholder="Type total price here"></input>
-                </view> 
-
-                <view class="add_price">
-                  <button form-type="submit" class = "add_p">Add</button>
-                </view> 
-
-              </view>    
-          </form>
-        </view>
+      </view>
         
-
-          <view class="view_1">
-
-            <block
-                wx:for="{{event.creator[0].personal_list}}"
-                wx:key="index"
-                wx:for-item="myItem"
-            >
-              <text class="item">{{myItem.name}}</text>
-            </block>  
-
-       </view>
+      <view class="view_1">
+        <block
+            wx:for="{{event.creator[0].personal_list}}"
+            wx:key="index"
+            wx:for-item="myItem"
+        >
+          <text class="item">{{myItem.name}}</text>
+        </block>  
+      </view>
     </view>
 
 
@@ -67,18 +67,17 @@
         wx:key="index"
         wx:for-item="guest"
     >
-      
+
       <view class="column2">
         <view class="profile-box">
-            <view class = "master">
-              <image class="avatar" src="{{guest.avatar}}"></image>
-            </view>
-          <view>
-          <view class="friend-name">{{guest.nickname}} brings</view>
-          <view class = "price">
-            <text>input price here</text>
+          <view class = "master">
+            <image class="avatar" src="{{guest.avatar}}"></image>
           </view>
-        
+          <view>
+            <view class="friend-name">{{guest.nickname}} brings</view>
+            <view class = "price">
+              <text>input price here</text>
+            </view>
           </view>   
         </view>
 
@@ -94,11 +93,10 @@
           </view>
         </view>
       </view>
-
       
-    </block>  
+    </block>
 
-
+  </view>
 
 
   <view class = "bring">
@@ -109,17 +107,13 @@
 
     <view class="profile-box">
         <view class="view_2">
-
-        <block
-            wx:for="{{event.not_taken_items}}"
-            wx:key="index"
-            wx:for-item="notTakenItem"
-        >
-          
-          <text class="item">{{notTakenItem.name}}</text>
-
-        </block>  
-
+          <block
+              wx:for="{{event.not_taken_items}}"
+              wx:key="index"
+              wx:for-item="notTakenItem"
+          >
+            <text class="item">{{notTakenItem.name}}</text>
+          </block>  
         </view>
     </view>
   </view>
