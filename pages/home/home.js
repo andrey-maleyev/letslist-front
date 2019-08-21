@@ -217,12 +217,12 @@ Page({
   },
 
   handleClick: event => {
-    // console.log(event)
     const event_id = event.currentTarget.dataset.eventid
-    // console.log("home.js, event_id: ", event_id)
+    const participant_id = event.currentTarget.dataset.participantid
+    console.log("home.js > handleClick > clickEvent dataset", event.currentTarget.dataset)
 
     wx.navigateTo({
-      url: `/pages/event/event?event_id=${event_id}`
+      url: `/pages/event/event?event_id=${event_id}&participant_id=${participant_id}`
     })
   },
 

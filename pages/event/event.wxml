@@ -43,7 +43,7 @@
               <view   wx:if="{{inputPrice== true}}" class = "form">
 
                 <view  class="input">
-                  <input class = "type" bindinput = "handlePrice" placeholder="Type total price here"></input>
+                  <input class = "type" bindinput="handlePrice" placeholder="Type total price here"></input>
                 </view> 
 
                 <view  class="add_price">
@@ -62,7 +62,7 @@
             wx:key="index"
             wx:for-item="myItem"
         >
-          <text class="item">{{myItem.name}}</text>
+          <text class="item" data-index="{{index}}" data-eventsitemid="{{myItem.events_item_id}}" data-participantid="{{event.creator[0].participant_id}}" bindtap="clickTakenItem">{{myItem.name}}</text>
         </block>  
       </view>
     </view>
@@ -91,14 +91,14 @@
 
         <view wx:elif="{{inputPrice == true}}">
           <form >
-              <view   wx:if="{{inputPrice== true}}" class = "form">
+              <view wx:if="{{inputPrice== true}}" class="form">
 
                 <view  class="input">
                   <input class = "type" bindinput = "handlePrice" placeholder="Type total price here"></input>
                 </view> 
 
                 <view  class="add_price">
-                  <button form-type="submit" bindtap= "showPrice"class= "add_p">Add</button>
+                  <button form-type="submit" bindtap="showPrice"class= "add_p">Add</button>
                 </view> 
               </view>    
           </form>  
@@ -114,7 +114,7 @@
                 wx:key="index"
                 wx:for-item="myItem"
             >
-              <text class="item">{{myItem.name}}</text>
+              <text class="item" data-index="{{index}}" data-eventsitemid="{{myItem.events_item_id}}" data-participantid="{{guest.participant_id}}" bindtap="clickTakenItem">{{myItem.name}}</text>
             </block>  
           </view>
         </view>
@@ -128,7 +128,7 @@
   <view class = "bring">
     <view class="add">
       <view>Items to bring</view>
-      <view><text class="cuIcon-roundadd" bindtap="addItems"></text></view>
+      <view><text class="cuIcon-roundadd" bindtap="goToItems"></text></view>
     </view>
 
     <view class="profile-box">
@@ -138,7 +138,7 @@
               wx:key="index"
               wx:for-item="notTakenItem"
           >
-            <text class="item">{{notTakenItem.name}}</text>
+            <text class="item" data-index="{{index}}" bindtap="clickNotTakenItem">{{notTakenItem.name}}</text>
           </block>  
         </view>
     </view>
