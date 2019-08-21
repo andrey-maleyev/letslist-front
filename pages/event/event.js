@@ -21,7 +21,8 @@ Page({
 
   clickPrice: function (e) {
     console.log(e)
-    let inputPrice = true
+    let inputPrice = []
+    inputPrice[this.data.participant_id] = true
     this.setData({
       inputPrice
     })
@@ -32,29 +33,27 @@ Page({
     const page = this
 
     const value = e.detail.value
-    const oldData = page.data
-    console.log(e)
-
-    oldData.price = value
+    // const oldData = page.data
+    let price = []
+    price[page.data.participant_id] = value
+    // oldData.price = value
     page.setData({
-      ...oldData
+      // ...oldData
+      price
     })
   },
 
   showPrice: function () {
-    let inputPrice = false
+    const page = this
+    let inputPrice = []
+    inputPrice[page.data.participant_id] = false
+
     this.setData({
       inputPrice
     })
-
   },
 
   //Lifecycle function--Called when page is initially rendered
-  goToList: function () {
-    wx.navigateTo({
-      url: `/pages/list/list`
-    })
-  },
   onReady: function () {
 
   },
@@ -109,7 +108,6 @@ Page({
     //   console.log(ops.target)
     // }
 
-    // console.log("onShare, event_id: ", app.globalData.event)
     const event_id = app.globalData.event.id
 
     return {
@@ -146,17 +144,9 @@ Page({
     apiClient.getEvent(getOptions)
   },
 
-  goToItems: function () {
-    wx.navigateTo({
-      url: '/pages/items/items',
-    })
-
-  },
-
   clickNotTakenItem: function (clickEvent) {
     const not_taken_items = app.globalData.event.not_taken_items
     const index = clickEvent.currentTarget.dataset.index
-    // console.log("not_taken_items[index]", not_taken_items[index])
     const events_item_id = not_taken_items[index].events_item_id
     this.addItemToPersonalList(events_item_id)
   },
@@ -164,12 +154,8 @@ Page({
   clickTakenItem: function (clickEvent) {
     const participant_id = clickEvent.currentTarget.dataset.participantid
     const events_item_id = clickEvent.currentTarget.dataset.eventsitemid
-    // const index = clickEvent.currentTarget.dataset.index
-
     const options = { participant_id, events_item_id }
-    // console.log("111111111111111", clickEvent)
-    // console.log("2222222222222", clickEvent)
-    this.deleteItemFromPersonalList(options)
+    this.removeItemFromPersonalList(options)
   },
 
   addItemToPersonalList: function (events_item_id) {
@@ -189,12 +175,10 @@ Page({
     }
 
     apiClient.createItemInPersonalList(getOptions)
-
   },
 
-  deleteItemFromPersonalList: function (options) {
+  removeItemFromPersonalList: function (options) {
     const page = this
-    // console.log("event.js line 192", options.participant_id)
     const participant_id = options.participant_id
     const events_item_id = options.events_item_id
 
@@ -202,14 +186,27 @@ Page({
       participant_id,
       events_item_id,
       success: function (res) {
-        console.log("addItemToPersonalList", res)
+        console.log("removeItemFromPersonalList", res)
         page.showEvent(page.data.event_id)
       },
       fail: function (err) {
-        console.log("addItemToPersonalList", err)
+        console.log("removeItemFromPersonalList", err)
       }
     }
 
     apiClient.deleteItemFromPersonalList(getOptions)
+  },
+
+  goToList: function () {
+    wx.navigateTo({
+      url: `/pages/list/list`
+    })
+  },
+
+  goToItems: function () {
+    wx.navigateTo({
+      url: '/pages/items/items',
+    })
+
   }
 })
