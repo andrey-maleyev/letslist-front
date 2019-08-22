@@ -18,8 +18,8 @@
     </button>
   </view>
   
-  <view class="container-upcoming">
-    <text class="upcoming">My upcoming events</text>
+  <view  class="container-upcoming">
+    <text wx:if="{{myEvents !== undefined && hasUserInfo}}"class="upcoming">My upcoming events</text>
     <!-- <button class="dropdown-btn">view events</button> -->
     <view class = "box">
       <view class="upcoming-content">

@@ -19,7 +19,7 @@ Page({
 
     // temp
     const event_id = app.globalData.event_id
-
+    // console.log(event_id)
     this.setData({
       event_id
     })
