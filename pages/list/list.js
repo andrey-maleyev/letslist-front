@@ -7,7 +7,7 @@ Page({
    * Page initial data
    */
   data: {
-    participants: [{ nickName: "Maggie", expenses: 123, avatar: "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKe1gFtBR1ia3jpq2sUFthqrpppMjVbWIhDQBFektJGicVIfapiaEYzw5Z6RDcN6ibIHGAHgkTjwkeiaiaA/132" }, { nickName: "Andrey", expenses: 56, avatar: "https://wx.qlogo.cn/mmopen/vi_32/UFLKFwTp3TEE1YJLk5cCcNMSYibKjDeTgOrgygbM52OZnYffdHwzEcakdlYibLzpGgdcyh9g2Z8hia3B5pgRGdvfw/132" }, {nickName: "Zoe", expenses: 63, avatar: "https://ca.slack-edge.com/T02NE0241-UKGDWU4D8-cae60da31f98-72"} ],
+  
 
 
   },
@@ -22,43 +22,95 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    const page = this 
-    const add = (a, b) => a + b
-    // const sum = numbers.reduce(add)
-    let totalExpensesArray = []
-    let participants = page.data.participants
-    let totalExpenses = 0
-    participants.map(function (par) {
-      totalExpensesArray.push(par.expenses)
-      
-      // console.log(totalExpenses)
-      // return totalExpenses
-    })
-    totalExpenses = totalExpensesArray.reduce(add)
-    let totalParticipants = participants.length
-    // console.log(totalParticipants)
-    let averageExpense = (totalExpenses / totalParticipants).toFixed(2)
-    console.log(averageExpense)
-    let moneyBalance = []
-     participants.map(function (par) {
-        moneyBalance.push(par.expenses - averageExpense)
-      // console.log(totalExpenses)
-      // return totalExpenses
-    })
-    
-    page.setData ({
-      totalExpenses,
-      totalParticipants,
-      averageExpense,
-      moneyBalance
-    })
+    let { event_id } = options
+
+    this.showEvent(event_id)
   },
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
+    const page = this
+    setTimeout(function(e){
+      
+      const add = (a, b) => a + b
+      // const sum = numbers.reduce(add)
+      let totalExpensesArray = []
+      // let participants = page.data.participants
+      let totalExpenses = 0
 
+      page.data.participants.map(function (par) {
+        totalExpensesArray.push(par.expenses)
+
+        // console.log(totalExpenses)
+        // return totalExpenses
+      })
+      totalExpenses = totalExpensesArray.reduce(add)
+      let totalParticipants = page.data.totalParticipants
+      // console.log(totalParticipants)
+      let averageExpense = (totalExpenses / totalParticipants).toFixed(2)
+      console.log(averageExpense)
+      let moneyBalance = []
+      page.data.participants.map(function (par) {
+        moneyBalance.push(par.expenses - averageExpense)
+        // console.log(totalExpenses)
+        // return totalExpenses
+      })
+
+      page.setData({
+        totalExpenses,
+        totalParticipants,
+        averageExpense,
+        moneyBalance
+      })
+    }, 1000)
+    wx.showToast({
+      title: 'Loading...',
+      icon: 'loading',
+      duration: 1000
+    })
+    
+  },
+
+  showEvent: function (event_id) {
+    const page = this
+
+    const getOptions = {
+      event_id,
+      success: function (res) {
+        console.log("1000000", res)
+       let participants = res.data.event.participants
+        const totalParticipants = res.data.event.participants_count
+        // const expenses = res.data.event.participants.expenses
+
+
+       page.setData({
+          participants,
+         totalParticipants
+       })
+        
+        // const event = res.data.event
+        // event.participants.map(function (par) {
+        //   par.input_clicked = false
+        //   return par
+        // })
+        // page.setData({
+        //   event
+        // })
+        // if (event.participants_count === 1) {
+        //   const participant_id = event.participants[0].participant_id
+        //   app.globalData.participant_id = participant_id
+        //   page.setData({
+        //     participant_id
+        //   })
+        },
+      fail: function(err) {
+        console.log("event.js > showEvent", err)
+      }
+    }
+
+    apiClient.getEvent(getOptions)
   },
 
   /**
@@ -101,6 +153,8 @@ Page({
       url: '/pages/home/home',
     })
   },
+
+
 
   /**
    * Called when user click on the top right corner to share
