@@ -67,11 +67,11 @@ Page({
     // if (ops.from === 'button') {
     //   console.log(ops.target)
     // }
-
     const event_id = this.data.event.id
+    const event_name = this.data.event.name
 
     return {
-      title: 'Letslist',
+      title: "You're invited to " + event_name,
       imageUrl: 'http://lc-7tihnc4y.cn-n1.lcfile.com/ee0dc5a15af47785a8bf/landing.jpeg',
       path:`/pages/index/index?event_id=${event_id}`,
       success: function (res) {

@@ -95,7 +95,7 @@
   </view>
   
   <view bindtap="goToList" class="finish">
-    <text class="finish_button">Finish the event</text>
+    <text class="finish_button">Calculate Expenses</text>
   </view>
 
 </view>

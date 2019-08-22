@@ -76,16 +76,16 @@ Page({
     const getOptions = {
       event_id,
       success: function (res) {
-        console.log("1000000", res)
-       let participants = res.data.event.participants
+        // console.log("1000000", res)
+        let participants = res.data.event.participants
+        const event_name = res.data.event.name
         const totalParticipants = res.data.event.participants_count
         // const expenses = res.data.event.participants.expenses
-
-
-       page.setData({
-          participants,
-         totalParticipants
-       })
+        page.setData({
+            participants,
+            totalParticipants,
+            event_name
+        })
         
         // const event = res.data.event
         // event.participants.map(function (par) {
@@ -146,7 +146,7 @@ Page({
   },
 
   goToHome:function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/home/home',
     })
   },
