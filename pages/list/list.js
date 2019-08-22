@@ -7,7 +7,7 @@ Page({
    * Page initial data
    */
   data: {
-    participants: [{ nickName: "Maggie", expenses: 123, avatar: "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKe1gFtBR1ia3jpq2sUFthqrpppMjVbWIhDQBFektJGicVIfapiaEYzw5Z6RDcN6ibIHGAHgkTjwkeiaiaA/132" }, { nickName: "Andrey", expenses: 56, avatar: "https://wx.qlogo.cn/mmopen/vi_32/UFLKFwTp3TEE1YJLk5cCcNMSYibKjDeTgOrgygbM52OZnYffdHwzEcakdlYibLzpGgdcyh9g2Z8hia3B5pgRGdvfw/132" }, {nickName: "Zoe", expenses: 63, avatar: "https://ca.slack-edge.com/T02NE0241-UKGDWU4D8-cae60da31f98-72"} ],
+    participants: [{ nickName: "Maggie", expenses: 123, avatar: "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKe1gFtBR1ia3jpq2sUFthqrpppMjVbWIhDQBFektJGicVIfapiaEYzw5Z6RDcN6ibIHGAHgkTjwkeiaiaA/132" }, { nickName: "Andrey", expenses: 56, avatar: "https://wx.qlogo.cn/mmopen/vi_32/UFLKFwTp3TEE1YJLk5cCcNMSYibKjDeTgOrgygbM52OZnYffdHwzEcakdlYibLzpGgdcyh9g2Z8hia3B5pgRGdvfw/132" }, { nickName: "Zoe", expenses: 63, avatar: "https://ca.slack-edge.com/T02NE0241-UKGDWU4D8-cae60da31f98-72" }, { nickName: "Zoe", expenses: 63, avatar: "https://ca.slack-edge.com/T02NE0241-UKGDWU4D8-cae60da31f98-72" }, { nickName: "Zoe", expenses: 63, avatar: "https://ca.slack-edge.com/T02NE0241-UKGDWU4D8-cae60da31f98-72" }, { nickName: "Zoe", expenses: 63, avatar: "https://ca.slack-edge.com/T02NE0241-UKGDWU4D8-cae60da31f98-72" }, { nickName: "Zoe", expenses: 63, avatar: "https://ca.slack-edge.com/T02NE0241-UKGDWU4D8-cae60da31f98-72" }, { nickName: "Zoe", expenses: 63, avatar: "https://ca.slack-edge.com/T02NE0241-UKGDWU4D8-cae60da31f98-72" } ],
 
 
   },
@@ -41,7 +41,7 @@ Page({
     console.log(averageExpense)
     let moneyBalance = []
      participants.map(function (par) {
-        moneyBalance.push(par.expenses - averageExpense)
+       moneyBalance.push((par.expenses - averageExpense).toFixed(2))
       // console.log(totalExpenses)
       // return totalExpenses
     })
@@ -51,9 +51,8 @@ Page({
       totalParticipants,
       averageExpense,
       moneyBalance
-    })
+   })
   },
-
   /**
    * Lifecycle function--Called when page is initially rendered
    */
