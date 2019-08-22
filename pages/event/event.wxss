@@ -211,6 +211,7 @@ page {
   border-radius: 15rpx;
   margin-left: 11rpx;
   margin-right: 11rpx;
+  z-index:2;
 }
 
 .view_2 {
