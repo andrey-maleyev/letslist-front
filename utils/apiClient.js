@@ -1,5 +1,5 @@
-// const baseUrl = "https://letslist.wogengapp.cn/api/v1/"
-const baseUrl = "http://localhost:3000/api/v1/"
+const baseUrl = "https://letslist.wogengapp.cn/api/v1/"
+// const baseUrl = "http://localhost:3000/api/v1/"
 
 const getMyEvents = options => {
   const { userId, success, fail } = options
