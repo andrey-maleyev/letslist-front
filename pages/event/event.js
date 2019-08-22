@@ -8,22 +8,10 @@ Page({
 
   // Lifecycle function--Called when page load
   onLoad: function (options) {
-    const page = this
     let { event_id, participant_id } = options
 
     app.globalData.event_id = event_id
     app.globalData.participant_id = participant_id
-
-    console.log("======= event_id", event_id)
-    console.log("======= participant_id", participant_id)
-    console.log("=======  app.globalData", app.globalData)
-
-    this.setData({
-      participant_id,
-      event_id
-    })
-
-    page.showEvent(event_id)
   },
 
   //Lifecycle function--Called when page is initially rendered
@@ -33,7 +21,20 @@ Page({
 
   // Lifecycle function--Called when page show
   onShow: function () {
+    const page = this
+    let event_id = app.globalData.event_id
+    let participant_id = app.globalData.participant_id
+    
+    // console.log("======= event_id", event_id)
+    // console.log("======= participant_id", participant_id)
+    // console.log("=======  app.globalData", app.globalData)
 
+    this.setData({
+      participant_id,
+      event_id
+    })
+
+    page.showEvent(event_id)
   },
 
   // Lifecycle function--Called when page hide
