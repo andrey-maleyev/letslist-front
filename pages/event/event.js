@@ -9,7 +9,14 @@ Page({
   // Lifecycle function--Called when page load
   onLoad: function (options) {
     const page = this
-    const { event_id, participant_id } = options
+    let { event_id, participant_id } = options
+
+    app.globalData.event_id = event_id
+    app.globalData.participant_id = participant_id
+
+    console.log("======= event_id", event_id)
+    console.log("======= participant_id", participant_id)
+    console.log("=======  app.globalData", app.globalData)
 
     this.setData({
       participant_id,
@@ -86,14 +93,19 @@ Page({
           par.input_clicked = false
           return par
         })
-        // app.globalData.event = event
-        // console.log("event.js, event:", app.globalData.event)
         page.setData({
           event
         })
+        if (event.participants_count === 1) {
+          const participant_id = event.participants[0].participant_id
+          app.globalData.participant_id = participant_id
+          page.setData({
+            participant_id
+          })
+        }
       },
       fail: function (err) {
-        console.log(err)
+        console.log("event.js > showEvent", err)
       }
     }
 
@@ -101,7 +113,7 @@ Page({
   },
 
   clickNotTakenItem: function (clickEvent) {
-    const not_taken_items = app.globalData.event.not_taken_items
+    const not_taken_items = this.data.event.not_taken_items
     const index = clickEvent.currentTarget.dataset.index
     const events_item_id = not_taken_items[index].events_item_id
     this.addItemToPersonalList(events_item_id)

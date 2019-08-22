@@ -134,6 +134,7 @@ Page({
 
           wx.navigateTo({
             url: `/pages/event/event?event_id=${event_id}`
+            // url: `/pages/event/event?event_id=${event_id}&participant_id=${participant_id}`
           })
         },
         fail: function (err) {
