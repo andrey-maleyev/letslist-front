@@ -64,21 +64,10 @@
   </view>
 </block>
  
- 
- 
-  
-
 
   <view class = "button">
    <view bindtap = "goToHome" class = "home"><text>home</text></view>
   </view>
-
-
-
-
-  
-
-
 
 
 </view> 

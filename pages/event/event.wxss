@@ -126,7 +126,7 @@ page {
 .con_2 {
   overflow:scroll;
   height:1000rpx !important;
-  padding-bottom: 40rpx;
+  padding-bottom:150rpx;
   padding-left: 15rpx;
   padding-right: 15rpx;
 }
@@ -211,6 +211,7 @@ page {
   border-radius: 15rpx;
   margin-left: 11rpx;
   margin-right: 11rpx;
+  z-index:2;
 }
 
 .view_2 {
