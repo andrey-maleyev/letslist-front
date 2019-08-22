@@ -20,76 +20,30 @@
       <text class="invite-txt">Invite friends</text>
     </view>
 
-    <view class="user-card">
-
-      <view class="profile-box">
-        <view class = "master">
-          <text class="cuIcon-crownfill"></text>
-          <image class="avatar" src="{{event.creator[0].avatar}}"></image>
-        </view>
-
-        <view>
-          <view class="friend-name">{{event.creator[0].nickname}} brings
-          </view>
-
-          <view wx:if="{{inputPrice[event.creator[0].participant_id] !== true}}" class="price" bindinput="handlePrice" bindtap="clickPrice">
-            <text wx:if="{{price === undefined}}">input price here</text>
-            <text wx:elif="{{price !== undefined}}">{{price[event.creator[0].participant_id]}}</text>
-          </view> 
-
-          <view wx:elif="{{inputPrice[event.creator[0].participant_id] == true}}">
-            <form >
-                <view   wx:if="{{inputPrice[event.creator[0].participant_id] == true}}" class = "form">
-
-                  <view  class="input">
-                    <input class="type" bindinput="handlePrice" placeholder="Type total price here"></input>
-                  </view> 
-
-                  <view  class="add_price">
-                    <button form-type="submit" bindtap="showPrice" class="add_p">Add</button>
-                  </view> 
-                </view>    
-            </form>  
-          </view>
-        </view>
-
-      </view>
-        
-      <view class="view_1">
-        <block
-            wx:for="{{event.creator[0].personal_list}}"
-            wx:key="index"
-            wx:for-item="myItem"
-        >
-          <text class="item" data-index="{{index}}" data-eventsitemid="{{myItem.events_item_id}}" data-participantid="{{event.creator[0].participant_id}}" bindtap="clickTakenItem">{{myItem.name}}</text>
-        </block>  
-      </view>
-    </view>
-
-
     <block
-        wx:for="{{event.guests}}"
+        wx:for="{{event.participants}}"
         wx:key="index"
-        wx:for-item="guest"
+        wx:for-item="participant"
     >
 
       <view class="user-card">
 
         <view class="profile-box">
           <view class = "master">
-            <image class="avatar" src="{{guest.avatar}}"></image>
+            <text wx:if="{{participant.is_creator == true}}" class="cuIcon-crownfill"></text>
+            <image class="avatar" src="{{participant.avatar}}"></image>
           </view>
 
           <view>
-            <view class="friend-name">{{guest.nickname}} brings</view>
-            <view wx:if="{{inputPrice[guest.participant_id] !== true}}"class = "price" bindinput = "handlePrice" bindtap = "clickPrice">
+            <view class="friend-name">{{participant.nickname}} brings</view>
+            <view wx:if="{{inputPrice[participant.participant_id] !== true}}"class = "price" bindinput = "handlePrice" bindtap = "clickPrice">
               <text wx:if="{{price === undefined}}">input price here</text>
-              <text wx:elif="{{price !== undefined}}">{{price[guest.participant_id]}}</text>
+              <text wx:elif="{{price !== undefined}}">{{participant.expenses}}</text>
             </view> 
 
-            <view wx:elif="{{inputPrice[guest.participant_id] == true}}">
+            <view wx:elif="{{inputPrice[participant.participant_id] == true}}">
               <form >
-                  <view wx:if="{{inputPrice[guest.participant_id] == true}}" class="form">
+                  <view wx:if="{{inputPrice[participant.participant_id] == true}}" class="form">
 
                     <view  class="input">
                       <input class = "type" bindinput = "handlePrice" placeholder="Type total price here"></input>
@@ -108,11 +62,11 @@
         <view class = "two">
           <view class="view_1">
             <block
-                wx:for="{{guest.personal_list}}"
+                wx:for="{{participant.personal_list}}"
                 wx:key="index"
                 wx:for-item="myItem"
             >
-              <text class="item" data-index="{{index}}" data-eventsitemid="{{myItem.events_item_id}}" data-participantid="{{guest.participant_id}}" bindtap="clickTakenItem">{{myItem.name}}</text>
+              <text class="item" data-index="{{index}}" data-eventsitemid="{{myItem.events_item_id}}" data-participantid="{{participant.participant_id}}" bindtap="clickTakenItem">{{myItem.name}}</text>
             </block>  
           </view>
         </view>
