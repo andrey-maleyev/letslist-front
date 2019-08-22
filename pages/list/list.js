@@ -7,8 +7,6 @@ Page({
    * Page initial data
    */
   data: {
-  
-
 
   },
 
@@ -23,10 +21,9 @@ Page({
    */
   onLoad: function (options) {
     let { event_id } = options
-
     this.showEvent(event_id)
   },
-
+  
   /**
    * Lifecycle function--Called when page is initially rendered
    */
