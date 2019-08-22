@@ -79,7 +79,7 @@
  flex-wrap: wrap;
  margin:0 20rpx;
  /* margin-bottom:30rpx; */
- padding:50rpx;
+ padding:25rpx;
 
 }
 .chosen {
