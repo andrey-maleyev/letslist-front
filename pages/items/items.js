@@ -17,6 +17,9 @@ Page({
   onLoad: function () {
     const page = this
 
+
+    console.log("=======  app.globalData", app.globalData)
+
     const options = {
       success: function (res) {
         console.log(res)
@@ -102,8 +105,9 @@ Page({
    })
    
     console.log("chosen items: ", chosen_items)
-    console.log("event", app.globalData.event)
-    const event_id = app.globalData.event.id
+    console.log("11111111111111", app.globalData)
+    const event_id = app.globalData.event_id
+    const participant_id = app.globalData.participant_id
 
     chosen_items.forEach(function (x) {
       const item_id = x.id
@@ -122,9 +126,9 @@ Page({
       apiClient.createEventItems(options)
     })
 
-    console.log("event_id: ", app.globalData.event.id)
+    // console.log("event_id: ", app.globalData.event.id)
     wx.reLaunch({
-      url: `/pages/event/event?event_id=${event_id}`
+      url: `/pages/event/event?event_id=${event_id}&participant_id=${participant_id}`
     })
   },
 
