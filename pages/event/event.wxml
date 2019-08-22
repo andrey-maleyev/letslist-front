@@ -31,22 +31,22 @@
         <view>
           <view class="friend-name">{{event.creator[0].nickname}} brings
           </view>
-            
-          <view wx:if="{{inputPrice !== true}}" class="price" bindinput="handlePrice" bindtap = "clickPrice">
+
+          <view wx:if="{{inputPrice[event.creator[0].participant_id] !== true}}" class="price" bindinput="handlePrice" bindtap="clickPrice">
             <text wx:if="{{price === undefined}}">input price here</text>
-            <text wx:elif="{{price !== undefined}}">{{price}}</text>
+            <text wx:elif="{{price !== undefined}}">{{price[event.creator[0].participant_id]}}</text>
           </view> 
 
-          <view wx:elif="{{inputPrice == true}}">
+          <view wx:elif="{{inputPrice[event.creator[0].participant_id] == true}}">
             <form >
-                <view   wx:if="{{inputPrice== true}}" class = "form">
+                <view   wx:if="{{inputPrice[event.creator[0].participant_id] == true}}" class = "form">
 
                   <view  class="input">
-                    <input class = "type" bindinput="handlePrice" placeholder="Type total price here"></input>
+                    <input class="type" bindinput="handlePrice" placeholder="Type total price here"></input>
                   </view> 
 
                   <view  class="add_price">
-                    <button form-type="submit" bindtap= "showPrice"class= "add_p">Add</button>
+                    <button form-type="submit" bindtap="showPrice" class="add_p">Add</button>
                   </view> 
                 </view>    
             </form>  
@@ -82,26 +82,25 @@
 
           <view>
             <view class="friend-name">{{guest.nickname}} brings</view>
-         
-           <view wx:if="{{inputPrice !== true}}"class = "price" bindinput = "handlePrice" bindtap = "clickPrice">
-          <text wx:if="{{price === undefined}}">input price here</text>
-          <text wx:elif="{{price !== undefined}}">{{price}}</text>
-        </view> 
+            <view wx:if="{{inputPrice[guest.participant_id] !== true}}"class = "price" bindinput = "handlePrice" bindtap = "clickPrice">
+              <text wx:if="{{price === undefined}}">input price here</text>
+              <text wx:elif="{{price !== undefined}}">{{price[guest.participant_id]}}</text>
+            </view> 
 
-        <view wx:elif="{{inputPrice == true}}">
-          <form >
-              <view wx:if="{{inputPrice== true}}" class="form">
+            <view wx:elif="{{inputPrice[guest.participant_id] == true}}">
+              <form >
+                  <view wx:if="{{inputPrice[guest.participant_id] == true}}" class="form">
 
-                <view  class="input">
-                  <input class = "type" bindinput = "handlePrice" placeholder="Type total price here"></input>
-                </view> 
+                    <view  class="input">
+                      <input class = "type" bindinput = "handlePrice" placeholder="Type total price here"></input>
+                    </view> 
 
-                <view  class="add_price">
-                  <button form-type="submit" bindtap="showPrice"class= "add_p">Add</button>
-                </view> 
-              </view>    
-          </form>  
-        </view>
+                    <view  class="add_price">
+                      <button form-type="submit" bindtap="showPrice"class= "add_p">Add</button>
+                    </view> 
+                  </view>    
+              </form>  
+            </view>
 
           </view>   
         </view>
@@ -117,6 +116,7 @@
             </block>  
           </view>
         </view>
+
       </view>
       
     </block>
