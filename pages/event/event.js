@@ -19,58 +19,10 @@ Page({
     page.showEvent(event_id)
   },
 
-  clickPrice: function (e) {
-    console.log(e)
-    let inputPrice = []
-    inputPrice[this.data.participant_id] = true
-    this.setData({
-      inputPrice
-    })
-  },
-
-  handlePrice: function (e) {
-    console.log(e)
-    const page = this
-
-    const value = e.detail.value
-    // const oldData = page.data
-    let price = []
-    price[page.data.participant_id] = value
-    // oldData.price = value
-    page.setData({
-      // ...oldData
-      price
-    })
-  },
-
-  showPrice: function () {
-    const page = this
-    let inputPrice = []
-    inputPrice[page.data.participant_id] = false
-
-    this.setData({
-      inputPrice
-    })
-  },
-
   //Lifecycle function--Called when page is initially rendered
   onReady: function () {
 
   },
-  
-  goToHome: function () {
-    wx.navigateTo({
-      url: '/pages/home/home',
-   })
-
-  },
-
-  // back: function () {
-  //   wx.navigateTo({
-  //     url: '/pages/home/home',
-  //   })
-
-  // },
 
   // Lifecycle function--Called when page show
   onShow: function () {
@@ -108,7 +60,7 @@ Page({
     //   console.log(ops.target)
     // }
 
-    const event_id = app.globalData.event.id
+    const event_id = this.data.event.id
 
     return {
       title: 'Letslist',
@@ -130,8 +82,12 @@ Page({
       event_id,
       success: function (res) {
         const event = res.data.event
-        app.globalData.event = event
-        console.log("event.js, event:", app.globalData.event)
+        event.participants.map(function(par) {
+          par.input_clicked = false
+          return par
+        })
+        // app.globalData.event = event
+        // console.log("event.js, event:", app.globalData.event)
         page.setData({
           event
         })
@@ -197,6 +153,45 @@ Page({
     apiClient.deleteItemFromPersonalList(getOptions)
   },
 
+  clickPrice: function (e) {
+    let page = this
+    let index = e.currentTarget.dataset.index
+    let event = page.data.event
+    event.participants[index].input_clicked = true
+    this.setData({
+      event: event
+    })
+  },
+
+  showPrice: function (e) {
+    // console.log(e)
+    let page = this
+    let expenses = e.detail.value.expenses
+    let index = e.detail.target.dataset.index
+    let event = page.data.event
+    const participant_id = event.participants[index].participant_id
+    event.participants[index].expenses = expenses
+    event.participants[index].input_clicked = false
+    this.setData({
+      event: event
+    })
+
+    const getOptions = {
+      participant_id,
+      data: {
+        "participant": { "expenses": expenses }
+      },
+      success: function (res) {
+        console.log(res)
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    }
+
+    apiClient.updateExpense(getOptions)
+  },
+
   goToList: function () {
     wx.navigateTo({
       url: `/pages/list/list`
@@ -207,6 +202,11 @@ Page({
     wx.navigateTo({
       url: '/pages/items/items',
     })
+  },
 
+  goToHome: function () {
+    wx.reLaunch({
+      url: '/pages/home/home',
+    })
   }
 })

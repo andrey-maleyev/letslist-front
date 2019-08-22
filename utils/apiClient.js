@@ -103,6 +103,18 @@ const updateUser = options => {
   })
 }
 
+const updateExpense = options => {
+  const { participant_id, data, success, fail } = options
+
+  return wx.request({
+    url: baseUrl + `participants/${participant_id}`,
+    method: "put",
+    data,
+    success,
+    fail
+  })
+}
+
 export default {
   getMyEvents,
   getEvent,
@@ -112,5 +124,6 @@ export default {
   createEventItems,
   updateUser,
   createItemInPersonalList,
-  deleteItemFromPersonalList
+  deleteItemFromPersonalList,
+  updateExpense
 }

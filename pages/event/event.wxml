@@ -22,7 +22,7 @@
 
     <block
         wx:for="{{event.participants}}"
-        wx:key="index"
+        wx:key
         wx:for-item="participant"
     >
 
@@ -36,23 +36,20 @@
 
           <view>
             <view class="friend-name">{{participant.nickname}} brings</view>
-            <view wx:if="{{inputPrice[participant.participant_id] !== true}}"class = "price" bindinput = "handlePrice" bindtap = "clickPrice">
-              <text wx:if="{{price === undefined}}">input price here</text>
-              <text wx:elif="{{price !== undefined}}">{{participant.expenses}}</text>
+            <view wx:if="{{!participant.input_clicked}}"class = "price" data-index="{{index}}" bindtap = "clickPrice">
+              <text wx:if="{{participant.expenses == null}}">input price here</text>
+              <text wx:elif="{participant.expenses != null}}">{{participant.expenses}}</text>
             </view> 
 
-            <view wx:elif="{{inputPrice[participant.participant_id] == true}}">
-              <form >
-                  <view wx:if="{{inputPrice[participant.participant_id] == true}}" class="form">
+            <view wx:elif="{{participant.input_clicked}}">
+              <form bindsubmit="showPrice">
+                  <view  class="input">
+                    <input class = "type" name="expenses" placeholder="Type total price here"></input>
+                  </view> 
 
-                    <view  class="input">
-                      <input class = "type" bindinput = "handlePrice" placeholder="Type total price here"></input>
-                    </view> 
-
-                    <view  class="add_price">
-                      <button form-type="submit" bindtap="showPrice"class= "add_p">Add</button>
-                    </view> 
-                  </view>    
+                  <view  class="add_price">
+                    <button form-type="submit" data-index="{{index}}" class= "add_p">Add</button>
+                  </view> 
               </form>  
             </view>
 
