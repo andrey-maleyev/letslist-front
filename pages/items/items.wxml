@@ -9,10 +9,10 @@
    <text>Add customized items</text>
   </view>
  
-  <form >
+  <form bindsubmit="addCustomItem">
    <view class = "form">
     <view class="cu-form-group">
-      <input class = "type" placeholder="Type item name here"></input>
+      <input class = "type" name="name" placeholder="Type item name here"></input>
     </view> 
 
     <view class="btn-area">
@@ -22,8 +22,18 @@
   </form>
 
   <view class = "suggestions">
-    <text class = "select">New item 1</text>
-    <text class = "select">New item 2</text>
+    <block
+        wx:for="{{tempCustomItems}}"
+        wx:key="index"
+        wx:for-item="tempCustomItem"
+    >
+      <!-- <text data-index="{{index}}" class="select">{{tempCustomItem.name}}</text> -->
+
+      <text wx:if="{{tempCustomItem.clicked}}" data-index="{{index}}" bindtap="clickCustomItem" 
+      class="select">{{tempCustomItem.name}}</text>
+      <text wx:if="{{!tempCustomItem.clicked}}" data-index="{{index}}" bindtap="clickCustomItem" 
+      class="unselect">{{tempCustomItem.name}}</text>
+    </block>
   </view>
 
   <view class = "h2">

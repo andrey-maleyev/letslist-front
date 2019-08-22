@@ -1,5 +1,5 @@
-const baseUrl = "https://letslist.wogengapp.cn/api/v1/"
-// const baseUrl = "http://localhost:3000/api/v1/"
+// const baseUrl = "https://letslist.wogengapp.cn/api/v1/"
+const baseUrl = "http://localhost:3000/api/v1/"
 
 const getMyEvents = options => {
   const { userId, success, fail } = options
@@ -115,6 +115,20 @@ const updateExpense = options => {
   })
 }
 
+const createItem = options => {
+  const { data, success, fail } = options
+
+  console.log("apiClient", data)
+
+  return wx.request({
+    url: baseUrl + 'items',
+    method: "post",
+    data,
+    success,
+    fail
+  })
+}
+
 export default {
   getMyEvents,
   getEvent,
@@ -125,5 +139,6 @@ export default {
   updateUser,
   createItemInPersonalList,
   deleteItemFromPersonalList,
-  updateExpense
+  updateExpense,
+  createItem
 }
