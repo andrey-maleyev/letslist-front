@@ -1,4 +1,4 @@
-<cu-custom bindtap = "goToHome"isBack="{{true}}">
+<cu-custom isBack="{{true}}">
     <view bindtap = "goToHome"slot="backText" class = "back">save</view>
     <view slot="content" class = "nav">Letslist</view>
 </cu-custom>
@@ -77,8 +77,8 @@
 
   <view class = "bring">
     <view class="add">
-      <view>Items to bring</view>
-      <view><text class="cuIcon-roundadd" bindtap="goToItems"></text></view>
+      <view>Click an item to bring</view>
+      <view><text class = "add_button" bindtap="goToItems">add</text></view>
     </view>
 
     <view class="profile-box">
