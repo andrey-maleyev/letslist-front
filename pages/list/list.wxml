@@ -58,8 +58,8 @@
               wx:for-item="participant"
           >
   <view class = "person">
-    <view class = "name"><image class="avatar"  data-index="{{index}}" src="{{participant.avatar}}"></image><text>{{participant.nickName}}</text></view>
-    <view class = "credit"><text>{{ moneyBalance[index] < 0 ? 'owes ' + moneyBalance[index]*(-1) : 'gets ' + moneyBalance[index] }}</text></view>
+    <view class = "name"><image class="avatar"  data-index="{{index}}" src="{{participant.avatar}}"></image><text>{{participant.nickname}}</text></view>
+    <view class = "credit"><text>{{ moneyBalance[index] == undefined ? 'loading...' : moneyBalance[index] < 0 ? 'owes ' + moneyBalance[index]*(-1) : 'gets ' + moneyBalance[index] }}</text></view>
 
   </view>
 </block>

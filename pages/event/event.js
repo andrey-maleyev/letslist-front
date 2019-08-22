@@ -205,8 +205,9 @@ Page({
   },
 
   goToList: function () {
+    const event_id = this.data.event.id
     wx.navigateTo({
-      url: `/pages/list/list`
+      url: `/pages/list/list?event_id=${event_id}`
     })
   },
 
