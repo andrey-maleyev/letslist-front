@@ -6,7 +6,15 @@ page {
   width: 100vw;
    /* margin-top:50rpx; */
 }
+.add_button {
+  border:1rpx solid #1AAB8A;
+  color:#1AAB8A;
+  border-radius:10rpx;
+  margin:10rpx;
+  padding:10rpx;
+  font-size:30rpx;
 
+}
 .container {
   /* margin: 0 30rpx; */
   padding: 20rpx;
@@ -205,13 +213,15 @@ page {
   /* border-top: 1rpx solid rgb(200, 200, 200); */
   height: 30vh;
   position: sticky;
-  bottom: 85rpx;
+  bottom: 110rpx;
   background-color:rgb(252, 252, 252);
   box-shadow: 0rpx -5rpx 15rpx rgb(215, 215, 215);
   border-radius: 15rpx;
   margin-left: 11rpx;
   margin-right: 11rpx;
+  /* margin-bottom:30rpx; */
   z-index:2;
+  /* padding-bottom: 20rpx; */
 }
 
 .view_2 {
@@ -221,9 +231,9 @@ page {
   margin-bottom: 10rpx;
   overflow: scroll;
   position: sticky;
-  bottom: 0;
-  height: 340rpx;
-  padding-bottom:20rpx;
+  height: 300rpx;
+  bottom:120rpx;
+  /* padding-bottom:100rpx; */
 }
 
 .input {
@@ -298,9 +308,11 @@ font-size:30rpx;
 }
 
 .finish {
+   z-index:5;
   display:flex;
   justify-content:center;
   align-items:center;
+  height:100rpx;
   position:sticky;
   bottom:10rpx;
   width:100%;
@@ -310,7 +322,7 @@ font-size:30rpx;
 .finish_button {
   border-radius: 15rpx;
   background-color:white;
-  font-weight: bold;
+  font-weight: light;
   padding:5rpx;
   color:#1AAB8A;
   box-shadow: 5rpx 5rpx 10rpx rgba(128, 128, 128, 0.877);
