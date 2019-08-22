@@ -37,8 +37,8 @@
           <view>
             <view class="friend-name">{{participant.nickname}} brings</view>
             <view wx:if="{{!participant.input_clicked}}"class = "price" data-index="{{index}}" bindtap = "clickPrice">
-              <text wx:if="{{participant.expenses == null}}">input price here</text>
-              <text wx:elif="{participant.expenses != null}}">{{participant.expenses}}</text>
+              <text wx:if="{{!participant.expenses}}">input price here</text>
+              <text wx:elif="{{participant.expenses}}">{{participant.expenses}}</text>
             </view> 
 
             <view wx:elif="{{participant.input_clicked}}">
