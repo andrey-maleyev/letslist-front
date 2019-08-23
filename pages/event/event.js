@@ -218,7 +218,8 @@ Page({
     })
   },
 
-  goToHome: function () {
+  goToHome: function (e) {
+    e.preventDefault()
     wx.reLaunch({
       url: '/pages/home/home',
     })
