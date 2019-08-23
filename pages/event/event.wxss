@@ -203,7 +203,7 @@ page {
   display:flex;
   align-items:center;
   justify-content:space-between;
-  font-size:40rpx;
+  font-size:36rpx;
   position:sticky;
   bottom:326rpx;
   /* border-bottom: 1rpx solid #1AAB8A; */

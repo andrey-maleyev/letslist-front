@@ -39,10 +39,9 @@
            <view class = "name">
              <text class ="one" >{{myEvent.event}}</text>
            </view>
-           <view>
+           <!-- <view>
             <text class="cuIcon-delete" ></text>
-
-           </view>
+           </view> -->
          </view>
 
 

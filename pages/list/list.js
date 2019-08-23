@@ -50,7 +50,7 @@ Page({
       console.log(averageExpense)
       let moneyBalance = []
       page.data.participants.map(function (par) {
-        moneyBalance.push(par.expenses - averageExpense)
+        moneyBalance.push((par.expenses - averageExpense).toFixed(2))
         // console.log(totalExpenses)
         // return totalExpenses
       })
