@@ -24,10 +24,6 @@ Page({
     const page = this
     let event_id = app.globalData.event_id
     let participant_id = app.globalData.participant_id
-    
-    // console.log("======= event_id", event_id)
-    // console.log("======= participant_id", participant_id)
-    // console.log("=======  app.globalData", app.globalData)
 
     this.setData({
       participant_id,
