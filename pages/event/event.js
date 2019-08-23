@@ -214,7 +214,7 @@ Page({
     })
   },
 
-  goToHome: function (e) {
+  goToHome: function () {
     wx.reLaunch({
       url: '/pages/home/home',
     })
